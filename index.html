@@ -8,257 +8,368 @@
 <link rel="canonical" href="https://soydavidcornejo.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#151412" media="(prefers-color-scheme: dark)">
+<link rel="preload" href="fuentes/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#f5f4f9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13111a" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="David Cornejo — Producto con IA, Tech Lead y CEO de Zyvoi">
-<meta property="og:description" content="Construyo productos con IA, de la idea a producción: pagos en BancoEstado, deporte en Zyvoi y cinco apps abiertas hechas con agentes de IA.">
+<meta property="og:description" content="Construyo productos con IA, de la idea a producción: pagos en BancoEstado, deporte en Zyvoi y cinco apps abiertas que nacieron en mi casa.">
 <meta property="og:url" content="https://soydavidcornejo.github.io/">
 <meta property="og:image" content="https://soydavidcornejo.github.io/img/compartir.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="David Cornejo: producto con IA, Tech Lead y CEO de Zyvoi">
 <meta property="og:locale" content="es_CL"><meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"David Cornejo","url":"https://soydavidcornejo.github.io/",
+ "image":"https://soydavidcornejo.github.io/img/david.jpg",
  "jobTitle":["Tech Lead","CEO y cofundador de Zyvoi"],
- "worksFor":[{"@type":"Organization","name":"BancoEstado"},{"@type":"Organization","name":"Zyvoi","url":"https://zyvoi.com"}],
+ "worksFor":[{"@type":"Organization","name":"BancoEstado"},{"@type":"Organization","name":"Zyvoi","url":"https://zyvoi.com","logo":"https://soydavidcornejo.github.io/img/zyvoi-logo.webp"}],
  "alumniOf":{"@type":"CollegeOrUniversity","name":"INACAP"},
  "address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"},
  "knowsLanguage":["es","en"],
- "knowsAbout":["Inteligencia artificial aplicada","Agentes de IA","Model Context Protocol","Pagos","Liderazgo técnico","Producto"],
+ "knowsAbout":["Inteligencia artificial aplicada","Agentes de IA","Model Context Protocol","Pagos","Liderazgo técnico","Producto","Deporte"],
  "sameAs":["https://www.linkedin.com/in/davidacp","https://github.com/soydavidcornejo"]}
 </script>
 <style>
+/* Bricolage Grotesque (SIL OFL 1.1, fuentes/OFL.txt), autoalojada: sin pedidos a terceros. */
+@font-face{font-family:"Bricolage";src:url("fuentes/bricolage-grotesque.woff2") format("woff2");font-weight:200 800;font-display:swap}
+
 :root{
-  --papel:#f6f3ec; --papel-2:#efeadf; --tinta:#1b1a17; --suave:#5d5a52; --linea:#ddd6c7;
-  --acento:#b8441f; --acento-txt:#fff; --tarjeta:#fffdf8; --sombra:0 1px 0 rgba(27,26,23,.04),0 10px 30px -18px rgba(27,26,23,.35);
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
-  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --fondo:#f5f4f9; --fondo-2:#ebe8f2; --tarjeta:#fff; --tinta:#1a1626; --suave:#575166; --linea:#dcd8e6;
+  --acento:#5a2dc6; --acento-txt:#fff; --acento-velo:color-mix(in srgb,var(--acento) 9%,var(--tarjeta));
+  --verde:#1f8a4c;
+  /* Zyvoi: su degradado es la firma de la marca (magenta → cian). */
+  --zy-magenta:#e040fb; --zy-cian:#18acfe; --zy-grad:linear-gradient(90deg,#e040fb,#18acfe);
+  --zy-grad-3:linear-gradient(90deg,#e040fb,#9371f0 50%,#28b5e1);
+  --letra:"Bricolage",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --suave-mov:cubic-bezier(.2,.8,.2,1);
 }
 @media (prefers-color-scheme:dark){:root:not([data-tema="claro"]){
-  --papel:#151412; --papel-2:#1d1c19; --tinta:#efeae0; --suave:#a8a296; --linea:#34312c;
-  --acento:#f0835e; --acento-txt:#111; --tarjeta:#1d1c19; --sombra:0 10px 30px -18px rgba(0,0,0,.8);
+  --fondo:#13111a; --fondo-2:#1a1723; --tarjeta:#1d1a28; --tinta:#efecf7; --suave:#aca6bd; --linea:#2f2a3d;
+  --acento:#b9a0ff; --acento-txt:#13111a; --verde:#4cc47f;
 }}
 :root[data-tema="oscuro"]{
-  --papel:#151412; --papel-2:#1d1c19; --tinta:#efeae0; --suave:#a8a296; --linea:#34312c;
-  --acento:#f0835e; --acento-txt:#111; --tarjeta:#1d1c19; --sombra:0 10px 30px -18px rgba(0,0,0,.8);
+  --fondo:#13111a; --fondo-2:#1a1723; --tarjeta:#1d1a28; --tinta:#efecf7; --suave:#aca6bd; --linea:#2f2a3d;
+  --acento:#b9a0ff; --acento-txt:#13111a; --verde:#4cc47f;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{margin:0;background:var(--papel);color:var(--tinta);font:16.5px/1.6 var(--sans);text-rendering:optimizeLegibility}
-a{color:inherit;text-decoration-color:color-mix(in srgb,var(--acento) 60%,transparent);text-underline-offset:3px}
-a:hover{color:var(--acento)}
-:focus-visible{outline:2.5px solid var(--acento);outline-offset:3px;border-radius:6px}
-.envoltura{max-width:1100px;margin:0 auto;padding:0 24px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:72px}
+body{margin:0;background:var(--fondo);color:var(--tinta);font:400 17px/1.6 var(--letra);font-optical-sizing:auto;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto}
+a{color:inherit;text-decoration-line:underline;text-decoration-color:color-mix(in srgb,var(--acento) 55%,transparent);text-decoration-thickness:1.5px;text-underline-offset:4px;transition:text-decoration-color .15s,color .15s}
+a:hover{color:var(--acento);text-decoration-color:currentColor}
+:focus-visible{outline:2.5px solid var(--acento);outline-offset:3px;border-radius:8px}
+.envoltura{max-width:1180px;margin:0 auto;padding:0 32px}
 @media (max-width:560px){.envoltura{padding:0 16px}}
+.solo-imprimir{display:none}
+.saltar{position:absolute;left:12px;top:-60px;z-index:20;background:var(--tinta);color:var(--fondo);padding:10px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+.saltar:focus{top:12px}
 
 /* Barra */
-header.barra{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--papel) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.barra{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--fondo) 86%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
 header.barra.con-borde{border-bottom-color:var(--linea)}
-.barra .envoltura{display:flex;align-items:center;gap:20px;height:60px}
-.marca{font:600 17px/1 var(--serif);text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
-.marca .mono{width:30px;height:30px;border-radius:9px;background:var(--tinta);color:var(--papel);display:grid;place-items:center;font:600 13px/1 var(--sans);letter-spacing:.02em}
-nav.secciones{display:flex;gap:18px;margin-left:auto;font-size:14.5px}
+.barra .envoltura{display:flex;align-items:center;gap:20px;height:64px}
+.marca{font:700 18px/1 var(--letra);letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.marca:hover{color:inherit}
+.marca .mono{position:relative;width:32px;height:32px;border-radius:10px;background:var(--tinta);color:var(--fondo);display:grid;place-items:center;font:800 13px/1 var(--letra);letter-spacing:-.02em}
+.marca .mono::after{content:"";position:absolute;right:-3px;top:-3px;width:9px;height:9px;border-radius:50%;background:var(--zy-grad);box-shadow:0 0 0 2px var(--fondo)}
+nav.secciones{display:flex;gap:22px;margin-left:auto;font-size:15px}
 nav.secciones a{text-decoration:none;color:var(--suave)}
 nav.secciones a:hover{color:var(--tinta)}
 .botones-barra{display:flex;gap:6px}
-.chico{border:1px solid var(--linea);background:transparent;color:var(--tinta);border-radius:999px;height:32px;min-width:32px;padding:0 11px;font:600 12.5px/1 var(--sans);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.chico{border:1px solid var(--linea);background:transparent;color:var(--tinta);border-radius:999px;height:34px;min-width:34px;padding:0 12px;font:600 13px/1 var(--letra);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;transition:border-color .15s,transform .12s}
 .chico:hover{border-color:var(--suave)}
-@media (max-width:820px){nav.secciones{display:none}.botones-barra{margin-left:auto}}
+.chico:active{transform:scale(.96)}
+@media (max-width:880px){nav.secciones{display:none}.botones-barra{margin-left:auto}}
 
 /* Portada */
-.portada{padding:84px 0 64px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:56px;align-items:end}
-@media (max-width:860px){.portada{grid-template-columns:minmax(0,1fr);gap:36px;padding:48px 0 40px}}
-.antetitulo{font:600 12.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--acento);margin:0 0 22px;display:flex;align-items:center;gap:10px}
-.antetitulo::before{content:"";width:28px;height:1.5px;background:currentColor}
-h1{font:500 clamp(44px,7.4vw,84px)/.98 var(--serif);letter-spacing:-.035em;margin:0 0 26px}
-h1 em{font-style:italic;color:var(--acento)}
-.bajada{font-size:clamp(18px,2.1vw,21px);line-height:1.5;color:var(--suave);max-width:36em;margin:0 0 32px}
+.portada{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:64px;align-items:center;padding:72px 0 56px}
+@media (max-width:900px){.portada{grid-template-columns:minmax(0,1fr) minmax(0,300px);gap:36px}}
+@media (max-width:720px){.portada{grid-template-columns:minmax(0,1fr);gap:38px;padding:24px 0 40px}.retrato{order:-1}}
+h1.saludo{font:760 clamp(58px,9.2vw,124px)/.9 var(--letra);letter-spacing:-.045em;margin:0 0 26px;max-width:6.2em;text-wrap:balance}
+.lema{font:560 clamp(25px,2.9vw,36px)/1.15 var(--letra);letter-spacing:-.02em;margin:0 0 18px;max-width:19em;text-wrap:balance}
+.bajada{font-size:clamp(17px,1.5vw,19px);line-height:1.6;color:var(--suave);max-width:36em;margin:0 0 30px}
 .bajada b{color:var(--tinta);font-weight:600}
 .acciones{display:flex;flex-wrap:wrap;gap:10px}
-.boton{display:inline-flex;align-items:center;gap:9px;height:46px;padding:0 20px;border-radius:999px;font:600 15px/1 var(--sans);text-decoration:none;border:1.5px solid var(--tinta);color:var(--tinta);background:transparent;cursor:pointer}
-.boton:hover{background:var(--tinta);color:var(--papel)}
+.boton{display:inline-flex;align-items:center;gap:9px;min-height:48px;padding:0 22px;border-radius:999px;font:600 16px/1 var(--letra);text-decoration:none;border:1.5px solid var(--tinta);color:var(--tinta);background:transparent;cursor:pointer;transition:background-color .15s,color .15s,transform .12s,filter .15s}
+.boton:hover{background:var(--tinta);color:var(--fondo)}
+.boton:active{transform:scale(.98)}
 .boton.principal{background:var(--acento);border-color:var(--acento);color:var(--acento-txt)}
-.boton.principal:hover{filter:brightness(1.06);color:var(--acento-txt)}
+.boton.principal:hover{filter:brightness(1.08);color:var(--acento-txt)}
 .boton svg{width:18px;height:18px;flex:none}
-.ficha{border:1px solid var(--linea);border-radius:20px;background:var(--tarjeta);box-shadow:var(--sombra);padding:22px 24px}
-.ficha dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px 18px;font-size:15px}
-.ficha dt{color:var(--suave);font-size:13px;padding-top:2px}
-.ficha dd{margin:0;font-weight:500}
-.ficha .estado{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--suave);margin:0 0 16px;padding-bottom:16px;border-bottom:1px dashed var(--linea)}
-.punto{width:8px;height:8px;border-radius:50%;background:#2f9e5b;box-shadow:0 0 0 4px color-mix(in srgb,#2f9e5b 22%,transparent)}
+
+.retrato{margin:0;position:relative}
+.marco{position:relative;border-radius:34px;padding:6px;background:var(--zy-grad-3);transform:rotate(-2.2deg);transition:transform .5s var(--suave-mov);box-shadow:0 30px 60px -30px color-mix(in srgb,#5a2dc6 55%,transparent)}
+.retrato:hover .marco{transform:rotate(0)}
+.marco img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:28px;background:var(--fondo-2)}
+@media (max-width:720px){.marco{transform:rotate(-1.2deg)}.marco img{aspect-ratio:5/4;object-position:50% 22%}}
+.estado{position:absolute;left:-18px;bottom:-18px;margin:0;display:flex;align-items:center;gap:9px;background:var(--tarjeta);color:var(--tinta);border:1px solid var(--linea);border-radius:999px;padding:9px 15px 9px 12px;font-size:14px;font-weight:500;box-shadow:0 12px 30px -16px rgba(26,22,38,.45);max-width:calc(100% + 14px)}
+@media (max-width:720px){.estado{left:10px;bottom:-14px;font-size:13.5px}}
+.punto{flex:none;width:8px;height:8px;border-radius:50%;background:var(--verde);box-shadow:0 0 0 4px color-mix(in srgb,var(--verde) 22%,transparent)}
+
+.ficha{margin:0;padding:22px 0 0;border-top:1px solid var(--linea);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 28px}
+.ficha div{min-width:0}
+.ficha dt{color:var(--suave);font-size:13.5px;margin-bottom:4px}
+.ficha dd{margin:0;font-weight:500;font-size:15.5px;line-height:1.4}
+@media (max-width:900px){.ficha{grid-template-columns:repeat(2,minmax(0,1fr))}.ficha div:first-child{grid-column:1/-1}}
+
+/* Carga: un solo momento orquestado al abrir la página. */
+@media (prefers-reduced-motion:no-preference){
+  .portada > div > *{animation:subir .7s var(--suave-mov) both}
+  .portada > div > :nth-child(2){animation-delay:.08s}
+  .portada > div > :nth-child(3){animation-delay:.16s}
+  .portada > div > :nth-child(4){animation-delay:.24s}
+  .portada > div > :nth-child(5){animation-delay:.32s}
+  .marco{animation:posar 1s var(--suave-mov) .1s both}
+  .estado{animation:subir .6s var(--suave-mov) .7s both}
+}
+@keyframes subir{from{opacity:0;transform:translateY(16px)}}
+@keyframes posar{from{opacity:0;transform:rotate(4deg) scale(.94)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
 /* Secciones */
-section{padding:72px 0;border-top:1px solid var(--linea)}
-@media (max-width:560px){section{padding:52px 0}}
-.cabeza{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:24px;margin-bottom:40px}
-@media (max-width:760px){.cabeza{grid-template-columns:minmax(0,1fr);gap:8px;margin-bottom:28px}}
-.num{font:500 13px/1.6 var(--mono);color:var(--suave)}
-h2{font:500 clamp(30px,4vw,42px)/1.08 var(--serif);letter-spacing:-.025em;margin:0}
-.cabeza p{color:var(--suave);margin:12px 0 0;max-width:40em}
+section{padding:96px 0}
+@media (max-width:560px){section{padding:64px 0}}
+.raya{border-top:1px solid var(--linea)}
+h2{font:720 clamp(34px,4.6vw,54px)/1.02 var(--letra);letter-spacing:-.035em;margin:0;text-wrap:balance}
+.cabeza{max-width:46em;margin-bottom:44px}
+.cabeza p{color:var(--suave);margin:16px 0 0;font-size:18px}
+@media (max-width:560px){.cabeza{margin-bottom:30px}.cabeza p{font-size:17px}}
+h3{text-wrap:balance}
 
-/* Lo que hago */
+/* Por qué: una carta corta */
+.carta{display:grid;grid-template-columns:minmax(0,330px) minmax(0,1fr);gap:56px;align-items:start}
+@media (max-width:820px){.carta{grid-template-columns:minmax(0,1fr);gap:24px}}
+.carta h2{position:sticky;top:96px}
+@media (max-width:820px){.carta h2{position:static}}
+.carta-texto{max-width:34em;font-size:clamp(19px,1.9vw,23px);line-height:1.55}
+.carta-texto p{margin:0 0 22px}
+.nacio{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:12px}
+.nacio li{display:flex;gap:16px;align-items:center;padding:14px 18px;background:var(--tarjeta);border:1px solid var(--linea);border-radius:18px;font-size:clamp(17px,1.5vw,19px);line-height:1.45}
+.nacio img{width:40px;height:40px;border-radius:11px;flex:none}
+.nacio b{font-weight:650}
+.firma{font:700 clamp(26px,2.6vw,32px)/1 var(--letra);letter-spacing:-.02em;margin-top:34px!important;color:var(--acento)}
+
+/* Zyvoi: escenario oscuro con la identidad de la marca, igual en modo claro y oscuro */
+.zyvoi{position:relative;isolation:isolate;overflow:hidden;background:#000;color:#fff;padding:104px 0}
+@media (max-width:560px){.zyvoi{padding:72px 0}}
+.zyvoi a:focus-visible,.zyvoi :focus-visible{outline-color:#fff}
+.zy-cancha{position:absolute;inset:0;z-index:-1;background:url("img/zyvoi-cancha.webp") 100% 50%/auto 118% no-repeat;opacity:.55;-webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 75%);mask-image:linear-gradient(90deg,transparent 30%,#000 75%)}
+@media (max-width:900px){.zy-cancha{background-position:50% 100%;background-size:150% auto;opacity:.4;-webkit-mask-image:linear-gradient(180deg,transparent 45%,#000 85%);mask-image:linear-gradient(180deg,transparent 45%,#000 85%)}}
+.zy-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:center}
+@media (max-width:900px){.zy-grid{grid-template-columns:minmax(0,1fr);gap:56px}}
+.zy-marca{display:flex;align-items:center;gap:14px;margin-bottom:30px}
+.zy-marca .figura{width:46px;height:auto}
+.zy-marca .palabra{width:118px;height:auto}
+.zy-rol{margin:0 0 14px;color:rgba(255,255,255,.74);font-size:16px}
+.zyvoi h2{font-size:clamp(34px,4.4vw,52px);max-width:14em}
+.zy-bajada{color:rgba(255,255,255,.78);font-size:18px;max-width:34em;margin:18px 0 24px}
+.zy-deportes{list-style:none;margin:0 0 34px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.zy-deportes li{border:1.5px solid transparent;background:linear-gradient(#000,#000) padding-box,var(--zy-grad-3) border-box;border-radius:8px;padding:7px 14px;font-size:14.5px;font-weight:650}
+.zy-funciones{list-style:none;margin:0 0 26px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px}
+@media (max-width:560px){.zy-funciones{grid-template-columns:minmax(0,1fr)}}
+.zy-funciones li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 12px;align-items:start}
+.zy-funciones svg{grid-row:span 2;width:22px;height:22px;margin-top:2px;color:#fff;stroke:url(#zy-trazo)}
+.zy-funciones b{font-weight:650;font-size:16.5px}
+.zy-funciones span{color:rgba(255,255,255,.72);font-size:15px;line-height:1.5}
+.zy-recintos{border-radius:16px;background:rgba(217,217,217,.11);border:1px solid rgba(255,255,255,.14);padding:18px 20px;margin:0 0 30px;max-width:36em}
+.zy-recintos b{display:block;font-weight:700;font-size:17px;margin-bottom:4px}
+.zy-recintos p{margin:0;color:rgba(255,255,255,.76);font-size:15.5px}
+.zy-boton{border:0;background:var(--zy-grad);color:#000}
+.zy-boton:hover{filter:brightness(1.08);background:var(--zy-grad);color:#000}
+.zy-borde{border-color:#fff;color:#fff}
+.zy-borde:hover{background:#fff;color:#000}
+.zy-telefonos{position:relative;display:flex;justify-content:center;align-items:flex-start;padding:0 0 40px}
+.telefono{margin:0;width:min(272px,48%);padding:7px;border-radius:36px;background:#0a0a0a;border:1px solid rgba(255,255,255,.16);box-shadow:0 30px 60px -20px rgba(224,64,251,.35),0 20px 50px -20px rgba(24,172,254,.35);transition:transform .45s var(--suave-mov)}
+.telefono img{display:block;width:100%;border-radius:29px}
+.telefono.t-uno{transform:rotate(-5deg) translateY(10px);z-index:1}
+.telefono.t-dos{transform:rotate(4deg) translateY(56px);margin-left:-26px}
+.zy-telefonos:hover .t-uno{transform:rotate(-7deg) translate(-8px,4px)}
+.zy-telefonos:hover .t-dos{transform:rotate(6deg) translate(8px,48px)}
+
+/* Lo que hago hoy */
 .ahora{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 @media (max-width:900px){.ahora{grid-template-columns:minmax(0,1fr)}}
-.tarjeta{background:var(--tarjeta);border:1px solid var(--linea);border-radius:20px;padding:26px;box-shadow:var(--sombra);display:flex;flex-direction:column;gap:12px}
-.tarjeta .rol{font:600 12px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--acento)}
-.tarjeta h3{font:500 26px/1.15 var(--serif);letter-spacing:-.02em;margin:0}
-.tarjeta .fecha{font:13px/1 var(--mono);color:var(--suave)}
+.tarjeta{position:relative;background:var(--tarjeta);border:1px solid var(--linea);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px;overflow:hidden}
+.tarjeta.zy::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--zy-grad)}
+.rol{font-size:14.5px;font-weight:600;color:var(--acento)}
+.tarjeta h3{font:720 30px/1.05 var(--letra);letter-spacing:-.03em;margin:0}
+.fecha{font-size:14px;color:var(--suave);font-variant-numeric:tabular-nums}
 .tarjeta p{margin:0;color:var(--suave)}
 .tarjeta ul{margin:0;padding-left:18px;color:var(--suave)}
-.tarjeta ul li{margin:3px 0}
-.tarjeta .pie{margin-top:auto;padding-top:8px;display:flex;flex-wrap:wrap;gap:14px;font-weight:600;font-size:14.5px}
+.tarjeta ul li{margin:4px 0}
+.tarjeta ul li::marker{color:var(--acento)}
+.tarjeta ul.habilidades,.tarjeta ul.lista-certs{padding-left:0;color:var(--tinta)}
+.tarjeta ul.habilidades li,.tarjeta ul.lista-certs li{margin:0}
+.tarjeta .pie{margin-top:auto;padding-top:8px;display:flex;flex-wrap:wrap;gap:16px;font-weight:600;font-size:15px}
+
+/* IA */
+.fuente{font-size:15px!important}
+.arquetipos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+@media (max-width:1000px){.arquetipos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.arquetipos{grid-template-columns:minmax(0,1fr)}}
+.arquetipo{border:1px solid var(--linea);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.arquetipo.fuerte{background:var(--acento-velo);border-color:color-mix(in srgb,var(--acento) 40%,var(--linea))}
+.arq-cab{display:flex;flex-direction:column;gap:3px}
+.arquetipo h3{font:700 23px/1.1 var(--letra);letter-spacing:-.02em;margin:0}
+.arq-en{font-size:13.5px;color:var(--suave)}
+html[lang="en"] .arq-en{display:none}
+.marca-fuerte{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--acento);margin-top:4px}
+.marca-fuerte::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.arquetipo p{margin:0;color:var(--suave);font-size:15.5px}
+.sub{font:700 28px/1.2 var(--letra);letter-spacing:-.025em;margin:64px 0 20px}
+.kit{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 40px}
+@media (max-width:860px){.kit{grid-template-columns:minmax(0,1fr)}}
+.kit li{padding:20px 0;border-top:1px solid var(--linea)}
+.kit h3{font:650 17.5px/1.3 var(--letra);margin:0 0 6px}
+.kit p{margin:0;color:var(--suave);font-size:15.5px}
 
 /* Proyectos */
-.principios{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
-.principios li{border:1px solid var(--linea);border-radius:999px;padding:6px 13px;font-size:13.5px;color:var(--tinta);background:var(--papel-2)}
+.principios{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0;padding:0;list-style:none}
+.principios li{border:1px solid var(--linea);border-radius:999px;padding:6px 14px;font-size:14px;background:var(--tarjeta)}
 .proyectos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
-.proyecto{grid-column:span 2;background:var(--tarjeta);border:1px solid var(--linea);border-radius:20px;overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
+.proyecto{grid-column:span 2;background:var(--tarjeta);border:1px solid var(--linea);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
 .proyecto:nth-child(-n+2){grid-column:span 3}
-.proyecto:hover{transform:translateY(-3px)}
 @media (max-width:900px){.proyecto,.proyecto:nth-child(-n+2){grid-column:span 3}}
 @media (max-width:600px){.proyectos{grid-template-columns:minmax(0,1fr)}.proyecto,.proyecto:nth-child(-n+2){grid-column:auto}}
-.proyecto .foto{display:block;aspect-ratio:1200/630;background:var(--papel-2);border-bottom:1px solid var(--linea)}
-.proyecto .foto img{width:100%;height:100%;object-fit:cover;display:block}
+.proyecto .foto{display:block;aspect-ratio:1200/630;background:var(--fondo-2);border-bottom:1px solid var(--linea);overflow:hidden}
+.proyecto .foto img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s var(--suave-mov)}
+.proyecto:hover .foto img{transform:scale(1.035)}
 .proyecto .cuerpo{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
 .proyecto .titulo{display:flex;align-items:center;gap:11px}
-.proyecto .titulo img{width:30px;height:30px;border-radius:8px;flex:none}
-.proyecto h3{font:500 23px/1 var(--serif);margin:0;letter-spacing:-.015em}
-.licencia{margin-left:auto;font:12px/1 var(--mono);color:var(--suave);border:1px solid var(--linea);border-radius:6px;padding:4px 7px;white-space:nowrap}
+.proyecto .titulo img{width:32px;height:32px;border-radius:9px;flex:none}
+.proyecto h3{font:700 24px/1 var(--letra);margin:0;letter-spacing:-.025em}
+.licencia{margin-left:auto;font-size:12.5px;color:var(--suave);border:1px solid var(--linea);border-radius:7px;padding:4px 8px;white-space:nowrap}
 .proyecto p{margin:0;color:var(--suave);font-size:15.5px}
-.proyecto .pie{margin-top:auto;padding-top:6px;display:flex;gap:16px;font-weight:600;font-size:14.5px}
+.proyecto .pie{margin-top:auto;padding-top:6px;display:flex;gap:16px;font-weight:600;font-size:15px}
 
 /* Trayectoria */
-.linea-tiempo{list-style:none;margin:0;padding:0;border-left:1.5px solid var(--linea);margin-left:6px}
-.linea-tiempo li{position:relative;padding:0 0 30px 28px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:4px 24px}
+.linea-tiempo{list-style:none;margin:0;padding:0;border-left:2px solid var(--linea);margin-left:6px}
+.linea-tiempo li{position:relative;padding:0 0 30px 30px;display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:4px 24px}
 .linea-tiempo li:last-child{padding-bottom:0}
-.linea-tiempo li::before{content:"";position:absolute;left:-6.5px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--papel);border:2px solid var(--suave)}
-.linea-tiempo li.actual::before{background:var(--acento);border-color:var(--acento)}
-@media (max-width:640px){.linea-tiempo li{grid-template-columns:minmax(0,1fr);padding-left:22px}}
-.linea-tiempo .cuando{font:13.5px/1.7 var(--mono);color:var(--suave)}
-.linea-tiempo h3{font:600 17px/1.4 var(--sans);margin:0}
+.linea-tiempo li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--fondo);border:2px solid var(--suave)}
+.linea-tiempo li.actual::before{background:var(--acento);border-color:var(--acento);box-shadow:0 0 0 5px color-mix(in srgb,var(--acento) 20%,transparent)}
+@media (max-width:640px){.linea-tiempo li{grid-template-columns:minmax(0,1fr);padding-left:24px}}
+.cuando{font-size:15px;color:var(--suave);font-variant-numeric:tabular-nums}
+.linea-tiempo h3{font:650 18px/1.4 var(--letra);margin:0}
 .linea-tiempo h3 span{font-weight:400;color:var(--suave)}
-.linea-tiempo p{margin:4px 0 0;color:var(--suave);font-size:15px}
+.linea-tiempo p{margin:4px 0 0;color:var(--suave);font-size:15.5px}
 
 /* Estudios */
 .dos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 @media (max-width:760px){.dos{grid-template-columns:minmax(0,1fr)}}
-.lista-certs{list-style:none;margin:0;padding:0;display:grid;gap:0}
-.lista-certs li{padding:11px 0;border-bottom:1px dashed var(--linea);display:flex;gap:12px;align-items:baseline}
+.lista-certs{list-style:none;margin:0;padding:0}
+.lista-certs li{padding:11px 0;border-bottom:1px solid var(--linea);display:flex;gap:12px;align-items:baseline}
 .lista-certs li:last-child{border-bottom:0}
-.lista-certs .tipo{font:12px/1 var(--mono);color:var(--suave);margin-left:auto;white-space:nowrap}
+.lista-certs .tipo{font-size:13px;color:var(--suave);margin-left:auto;white-space:nowrap}
 .habilidades{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:6px 0 0;padding:0}
-.habilidades li{background:var(--papel-2);border:1px solid var(--linea);border-radius:8px;padding:5px 11px;font-size:14px}
+.habilidades li{background:var(--fondo);border:1px solid var(--linea);border-radius:9px;padding:5px 11px;font-size:14.5px}
 
 /* Contacto */
-.contacto{text-align:left;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center}
-@media (max-width:760px){.contacto{grid-template-columns:minmax(0,1fr);gap:24px}}
-.contacto h2{font-size:clamp(34px,5vw,56px)}
+.contacto{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:center}
+@media (max-width:760px){.contacto{grid-template-columns:minmax(0,1fr);gap:28px}}
+.contacto h2{font-size:clamp(46px,7vw,92px);line-height:.95}
+.contacto .bajada{margin:20px 0 0}
 .enlaces-contacto{display:grid;gap:10px}
-.enlaces-contacto a{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--linea);border-radius:16px;background:var(--tarjeta);text-decoration:none;font-weight:600;box-shadow:var(--sombra)}
-.enlaces-contacto a span{font-weight:400;color:var(--suave);font-size:14px;margin-left:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.enlaces-contacto a{display:flex;align-items:center;gap:14px;padding:18px 20px;border:1px solid var(--linea);border-radius:18px;background:var(--tarjeta);text-decoration:none;font-weight:600;transition:border-color .15s,transform .12s}
+.enlaces-contacto a:hover{border-color:var(--acento);color:var(--tinta)}
+.enlaces-contacto a:active{transform:scale(.99)}
+.enlaces-contacto a .dato{font-weight:400;color:var(--suave);font-size:14.5px;margin-left:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
 .enlaces-contacto svg{width:20px;height:20px;flex:none}
-footer{border-top:1px solid var(--linea);padding:28px 0 40px;color:var(--suave);font-size:13.5px}
-footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
 
-/* IA */
-.fuente{margin-top:10px!important;font-size:14px}
-.arquetipos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
-@media (max-width:1000px){.arquetipos{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.arquetipos{grid-template-columns:minmax(0,1fr)}}
-.arquetipo{border:1px solid var(--linea);border-radius:18px;padding:20px;background:var(--papel-2);display:flex;flex-direction:column;gap:10px}
-.arquetipo.fuerte{background:var(--tarjeta);box-shadow:var(--sombra);border-color:color-mix(in srgb,var(--acento) 45%,var(--linea))}
-.arq-cab{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
-.arq-num{font:500 13px/1 var(--mono);color:var(--suave);width:100%}
-.arquetipo h3{font:500 22px/1.1 var(--serif);margin:0;letter-spacing:-.015em}
-.arq-en{font:12px/1 var(--mono);color:var(--suave);width:100%}
-html[lang="en"] .arq-en{display:none}
-.marca-fuerte{width:100%;font:600 11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--acento);margin-top:4px}
-.arquetipo p{margin:0;color:var(--suave);font-size:15px}
-.sub{font:500 26px/1.2 var(--serif);letter-spacing:-.02em;margin:48px 0 18px}
-.kit{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--linea)}
-@media (max-width:860px){.kit{grid-template-columns:minmax(0,1fr)}}
-.kit li{padding:20px 22px 20px 0;border-bottom:1px solid var(--linea)}
-.kit h3{font:600 16px/1.3 var(--sans);margin:0 0 6px}
-.kit p{margin:0;color:var(--suave);font-size:15px}
-button.boton{font-family:var(--sans)}
+/* Pie con firma */
+footer{border-top:1px solid var(--linea);padding:40px 0 48px;color:var(--suave);font-size:14.5px}
+footer .envoltura{display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px}
+.firma-pie{margin:0 auto 0 0;display:flex;align-items:center;gap:12px;color:var(--tinta);font:600 clamp(19px,2vw,22px)/1.2 var(--letra);letter-spacing:-.015em}
+.firma-pie svg{width:34px;height:34px;flex:none;overflow:visible}
+.firma-pie path{stroke-dasharray:110;stroke-dashoffset:0}
+.firma-pie.dibujar path{animation:trazo 1.6s var(--suave-mov) .15s both}
+@keyframes trazo{from{stroke-dashoffset:110}}
+footer p{margin:0}
 
-/* Imprimir = CV en PDF (compacto: el ancho de A4 caería en los diseños de celular) */
+/* Imprimir = CV en PDF de 2 páginas A4 */
 @media print{
-  @page{size:A4;margin:12mm 13mm}
-  :root{--papel:#fff;--papel-2:#fff;--tarjeta:#fff;--tinta:#111;--suave:#454545;--linea:#d4d4d4;--acento:#9a3412;--sombra:none}
-  body{font-size:8.6pt;line-height:1.42}
-  header.barra,.acciones,.proyecto .foto,.principios,.fuente,#saltar,footer,.punto,.estado,.num,.cabeza p,.tarjeta .pie,.proyecto .pie,.marca-fuerte{display:none!important}
+  @page{size:A4;margin:11mm 13mm}
+  :root:root:root{--fondo:#fff;--fondo-2:#fff;--tarjeta:#fff;--tinta:#111;--suave:#444;--linea:#d6d6d6;--acento:#4b22b0;--acento-velo:#fff}
+  body{font-size:8.5pt;line-height:1.4;background:#fff}
+  header.barra,.acciones,.estado,#porque,#zyvoi,footer,.saltar,.proyecto .foto,.principios,.fuente,.cabeza p,.tarjeta .pie,.proyecto .pie,.marca-fuerte,.licencia,[data-t="saludo"]{display:none!important}
+  .solo-imprimir{display:revert}
   .envoltura{padding:0!important;max-width:none}
-  .aparece{opacity:1!important;transform:none!important}
-  section{padding:9pt 0 0!important;border-top:1px solid var(--linea)}
-  .portada{padding:0 0 8pt!important;grid-template-columns:1.5fr 1fr!important;gap:16pt!important;align-items:start}
-  .antetitulo{margin-bottom:6pt;font-size:7.5pt}
-  h1{font-size:22pt!important;margin:0 0 6pt}
-  .bajada{font-size:9.5pt!important;margin:0}
-  .ficha{padding:8pt 10pt;border-radius:8pt}
-  .ficha dl{gap:3pt 8pt;font-size:8.2pt}
-  .cabeza{grid-template-columns:1fr!important;margin-bottom:6pt!important;gap:0!important}
-  h2{font-size:14pt!important}
+  section{padding:8pt 0 0!important;border-top:1px solid var(--linea)}
+  .portada{padding:0 0 6pt!important;grid-template-columns:1fr 62pt!important;gap:14pt!important;align-items:start}
+  .retrato{order:0!important}
+  .marco{transform:none!important;padding:0;border-radius:50%;background:none;box-shadow:none}
+  .marco img{aspect-ratio:1!important;border-radius:50%;object-position:50% 18%!important}
+  h1.saludo{font-size:23pt!important;max-width:none;margin:0 0 3pt;letter-spacing:-.03em}
+  .lema{font-size:12pt!important;margin:0 0 3pt;max-width:none}
+  .bajada{font-size:8.8pt!important;margin:0;max-width:none}
+  .ficha{grid-template-columns:repeat(5,minmax(0,1fr))!important;padding-top:5pt;gap:4pt 10pt}
+  .ficha div:first-child{grid-column:auto!important}
+  .ficha dt{font-size:7.3pt;margin:0}
+  .ficha dd{font-size:8pt}
+  .cabeza{margin-bottom:5pt!important}
+  h2{font-size:13.5pt!important;letter-spacing:-.02em}
   .arquetipos{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:5pt}
-  .arquetipo{padding:6pt 7pt;border-radius:7pt;gap:3pt;background:#fff}
-  .arquetipo h3{font-size:11pt}
-  .arquetipo p,.kit p,.tarjeta p,.tarjeta ul,.proyecto p,.linea-tiempo p{font-size:8pt}
-  .sub{font-size:11pt;margin:8pt 0 4pt}
-  .kit{grid-template-columns:repeat(3,minmax(0,1fr))!important;border-top:0}
-  .kit li{padding:3pt 8pt 3pt 0;border:0}
-  .kit h3{font-size:8.6pt;margin:0}
+  .arquetipo{padding:5pt 7pt;border-radius:7pt;gap:2pt}
+  .arquetipo.fuerte{border-color:var(--acento)}
+  .arquetipo h3{font-size:10.5pt}
+  .arq-en{font-size:7pt}
+  .arquetipo p,.kit p,.tarjeta p,.tarjeta ul,.proyecto p,.linea-tiempo p{font-size:7.9pt}
+  .sub{font-size:10.5pt;margin:7pt 0 3pt}
+  .kit{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:0 10pt}
+  .kit li{padding:3pt 0;border:0}
+  .kit h3{font-size:8.5pt;margin:0}
   .ahora{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6pt}
-  .tarjeta{padding:7pt 9pt;border-radius:8pt;gap:3pt}
+  .tarjeta{padding:7pt 9pt;border-radius:8pt;gap:2pt}
+  .tarjeta.zy::before{display:none}
   .tarjeta h3{font-size:12pt}
-  .tarjeta ul{padding-left:12pt}
+  .rol,.fecha{font-size:7.8pt}
+  .tarjeta ul{padding-left:11pt}
+  .tarjeta ul li{margin:1pt 0}
   .proyectos{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:5pt}
   .proyecto,.proyecto:nth-child(-n+2){grid-column:auto!important;border-radius:7pt}
   .proyecto .cuerpo{padding:6pt 7pt;gap:3pt}
-  .proyecto h3{font-size:11pt}
-  .proyecto .titulo img{width:16pt;height:16pt}
-  .licencia{display:none}
-  .linea-tiempo li{grid-template-columns:70pt minmax(0,1fr)!important;padding:0 0 4pt 12pt!important;gap:0 8pt}
-  .linea-tiempo li::before{top:3pt;width:7pt;height:7pt;left:-4.5pt}
-  .linea-tiempo h3{font-size:8.8pt}
-  .linea-tiempo .cuando{font-size:7.8pt}
+  .proyecto h3{font-size:10.5pt}
+  .proyecto .titulo img{width:15pt;height:15pt;border-radius:4pt}
+  .linea-tiempo li{grid-template-columns:62pt minmax(0,1fr)!important;padding:0 0 3.5pt 11pt!important;gap:0 8pt}
+  .linea-tiempo li::before{top:3pt;width:6pt;height:6pt;left:-4pt;box-shadow:none!important}
+  .linea-tiempo h3{font-size:8.6pt}
+  .cuando{font-size:7.8pt}
   .dos{grid-template-columns:1fr 1fr!important;gap:6pt}
-  .lista-certs li{padding:2pt 0}
-  .habilidades li{padding:1pt 6pt;font-size:7.8pt}
-  .contacto{grid-template-columns:1fr 1fr!important;gap:10pt}
-  .contacto h2{font-size:14pt!important}
+  .lista-certs li{padding:1.5pt 0}
+  .lista-certs .tipo{font-size:7pt}
+  .habilidades li{padding:1pt 6pt;font-size:7.6pt}
+  .contacto{grid-template-columns:auto minmax(0,1fr)!important;gap:16pt}
+  .contacto h2{font-size:13.5pt!important}
   .contacto .bajada{display:none}
-  .enlaces-contacto{gap:3pt}
-  .enlaces-contacto a{padding:4pt 8pt;border-radius:6pt;font-size:8.5pt}
-  .tarjeta,.proyecto,.arquetipo,.ficha,.linea-tiempo li{break-inside:avoid}
+  .enlaces-contacto{grid-template-columns:repeat(3,minmax(0,1fr));gap:4pt}
+  .enlaces-contacto a{padding:4pt 7pt;border-radius:6pt;font-size:8pt;flex-wrap:wrap;gap:2pt 6pt}
+  .enlaces-contacto a .dato{margin-left:0;width:100%;font-size:7.6pt;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+  .enlaces-contacto svg{width:10pt;height:10pt}
+  .tarjeta,.proyecto,.arquetipo,.linea-tiempo li{break-inside:avoid}
   #proyectos{break-before:page}
   a{text-decoration:none}
 }
-
-/* Entrada suave */
-.aparece{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
-.aparece.visible{opacity:1;transform:none}
-.sin-js .aparece{opacity:1;transform:none}
 </style>
 </head>
-<body class="sin-js">
-<a href="#contenido" class="chico" style="position:absolute;left:-9999px" id="saltar" data-t="saltar">Ir al contenido</a>
+<body>
+<a href="#contenido" class="saltar" data-t="saltar">Ir al contenido</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="zy-trazo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e040fb"/><stop offset="1" stop-color="#18acfe"/></linearGradient></defs></svg>
 
 <header class="barra" id="barra">
   <div class="envoltura">
     <a class="marca" href="#arriba" aria-label="David Cornejo"><span class="mono" aria-hidden="true">DC</span>David Cornejo</a>
-    <nav class="secciones" aria-label="Secciones">
+    <nav class="secciones" aria-label="Secciones" data-t-aria="secciones">
+      <a href="#porque" data-t="nav_porque">Por qué</a>
+      <a href="#zyvoi">Zyvoi</a>
       <a href="#ia" data-t="nav_ia">IA</a>
-      <a href="#hoy" data-t="nav_hoy">Hoy</a>
       <a href="#proyectos" data-t="nav_proy">Proyectos</a>
       <a href="#trayectoria" data-t="nav_tray">Trayectoria</a>
-      <a href="#estudios" data-t="nav_est">Estudios</a>
       <a href="#contacto" data-t="nav_cont">Contacto</a>
     </nav>
     <div class="botones-barra">
-      <button class="chico" id="idioma" type="button" aria-label="Read in English">EN</button>
+      <button class="chico" id="idioma" type="button" aria-label="Read in English" lang="en">EN</button>
       <button class="chico" id="tema" type="button" aria-label="Cambiar entre modo claro y oscuro" data-t-aria="tema"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
     </div>
   </div>
@@ -268,95 +379,143 @@ button.boton{font-family:var(--sans)}
 <div class="envoltura" id="arriba">
   <div class="portada">
     <div>
-      <p class="antetitulo" data-t="ante">Santiago de Chile · Tech Lead · CEO de Zyvoi</p>
-      <h1 data-t="titulo">Construyo productos con IA, <em>de la idea a producción</em>.</h1>
+      <h1 class="saludo"><span data-t="saludo">Hola, soy David.</span><span class="solo-imprimir">David Cornejo</span></h1>
+      <p class="lema" data-t="titulo">Construyo productos con IA, de la idea a producción.</p>
       <p class="bajada" data-t="bajada">Más de 12 años en tecnología. Hoy soy <b>Tech Lead en BancoEstado</b>, <b>CEO y cofundador de Zyvoi</b> y creo <b>apps de código abierto trabajando con agentes de IA</b>: rápido para probar ideas, riguroso para llevarlas a producción.</p>
       <div class="acciones">
         <a class="boton principal" href="https://www.linkedin.com/in/davidacp" rel="me noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>LinkedIn</a>
         <a class="boton" href="#ia" data-t="ver_ia">Cómo trabajo con IA</a>
         <button class="boton" type="button" id="imprimir" data-t="cv">Descargar CV</button>
-              </div>
+      </div>
     </div>
-    <aside class="ficha" aria-label="Resumen">
+    <figure class="retrato">
+      <div class="marco"><img src="img/david.webp" width="720" height="900" fetchpriority="high" alt="David Cornejo sonriendo, con una polera morada de Zyvoi" data-t-alt="retrato_alt"></div>
       <p class="estado"><span class="punto" aria-hidden="true"></span><span data-t="estado">Construyendo Zyvoi y cinco apps abiertas</span></p>
-      <dl>
-        <dt data-t="f_enf">Enfoque</dt><dd data-t="f_enf_v">Producto con IA · Agentes · MCP</dd>
-        <dt data-t="f_ahora">Ahora</dt><dd data-t="f_ahora_v">Tech Lead · BancoEstado<br>CEO y cofundador · Zyvoi</dd>
-        <dt data-t="f_exp">Experiencia</dt><dd data-t="f_exp_v">Más de 12 años en tecnología</dd>
-        <dt data-t="f_est">Estudios</dt><dd data-t="f_est_v">Ingeniería en Informática, INACAP</dd>
-        <dt data-t="f_idi">Idiomas</dt><dd data-t="f_idi_v">Español nativo · Inglés profesional</dd>
-      </dl>
-    </aside>
+    </figure>
   </div>
+  <dl class="ficha" aria-label="Resumen" data-t-aria="resumen">
+    <div><dt data-t="f_enf">Enfoque</dt><dd data-t="f_enf_v">Producto con IA, agentes y MCP</dd></div>
+    <div><dt data-t="f_ahora">Ahora</dt><dd data-t="f_ahora_v">Tech Lead en BancoEstado<br>CEO y cofundador de Zyvoi</dd></div>
+    <div><dt data-t="f_exp">Experiencia</dt><dd data-t="f_exp_v">Más de 12 años en tecnología</dd></div>
+    <div><dt data-t="f_est">Estudios</dt><dd data-t="f_est_v">Ingeniería en Informática, INACAP</dd></div>
+    <div><dt data-t="f_idi">Idiomas</dt><dd data-t="f_idi_v">Español nativo, inglés profesional</dd></div>
+  </dl>
 </div>
+
+<section id="porque">
+  <div class="envoltura carta">
+    <h2 data-t="h_porque">Por qué hago lo que hago</h2>
+    <div class="carta-texto">
+      <p data-t="pq_1">Empiezo por la casa. Soy de Santiago, estoy casado y soy papá de tres. Casi todo lo que construyo partió como algo que nos hacía falta a nosotros:</p>
+      <ul class="nacio">
+        <li><img src="img/repasa.svg" alt="" width="40" height="40"><span data-t="pq_repasa"><b>Repasa</b> nació para que mis hijos estudien desde la foto del cuaderno.</span></li>
+        <li><img src="img/alcancia.svg" alt="" width="40" height="40"><span data-t="pq_alcancia"><b>Alcancía</b>, para ordenar las finanzas de la casa.</span></li>
+        <li><img src="img/minuta.svg" alt="" width="40" height="40"><span data-t="pq_minuta"><b>Minuta</b>, para mejorar en mis reuniones.</span></li>
+      </ul>
+      <p data-t="pq_2">Creo que tus datos son tuyos. Por eso mis apps guardan todo en tu computador y trabajan con tu propia IA, no con una mía.</p>
+      <p data-t="pq_3">Y creo que el deporte junta a la gente. Por eso existe Zyvoi: para que más personas jueguen y se conozcan a través del deporte.</p>
+      <p class="firma">David</p>
+    </div>
+  </div>
+</section>
+
+<section id="zyvoi" class="zyvoi" aria-labelledby="zy-titulo">
+  <div class="zy-cancha" aria-hidden="true"></div>
+  <div class="envoltura zy-grid">
+    <div>
+      <div class="zy-marca"><img class="figura" src="img/zyvoi-logo.webp" alt="" width="142" height="160" loading="lazy"><img class="palabra" src="img/zyvoi-palabra.webp" alt="Zyvoi" width="346" height="127" loading="lazy"></div>
+      <p class="zy-rol" data-t="zy_rol">Soy CEO y cofundador desde mayo de 2025.</p>
+      <h2 id="zy-titulo" data-t="zy_h">Para que más gente juegue y se conozca a través del deporte.</h2>
+      <p class="zy-bajada" data-t="z_p">Una app chilena para encontrar partidos, armar equipos y reservar canchas: fútbol, pádel, tenis, básquetbol y más.</p>
+      <ul class="zy-deportes" aria-label="Deportes" data-t-aria="zy_dep">
+        <li data-t="d_fut">Fútbol</li><li data-t="d_pad">Pádel</li><li data-t="d_ten">Tenis</li><li data-t="d_bas">Básquetbol</li>
+      </ul>
+      <ul class="zy-funciones">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><b data-t="zf1">Partidos cerca y a tu nivel</b><span data-t="zf1p">Encuentra o crea encuentros por cercanía y nivel.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM17 6h3v2a3 3 0 0 1-3 3M7 6H4v2a3 3 0 0 0 3 3"/></svg><b data-t="zf2">Ranking ELO</b><span data-t="zf2p">Cada deporte con su ranking: regional, nacional y mundial.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg><b data-t="zf3">Reserva de canchas</b><span data-t="zf3p">Reserva la cancha desde la misma app.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><b data-t="zf4">Equipos</b><span data-t="zf4p">Arma tu equipo o súmate a uno.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg><b data-t="zf5">Compartir</b><span data-t="zf5p">Comparte el partido para completar los cupos.</span></li>
+      </ul>
+      <div class="zy-recintos">
+        <b>Zyvoi Recintos</b>
+        <p data-t="zr_p">Para los recintos deportivos: canchas, horarios y precios, reservas y pagos en un solo lugar.</p>
+      </div>
+      <div class="acciones">
+        <a class="boton zy-boton" href="https://apps.apple.com/app/id6753231031" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.01.61-2.66 1.37-.58.67-1.1 1.76-.96 2.8 1.01.08 2.05-.52 2.68-1.28z"/></svg><span data-t="zy_ios">Descargar en App Store</span></a>
+        <a class="boton zy-borde" href="https://zyvoi.com" target="_blank" rel="noopener">zyvoi.com</a>
+      </div>
+    </div>
+    <div class="zy-telefonos">
+      <figure class="telefono t-uno"><img src="img/zyvoi-encuentros.webp" width="302" height="653" loading="lazy" alt="Pantalla «Mis encuentros» de la app Zyvoi, con filtros por deporte y el botón Crear encuentro" data-t-alt="zy_alt1"></figure>
+      <figure class="telefono t-dos"><img src="img/zyvoi-ranking.webp" width="285" height="616" loading="lazy" alt="Pantalla «Ranking» de la app Zyvoi: jugadores de fútbol de la Región Metropolitana con su ranking, win rate y partidos jugados" data-t-alt="zy_alt2"></figure>
+    </div>
+  </div>
+</section>
 
 <section id="ia">
   <div class="envoltura">
-    <div class="cabeza aparece">
-      <div class="num">01</div>
-      <div>
-        <h2 data-t="h_ia">Cómo trabajo en la era de la IA</h2>
-        <p data-t="p_ia">Boris Cherny, creador de Claude Code en Anthropic, plantea que con la IA los equipos se ordenan menos por cargos (frontend, backend, diseño) y más por cinco formas de aportar. Así me reparto entre ellas:</p>
-        <p class="fuente"><a href="https://www.inc.com/ashley-couto/claude-code-startup-needs-employee-archetypes/91370409" target="_blank" rel="noopener" data-t="fuente">Los cinco arquetipos, según Inc.</a></p>
-      </div>
+    <div class="cabeza">
+      <h2 data-t="h_ia">Cómo trabajo en la era de la IA</h2>
+      <p data-t="p_ia">Boris Cherny, creador de Claude Code en Anthropic, plantea que con la IA los equipos se ordenan menos por cargos (frontend, backend, diseño) y más por cinco formas de aportar. Así me reparto entre ellas:</p>
+      <p class="fuente"><a href="https://www.inc.com/ashley-couto/claude-code-startup-needs-employee-archetypes/91370409" target="_blank" rel="noopener" data-t="fuente">Los cinco arquetipos, según Inc.</a></p>
     </div>
     <div class="arquetipos">
-        <article class="arquetipo aparece fuerte">
-          <div class="arq-cab"><span class="arq-num">1</span><h3 data-t="a_pro">Prototipador</h3><span class="arq-en">Prototyper</span><span class="marca-fuerte" data-t="fuerte">Mi fuerte</span></div>
+        <article class="arquetipo fuerte">
+          <div class="arq-cab"><h3 data-t="a_pro">Prototipador</h3><span class="arq-en" lang="en">Prototyper</span><span class="marca-fuerte" data-t="fuerte">Mi fuerte</span></div>
           <p data-t="a_pro_p">Cinco apps de código abierto lanzadas en semanas: de la idea a una versión que la gente puede usar, probando y descartando rápido con agentes de IA.</p>
         </article>
-        <article class="arquetipo aparece fuerte">
-          <div class="arq-cab"><span class="arq-num">2</span><h3 data-t="a_con">Constructor</h3><span class="arq-en">Builder</span><span class="marca-fuerte" data-t="fuerte">Mi fuerte</span></div>
+        <article class="arquetipo fuerte">
+          <div class="arq-cab"><h3 data-t="a_con">Constructor</h3><span class="arq-en" lang="en">Builder</span><span class="marca-fuerte" data-t="fuerte">Mi fuerte</span></div>
           <p data-t="a_con_p">Cuatro años como Tech Lead llevando a producción servicios de pagos en BancoEstado; antes, full stack en SONDA, Amaris y Vigalab.</p>
         </article>
-        <article class="arquetipo aparece fuerte">
-          <div class="arq-cab"><span class="arq-num">3</span><h3 data-t="a_imp">Impulsor</h3><span class="arq-en">Grower</span><span class="marca-fuerte" data-t="fuerte">Mi fuerte</span></div>
+        <article class="arquetipo fuerte">
+          <div class="arq-cab"><h3 data-t="a_imp">Impulsor</h3><span class="arq-en" lang="en">Grower</span><span class="marca-fuerte" data-t="fuerte">Mi fuerte</span></div>
           <p data-t="a_imp_p">Como CEO de Zyvoi persigo el product-market fit: validar el problema, el modelo de negocio y vender directo a los recintos deportivos.</p>
         </article>
-        <article class="arquetipo aparece">
-          <div class="arq-cab"><span class="arq-num">4</span><h3 data-t="a_man">Mantenedor</h3><span class="arq-en">Maintainer</span></div>
+        <article class="arquetipo">
+          <div class="arq-cab"><h3 data-t="a_man">Mantenedor</h3><span class="arq-en" lang="en">Maintainer</span></div>
           <p data-t="a_man_p">Pagos que no se pueden caer: confiabilidad, integraciones y procesos de datos en la nube que siguen rápidos a medida que crecen.</p>
         </article>
-        <article class="arquetipo aparece">
-          <div class="arq-cab"><span class="arq-num">5</span><h3 data-t="a_sim">Simplificador</h3><span class="arq-en">Sweeper</span></div>
+        <article class="arquetipo">
+          <div class="arq-cab"><h3 data-t="a_sim">Simplificador</h3><span class="arq-en" lang="en">Sweeper</span></div>
           <p data-t="a_sim_p">Lo más simple que funcione: sin dependencias innecesarias, pruebas automáticas en cada cambio y formatos abiertos.</p>
         </article>
     </div>
-    <h3 class="sub aparece" data-t="h_kit">IA en la práctica</h3>
+    <h3 class="sub" data-t="h_kit">IA en la práctica</h3>
     <ul class="kit">
-<li class="aparece"><h3 data-t="k1">Agentes de programación</h3><p data-t="k1p">Claude Code, Codex y Gemini en el día a día, con agentes revisores de privacidad y de aportes antes de cada cambio.</p></li>
-<li class="aparece"><h3 data-t="k2">Servidores MCP</h3><p data-t="k2p">Conecto la IA de cada persona con sus propios datos: un MCP de solo lectura para Alcancía y herramientas internas para Zyvoi.</p></li>
-<li class="aparece"><h3 data-t="k3">La IA de cada persona</h3><p data-t="k3p">Apps que usan la suscripción del usuario, le muestran a la IA lo mínimo y validan cada respuesta antes de usarla.</p></li>
-<li class="aparece"><h3 data-t="k4">IA local</h3><p data-t="k4p">Transcripción en el computador con whisper.cpp: el audio nunca sale de la máquina.</p></li>
-<li class="aparece"><h3 data-t="k5">Operación con agentes</h3><p data-t="k5p">Ventas, contenido y operación con flujos de agentes y bitácoras que aprenden de cada resultado.</p></li>
-<li class="aparece"><h3 data-t="k6">Seguridad primero</h3><p data-t="k6p">Formación en pentesting y hacking ético aplicada a los agentes: llaves en el Llavero, solo lectura y sin servidores propios.</p></li>
+      <li><h3 data-t="k1">Agentes de programación</h3><p data-t="k1p">Claude Code, Codex y Gemini en el día a día, con agentes revisores de privacidad y de aportes antes de cada cambio.</p></li>
+      <li><h3 data-t="k2">Servidores MCP</h3><p data-t="k2p">Conecto la IA de cada persona con sus propios datos: un MCP de solo lectura para Alcancía y herramientas internas para Zyvoi.</p></li>
+      <li><h3 data-t="k3">La IA de cada persona</h3><p data-t="k3p">Apps que usan la suscripción del usuario, le muestran a la IA lo mínimo y validan cada respuesta antes de usarla.</p></li>
+      <li><h3 data-t="k4">IA local</h3><p data-t="k4p">Transcripción en el computador con whisper.cpp: el audio nunca sale de la máquina.</p></li>
+      <li><h3 data-t="k5">Operación con agentes</h3><p data-t="k5p">Ventas, contenido y operación con flujos de agentes y bitácoras que aprenden de cada resultado.</p></li>
+      <li><h3 data-t="k6">Seguridad primero</h3><p data-t="k6p">Formación en pentesting y hacking ético aplicada a los agentes: llaves en el Llavero, solo lectura y sin servidores propios.</p></li>
     </ul>
   </div>
 </section>
 
-<section id="hoy">
+<section id="hoy" class="raya">
   <div class="envoltura">
-    <div class="cabeza aparece">
-      <div class="num">02</div>
-      <div><h2 data-t="h_hoy">Lo que hago hoy</h2><p data-t="p_hoy">Tres frentes: tecnología para un banco que usa todo Chile, una startup de deporte y software abierto para cualquier persona.</p></div>
+    <div class="cabeza">
+      <h2 data-t="h_hoy">Lo que hago hoy</h2><p data-t="p_hoy">Tres frentes: tecnología para un banco que usa todo Chile, una startup de deporte y software abierto para cualquier persona.</p>
     </div>
     <div class="ahora">
-      <article class="tarjeta aparece">
+      <article class="tarjeta zy">
         <span class="rol" data-t="z_rol">CEO y cofundador</span>
         <h3>Zyvoi</h3>
-        <span class="fecha" data-t="z_fecha">mayo 2025 — hoy</span>
-        <p data-t="z_p">Una app chilena para encontrar partidos, armar equipos y reservar canchas: fútbol, pádel, tenis, básquetbol y más.</p>
+        <span class="fecha" data-t="z_fecha">mayo 2025 – hoy</span>
+        <p data-t="z_corto">La startup de deporte que lidero: producto, negocio y venta directa a los recintos.</p>
         <ul>
           <li data-t="z_1">Visión, modelo de negocio y decisiones de producto</li>
-          <li data-t="z_2">Partidos por cercanía y nivel, con ranking ELO</li>
-          <li data-t="z_3">Zyvoi Recintos: reservas y gestión para los recintos deportivos</li>
+          <li class="solo-imprimir" data-t="z_2">Partidos por cercanía y nivel, con ranking ELO</li>
+          <li class="solo-imprimir" data-t="z_3">Zyvoi Recintos: reservas y gestión para los recintos deportivos</li>
         </ul>
-        <div class="pie"><a href="https://zyvoi.com" target="_blank" rel="noopener">zyvoi.com</a><a href="https://apps.apple.com/app/id6753231031" target="_blank" rel="noopener" data-t="z_ios">App Store</a></div>
+        <div class="pie"><a href="#zyvoi" data-t="z_ver">Conoce Zyvoi</a><a href="https://zyvoi.com" target="_blank" rel="noopener">zyvoi.com</a></div>
       </article>
-      <article class="tarjeta aparece">
+      <article class="tarjeta">
         <span class="rol">Tech Lead</span>
         <h3>BancoEstado</h3>
-        <span class="fecha" data-t="b_fecha">abril 2022 — hoy</span>
+        <span class="fecha" data-t="b_fecha">abril 2022 – hoy</span>
         <p data-t="b_p">Lidero desarrollo en el equipo de Compraquí, la pasarela de pagos del banco.</p>
         <ul>
           <li data-t="b_1">Arquitectura y liderazgo técnico del equipo</li>
@@ -364,10 +523,10 @@ button.boton{font-family:var(--sans)}
           <li data-t="b_3">Metodologías ágiles con Scrum y Jira</li>
         </ul>
       </article>
-      <article class="tarjeta aparece">
+      <article class="tarjeta">
         <span class="rol" data-t="o_rol">Creador</span>
         <h3 data-t="o_h">Código abierto</h3>
-        <span class="fecha" data-t="o_fecha">2026 — hoy</span>
+        <span class="fecha" data-t="o_fecha">2026 – hoy</span>
         <p data-t="o_p">Cinco apps para el computador, gratis para siempre, sin cuentas ni publicidad.</p>
         <ul>
           <li data-t="o_1">Tus datos viven en tu computador, en formatos abiertos</li>
@@ -380,55 +539,52 @@ button.boton{font-family:var(--sans)}
   </div>
 </section>
 
-<section id="proyectos">
+<section id="proyectos" class="raya">
   <div class="envoltura">
-    <div class="cabeza aparece">
-      <div class="num">03</div>
-      <div>
-        <h2 data-t="h_proy">Proyectos de código abierto</h2>
-        <p data-t="p_proy">Herramientas que me hacían falta a mí y a mi familia. Las publico para que cualquiera las use, las revise y las mejore.</p>
-        <ul class="principios">
-          <li data-t="pr_1">Gratis y sin cuentas</li><li data-t="pr_2">Tus datos no salen de tu computador</li><li data-t="pr_3">Tu propia IA</li><li data-t="pr_4">Español e inglés</li>
-        </ul>
-      </div>
+    <div class="cabeza">
+      <h2 data-t="h_proy">Proyectos de código abierto</h2>
+      <p data-t="p_proy">Herramientas que me hacían falta a mí y a mi familia. Las publico para que cualquiera las use, las revise y las mejore.</p>
+      <ul class="principios">
+        <li data-t="pr_1">Gratis y sin cuentas</li><li data-t="pr_2">Tus datos no salen de tu computador</li><li data-t="pr_3">Tu propia IA</li><li data-t="pr_4">Español e inglés</li>
+      </ul>
     </div>
     <div class="proyectos">
-      <article class="proyecto aparece">
+      <article class="proyecto">
         <a class="foto" href="https://minuta-app.github.io/minuta/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/minuta.jpg" alt="" width="960" height="504" loading="lazy"></a>
         <div class="cuerpo">
-          <div class="titulo"><img src="img/minuta.svg" alt=""><h3>Minuta</h3><span class="licencia">MIT</span></div>
+          <div class="titulo"><img src="img/minuta.svg" alt="" width="32" height="32"><h3>Minuta</h3><span class="licencia">MIT</span></div>
           <p data-t="minuta">Sal de cada reunión con las notas listas y sabiendo cómo mejorar tu forma de comunicar.</p>
           <div class="pie"><a href="https://minuta-app.github.io/minuta/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/minuta-app/minuta" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
         </div>
       </article>
-      <article class="proyecto aparece">
+      <article class="proyecto">
         <a class="foto" href="https://graba-app.github.io/graba/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/graba.jpg" alt="" width="960" height="504" loading="lazy"></a>
         <div class="cuerpo">
-          <div class="titulo"><img src="img/graba.svg" alt=""><h3>Graba</h3><span class="licencia">MIT</span></div>
+          <div class="titulo"><img src="img/graba.svg" alt="" width="32" height="32"><h3>Graba</h3><span class="licencia">MIT</span></div>
           <p data-t="graba">Graba tu pantalla con tu cámara y tu IA te deja notas, guion para YouTube, capítulos y subtítulos.</p>
           <div class="pie"><a href="https://graba-app.github.io/graba/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/graba-app/graba" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
         </div>
       </article>
-      <article class="proyecto aparece">
+      <article class="proyecto">
         <a class="foto" href="https://corta-app.github.io/corta/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/corta.jpg" alt="" width="960" height="504" loading="lazy"></a>
         <div class="cuerpo">
-          <div class="titulo"><img src="img/corta.svg" alt=""><h3>Corta</h3><span class="licencia">AGPL-3.0</span></div>
+          <div class="titulo"><img src="img/corta.svg" alt="" width="32" height="32"><h3>Corta</h3><span class="licencia">AGPL-3.0</span></div>
           <p data-t="corta">Editor para Shorts, Reels y TikTok: editas el texto y se edita el video. Sin marca de agua.</p>
           <div class="pie"><a href="https://corta-app.github.io/corta/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/corta-app/corta" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
         </div>
       </article>
-      <article class="proyecto aparece">
+      <article class="proyecto">
         <a class="foto" href="https://alcancia-app.github.io/alcancia/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/alcancia.jpg" alt="" width="960" height="504" loading="lazy"></a>
         <div class="cuerpo">
-          <div class="titulo"><img src="img/alcancia.svg" alt=""><h3>Alcancía</h3><span class="licencia">AGPL-3.0</span></div>
+          <div class="titulo"><img src="img/alcancia.svg" alt="" width="32" height="32"><h3>Alcancía</h3><span class="licencia">AGPL-3.0</span></div>
           <p data-t="alcancia">Control de gastos: junta las cartolas de tus bancos y tu IA te avisa a tiempo cuando algo se pasa.</p>
           <div class="pie"><a href="https://alcancia-app.github.io/alcancia/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/alcancia-app/alcancia" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
         </div>
       </article>
-      <article class="proyecto aparece">
+      <article class="proyecto">
         <a class="foto" href="https://repasa-app.github.io/repasa/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/repasa.jpg" alt="" width="960" height="504" loading="lazy"></a>
         <div class="cuerpo">
-          <div class="titulo"><img src="img/repasa.svg" alt=""><h3>Repasa</h3><span class="licencia">AGPL-3.0</span></div>
+          <div class="titulo"><img src="img/repasa.svg" alt="" width="32" height="32"><h3>Repasa</h3><span class="licencia">AGPL-3.0</span></div>
           <p data-t="repasa">Para estudiar desde la foto del cuaderno: resumen, preguntas tipo prueba y repaso diario.</p>
           <div class="pie"><a href="https://repasa-app.github.io/repasa/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/repasa-app/repasa" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
         </div>
@@ -437,44 +593,42 @@ button.boton{font-family:var(--sans)}
   </div>
 </section>
 
-<section id="trayectoria">
+<section id="trayectoria" class="raya">
   <div class="envoltura">
-    <div class="cabeza aparece">
-      <div class="num">04</div>
-      <div><h2 data-t="h_tray">Trayectoria</h2><p data-t="p_tray">De soporte técnico a liderar equipos: más de doce años construyendo y operando software.</p></div>
+    <div class="cabeza">
+      <h2 data-t="h_tray">Trayectoria</h2><p data-t="p_tray">De soporte técnico a liderar equipos: más de doce años construyendo y operando software.</p>
     </div>
-    <ol class="linea-tiempo aparece">
-      <li class="actual"><span class="cuando" data-t="t_zy">2025 — hoy</span><div><h3 data-t="t_zy_h">CEO y cofundador <span>· Zyvoi</span></h3><p data-t="t_zy_p">Estrategia, producto y crecimiento de una app de comunidad deportiva pensada para Latinoamérica.</p></div></li>
-      <li class="actual"><span class="cuando" data-t="t_be">2022 — hoy</span><div><h3>Tech Lead <span>· BancoEstado</span></h3><p data-t="t_be_p">Liderazgo técnico en pagos: Compraquí, integraciones y servicios en la nube.</p></div></li>
+    <ol class="linea-tiempo">
+      <li class="actual"><span class="cuando" data-t="t_zy">2025 – hoy</span><div><h3 data-t="t_zy_h">CEO y cofundador <span>· Zyvoi</span></h3><p data-t="t_zy_p">Estrategia, producto y crecimiento de una app de comunidad deportiva pensada para Latinoamérica.</p></div></li>
+      <li class="actual"><span class="cuando" data-t="t_be">2022 – hoy</span><div><h3>Tech Lead <span>· BancoEstado</span></h3><p data-t="t_be_p">Liderazgo técnico en pagos: Compraquí, integraciones y servicios en la nube.</p></div></li>
       <li><span class="cuando">2022</span><div><h3>Full Stack Developer <span>· Integ</span></h3></div></li>
-      <li><span class="cuando">2020 — 2021</span><div><h3>Tech Lead <span>· Vigalab</span></h3></div></li>
-      <li><span class="cuando">2019 — 2020</span><div><h3>Full Stack Developer <span>· Amaris Consulting</span></h3></div></li>
-      <li><span class="cuando">2018 — 2019</span><div><h3>Full Stack Developer <span>· SONDA</span></h3></div></li>
-      <li><span class="cuando">2017 — 2018</span><div><h3>Full Stack Developer <span>· Qanalytics</span></h3></div></li>
-      <li><span class="cuando">2016 — 2017</span><div><h3 data-t="t_it">Jefe de Informática <span>· Incobech</span></h3><p data-t="t_inc_p">Procesos, aplicaciones a medida con tecnologías web y adopción de nuevas herramientas.</p></div></li>
-      <li><span class="cuando">2014 — 2016</span><div><h3 data-t="t_it2">Jefe de Informática <span>· Comercial IP</span></h3><p data-t="t_cip_p">Armé el área desde cero: redes, servidores, ERP, sitio web y la migración de servicios a la nube.</p></div></li>
+      <li><span class="cuando">2020 – 2021</span><div><h3>Tech Lead <span>· Vigalab</span></h3></div></li>
+      <li><span class="cuando">2019 – 2020</span><div><h3>Full Stack Developer <span>· Amaris Consulting</span></h3></div></li>
+      <li><span class="cuando">2018 – 2019</span><div><h3>Full Stack Developer <span>· SONDA</span></h3></div></li>
+      <li><span class="cuando">2017 – 2018</span><div><h3>Full Stack Developer <span>· Qanalytics</span></h3></div></li>
+      <li><span class="cuando">2016 – 2017</span><div><h3 data-t="t_it">Jefe de Informática <span>· Incobech</span></h3><p data-t="t_inc_p">Procesos, aplicaciones a medida con tecnologías web y adopción de nuevas herramientas.</p></div></li>
+      <li><span class="cuando">2014 – 2016</span><div><h3 data-t="t_it2">Jefe de Informática <span>· Comercial IP</span></h3><p data-t="t_cip_p">Armé el área desde cero: redes, servidores, ERP, sitio web y la migración de servicios a la nube.</p></div></li>
       <li><span class="cuando">2013</span><div><h3 data-t="t_sop">Especialista de soporte técnico <span>· Adexus</span></h3></div></li>
     </ol>
   </div>
 </section>
 
-<section id="estudios">
+<section id="estudios" class="raya">
   <div class="envoltura">
-    <div class="cabeza aparece">
-      <div class="num">05</div>
-      <div><h2 data-t="h_est">Estudios y certificaciones</h2></div>
+    <div class="cabeza">
+      <h2 data-t="h_est">Estudios y certificaciones</h2>
     </div>
     <div class="dos">
-      <div class="tarjeta aparece">
+      <div class="tarjeta">
         <span class="rol" data-t="e_tit">Título</span>
         <h3 data-t="e_h">Ingeniería en Informática</h3>
-        <span class="fecha">INACAP · 2009 — 2014</span>
+        <span class="fecha">INACAP, 2009 – 2014</span>
         <span class="rol" style="margin-top:14px" data-t="e_hab">Cómo trabajo</span>
         <ul class="habilidades">
           <li data-t="hab_1">Liderazgo técnico</li><li data-t="hab_2">Gestión ágil</li><li>Scrum</li><li>Jira</li><li data-t="hab_3">Desarrollo full stack</li><li data-t="hab_4">Nube</li><li data-t="hab_5">Seguridad</li><li data-t="hab_6">Producto</li><li data-t="hab_7">IA aplicada</li><li data-t="hab_8">Agentes y MCP</li><li data-t="hab_9">CRM y ventas</li>
         </ul>
       </div>
-      <div class="tarjeta aparece">
+      <div class="tarjeta">
         <span class="rol" data-t="e_cert">Certificaciones y cursos</span>
         <ul class="lista-certs">
           <li><span data-t="c_1">Seguridad informática avanzada</span></li>
@@ -492,17 +646,16 @@ button.boton{font-family:var(--sans)}
   </div>
 </section>
 
-<section id="contacto">
+<section id="contacto" class="raya">
   <div class="envoltura contacto">
-    <div class="aparece">
-      <div class="num" style="margin-bottom:10px">06</div>
+    <div>
       <h2 data-t="h_cont">Conversemos.</h2>
-      <p class="bajada" style="margin-top:18px" data-t="p_cont">Producto, tecnología, deporte o código abierto: si quieres colaborar con algo, escríbeme.</p>
+      <p class="bajada" data-t="p_cont">Producto, tecnología, deporte o código abierto: si quieres colaborar con algo, escríbeme.</p>
     </div>
-    <div class="enlaces-contacto aparece">
-      <a href="https://www.linkedin.com/in/davidacp" target="_blank" rel="me noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>LinkedIn<span>in/davidacp</span></a>
-      <a href="https://github.com/soydavidcornejo" target="_blank" rel="me noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub<span>soydavidcornejo</span></a>
-      <a id="correo" href="#contacto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></svg><span data-t="correo" style="margin:0;color:inherit;font-weight:600;font-size:inherit">Correo</span><span id="correo-txt" data-t="correo_ver">Toca para verlo</span></a>
+    <div class="enlaces-contacto">
+      <a href="https://www.linkedin.com/in/davidacp" target="_blank" rel="me noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>LinkedIn<span class="dato">in/davidacp</span></a>
+      <a href="https://github.com/soydavidcornejo" target="_blank" rel="me noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub<span class="dato">soydavidcornejo</span></a>
+      <a id="correo" href="#contacto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></svg><span data-t="correo">Correo</span><span class="dato" id="correo-txt" data-t="correo_ver">Toca para verlo</span></a>
     </div>
   </div>
 </section>
@@ -510,18 +663,49 @@ button.boton{font-family:var(--sans)}
 
 <footer>
   <div class="envoltura">
-    <span>© <span id="anio">2026</span> David Cornejo · Santiago de Chile</span>
-    <span data-t="pie">Página hecha a mano, sin cookies ni seguimiento.</span>
+    <p class="firma-pie" id="firma-pie"><svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><defs><linearGradient id="corazon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e040fb"/><stop offset="1" stop-color="#18acfe"/></linearGradient></defs><path d="M17.4 28.6C10.2 23.7 4.6 19 4.9 12.6c.2-3.9 3.1-6.4 6.3-6.1 2.6.2 4.6 2.1 5.6 4.9.9-3.1 3.2-5.3 6.1-5.2 3.4.1 5.9 3 5.5 6.9-.5 5.6-5.6 10.1-11.2 14.2-.5.4-.9.1-.6-.4" stroke="url(#corazon)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-t="pie_firma">Hecho a mano en Santiago, con cariño.</span></p>
+    <p data-t="pie">Sin cookies ni seguimiento.</p>
+    <p>© <span id="anio">2026</span> David Cornejo</p>
   </div>
 </footer>
 
 <script>
 (function () {
   "use strict";
-  document.body.classList.remove("sin-js");
   const EN = {
-    nav_ia: "AI", ver_ia: "How I work with AI", cv: "Download CV",
-    f_enf: "Focus", f_enf_v: "AI products · Agents · MCP",
+    saltar: "Skip to content", secciones: "Sections", resumen: "Summary", tema: "Switch between light and dark mode",
+    nav_porque: "Why", nav_ia: "AI", nav_proy: "Projects", nav_tray: "Experience", nav_cont: "Contact",
+    saludo: "Hi, I'm David.",
+    titulo: "I build products with AI, from idea to production.",
+    bajada: "12+ years in technology. Today I'm <b>Tech Lead at BancoEstado</b>, <b>CEO and co-founder of Zyvoi</b>, and I build <b>open-source apps working with AI agents</b>: fast to test ideas, rigorous to take them to production.",
+    ver_ia: "How I work with AI", cv: "Download CV",
+    retrato_alt: "David Cornejo smiling, wearing a purple Zyvoi T-shirt",
+    estado: "Building Zyvoi and five open apps",
+    f_enf: "Focus", f_enf_v: "AI products, agents and MCP",
+    f_ahora: "Now", f_ahora_v: "Tech Lead at BancoEstado<br>CEO & co-founder of Zyvoi",
+    f_exp: "Experience", f_exp_v: "12+ years in technology",
+    f_est: "Education", f_est_v: "Computer Engineering, INACAP",
+    f_idi: "Languages", f_idi_v: "Native Spanish, professional English",
+    h_porque: "Why I do what I do",
+    pq_1: "I start at home. I'm from Santiago, married and a dad of three. Almost everything I build began as something we were missing ourselves:",
+    pq_repasa: "<b>Repasa</b> was born so my kids could study from a photo of their notebook.",
+    pq_alcancia: "<b>Alcancía</b>, to put our household finances in order.",
+    pq_minuta: "<b>Minuta</b>, to get better in my meetings.",
+    pq_2: "I believe your data is yours. That's why my apps keep everything on your computer and work with your own AI, not one of mine.",
+    pq_3: "And I believe sport brings people together. That's why Zyvoi exists: so more people play and get to know each other through sport.",
+    zy_rol: "I've been CEO and co-founder since May 2025.",
+    zy_h: "So more people play and get to know each other through sport.",
+    z_p: "A Chilean app to find games, build teams and book courts: football, padel, tennis, basketball and more.",
+    zy_dep: "Sports", d_fut: "Football", d_pad: "Padel", d_ten: "Tennis", d_bas: "Basketball",
+    zf1: "Games nearby, at your level", zf1p: "Find or create games by distance and skill level.",
+    zf2: "ELO ranking", zf2p: "Each sport with its own ranking: regional, national and global.",
+    zf3: "Court booking", zf3p: "Book the court right from the app.",
+    zf4: "Teams", zf4p: "Build your team or join one.",
+    zf5: "Sharing", zf5p: "Share the game to fill the open spots.",
+    zr_p: "For sports venues: courts, schedules and prices, bookings and payments in one place.",
+    zy_ios: "Download on the App Store",
+    zy_alt1: "The “My games” screen of the Zyvoi app, with sport filters and the Create game button",
+    zy_alt2: "The “Ranking” screen of the Zyvoi app: football players in the Santiago Metropolitan Region with their ranking, win rate and games played",
     h_ia: "How I work in the AI era",
     p_ia: "Boris Cherny, creator of Claude Code at Anthropic, argues that with AI, teams organize less around job titles (frontend, backend, design) and more around five ways of contributing. Here's how I spread across them:",
     fuente: "The five archetypes, per Inc.", fuerte: "My strength",
@@ -537,28 +721,15 @@ button.boton{font-family:var(--sans)}
     k4: "Local AI", k4p: "On-device transcription with whisper.cpp: audio never leaves the machine.",
     k5: "Operations with agents", k5p: "Sales, content and operations run with agent workflows and logs that learn from every result.",
     k6: "Security first", k6p: "Pentesting and ethical hacking training applied to agents: keys in the Keychain, read-only access and no servers of our own.",
-    hab_7: "Applied AI", hab_8: "Agents & MCP", hab_9: "CRM & sales",
-    c_5: "Tech Sales Specialist 360", c_6: "SDR techniques and tools", c_7: "Introduction to the SDR role",
-    saltar: "Skip to content", nav_hoy: "Now", nav_proy: "Projects", nav_tray: "Experience", nav_est: "Education", nav_cont: "Contact",
-    tema: "Switch between light and dark mode",
-    ante: "Santiago, Chile · Tech Lead · CEO of Zyvoi",
-    titulo: "I build products with AI, <em>from idea to production</em>.",
-    bajada: "12+ years in technology. Today I'm <b>Tech Lead at BancoEstado</b>, <b>CEO and co-founder of Zyvoi</b>, and I build <b>open-source apps working with AI agents</b>: fast to test ideas, rigorous to take them to production.",
-    ver_proy: "See projects", escribeme: "Get in touch",
-    estado: "Building Zyvoi and five open apps",
-    f_ahora: "Now", f_ahora_v: "Tech Lead · BancoEstado<br>CEO & co-founder · Zyvoi",
-    f_exp: "Experience", f_exp_v: "12+ years in technology",
-    f_est: "Education", f_est_v: "Computer Engineering, INACAP",
-    f_idi: "Languages", f_idi_v: "Native Spanish · Professional English",
     h_hoy: "What I do today", p_hoy: "Three fronts: technology for a bank used across Chile, a sports startup and open software for anyone.",
-    z_rol: "CEO & co-founder", z_fecha: "May 2025 — today",
-    z_p: "A Chilean app to find games, build teams and book courts: football, padel, tennis, basketball and more.",
+    z_rol: "CEO & co-founder", z_fecha: "May 2025 – today",
+    z_corto: "The sports startup I lead: product, business and selling directly to venues.",
     z_1: "Vision, business model and product decisions", z_2: "Nearby games by skill level, with ELO ranking",
-    z_3: "Zyvoi Recintos: bookings and management for sports venues", z_ios: "App Store",
-    b_fecha: "April 2022 — today", b_p: "I lead development on the Compraquí team, the bank's payment gateway.",
+    z_3: "Zyvoi Recintos: bookings and management for sports venues", z_ver: "Meet Zyvoi",
+    b_fecha: "April 2022 – today", b_p: "I lead development on the Compraquí team, the bank's payment gateway.",
     b_1: "Architecture and technical leadership of the team", b_2: "Payment integrations, microservices and cloud data processes",
     b_3: "Agile with Scrum and Jira",
-    o_rol: "Creator", o_h: "Open source", o_p: "Five desktop apps, free forever, no accounts or ads.",
+    o_rol: "Creator", o_h: "Open source", o_fecha: "2026 – today", o_p: "Five desktop apps, free forever, no accounts or ads.",
     o_1: "Your data lives on your computer, in open formats", o_2: "They work with your own AI: Claude, ChatGPT or Gemini",
     o_3: "Built in public, with the community", o_ver: "See all five",
     h_proy: "Open-source projects", p_proy: "Tools my family and I needed. I publish them so anyone can use, review and improve them.",
@@ -570,75 +741,82 @@ button.boton{font-family:var(--sans)}
     repasa: "Study from a photo of the school notebook: summary, test-style questions and daily review.",
     sitio: "Website", codigo: "Code",
     h_tray: "Experience", p_tray: "From tech support to leading teams: twelve-plus years building and running software.",
-    t_zy: "2025 — today", t_zy_h: "CEO & co-founder <span>· Zyvoi</span>", o_fecha: "2026 — today", t_zy_p: "Strategy, product and growth of a sports community app built for Latin America.",
-    t_be: "2022 — today", t_be_p: "Technical leadership in payments: Compraquí, integrations and cloud services.",
+    t_zy: "2025 – today", t_zy_h: "CEO & co-founder <span>· Zyvoi</span>", t_zy_p: "Strategy, product and growth of a sports community app built for Latin America.",
+    t_be: "2022 – today", t_be_p: "Technical leadership in payments: Compraquí, integrations and cloud services.",
     t_it: "IT Manager <span>· Incobech</span>", t_inc_p: "Processes, custom web applications and adopting new tools.",
     t_it2: "IT Manager <span>· Comercial IP</span>", t_cip_p: "Built the department from scratch: networks, servers, ERP, website and moving services to the cloud.",
     t_sop: "Technical Support Specialist <span>· Adexus</span>",
     h_est: "Education and certifications", e_tit: "Degree", e_h: "Computer Engineering", e_hab: "How I work",
     hab_1: "Technical leadership", hab_2: "Agile management", hab_3: "Full-stack development", hab_4: "Cloud", hab_5: "Security", hab_6: "Product",
+    hab_7: "Applied AI", hab_8: "Agents & MCP", hab_9: "CRM & sales",
     e_cert: "Certifications and courses", c_1: "Advanced IT security", c_2: "Pentesting fundamentals", c_3: "Ethical hacking", c_4: "Docker fundamentals", curso: "course",
+    c_5: "Tech Sales Specialist 360", c_6: "SDR techniques and tools", c_7: "Introduction to the SDR role",
     h_cont: "Let's talk.", p_cont: "Product, technology, sports or open source: if you'd like to work on something together, write to me.",
     correo: "Email", correo_ver: "Tap to show",
-    pie: "Handmade page, no cookies or tracking."
+    pie_firma: "Handmade in Santiago, with love.", pie: "No cookies or tracking."
   };
-  // Español: el texto que ya está en la página.
-  const ES = {};
+  // Español: el texto que ya está en la página (contenido, aria-label y alt).
+  const ES = {}, ES_ARIA = {}, ES_ALT = {};
   document.querySelectorAll("[data-t]").forEach((el) => { ES[el.dataset.t] = el.innerHTML; });
-  ES.tema = document.getElementById("tema").getAttribute("aria-label");
+  document.querySelectorAll("[data-t-aria]").forEach((el) => { ES_ARIA[el.dataset.tAria] = el.getAttribute("aria-label"); });
+  document.querySelectorAll("[data-t-alt]").forEach((el) => { ES_ALT[el.dataset.tAlt] = el.getAttribute("alt"); });
   const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
   const leer = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 
+  let correoVisible = false;
   let idioma = new URLSearchParams(location.search).get("lang") || leer("idioma") || ((navigator.language || "es").toLowerCase().startsWith("es") ? "es" : "en");
   if (idioma !== "en") idioma = "es";
   function aplicarIdioma() {
-    const d = idioma === "en" ? EN : ES;
-    document.querySelectorAll("[data-t]").forEach((el) => { const v = d[el.dataset.t]; if (v != null && !(el.id === "correo-txt" && correoVisible)) el.innerHTML = v; });
+    const en = idioma === "en";
+    document.querySelectorAll("[data-t]").forEach((el) => {
+      const v = en ? EN[el.dataset.t] : ES[el.dataset.t];
+      if (v != null && !(el.id === "correo-txt" && correoVisible)) el.innerHTML = v;
+    });
+    document.querySelectorAll("[data-t-aria]").forEach((el) => { const k = el.dataset.tAria; el.setAttribute("aria-label", en ? EN[k] : ES_ARIA[k]); });
+    document.querySelectorAll("[data-t-alt]").forEach((el) => { const k = el.dataset.tAlt; el.setAttribute("alt", en ? EN[k] : ES_ALT[k]); });
     document.documentElement.lang = idioma;
     const b = document.getElementById("idioma");
-    b.textContent = idioma === "en" ? "ES" : "EN";
-    b.setAttribute("aria-label", idioma === "en" ? "Leer en español" : "Read in English");
-    document.getElementById("tema").setAttribute("aria-label", d.tema);
-    document.title = idioma === "en" ? "David Cornejo — AI products, Tech Lead and CEO of Zyvoi" : "David Cornejo — Producto con IA, Tech Lead y CEO de Zyvoi";
+    b.textContent = en ? "ES" : "EN";
+    b.setAttribute("lang", en ? "es" : "en");
+    b.setAttribute("aria-label", en ? "Leer en español" : "Read in English");
+    document.title = en ? "David Cornejo — AI products, Tech Lead and CEO of Zyvoi" : "David Cornejo — Producto con IA, Tech Lead y CEO de Zyvoi";
   }
   document.getElementById("idioma").addEventListener("click", () => { idioma = idioma === "en" ? "es" : "en"; guardar("idioma", idioma); aplicarIdioma(); });
 
   // Tema claro/oscuro: sigue al sistema hasta que la persona elige.
   const raiz = document.documentElement;
-  const elegido = leer("tema"); if (elegido) raiz.dataset.tema = elegido;
+  const elegido = leer("tema"); if (elegido === "claro" || elegido === "oscuro") raiz.dataset.tema = elegido;
   document.getElementById("tema").addEventListener("click", () => {
     const oscuroAhora = raiz.dataset.tema ? raiz.dataset.tema === "oscuro" : matchMedia("(prefers-color-scheme: dark)").matches;
     raiz.dataset.tema = oscuroAhora ? "claro" : "oscuro"; guardar("tema", raiz.dataset.tema);
   });
 
   // Correo: se arma al tocarlo, para que los robots que recolectan direcciones no lo lean del HTML.
-  let correoVisible = false;
   const correo = document.getElementById("correo");
-  correo.addEventListener("click", (ev) => {
+  const mostrarCorreo = () => {
     const dir = ["soydavidcornejo", "gmail.com"].join("@");
-    if (!correoVisible) {
-      ev.preventDefault(); correoVisible = true;
-      document.getElementById("correo-txt").textContent = dir;
-      correo.href = "mailto:" + dir;
-    }
-  });
+    correoVisible = true;
+    document.getElementById("correo-txt").textContent = dir;
+    correo.href = "mailto:" + dir;
+  };
+  correo.addEventListener("click", (ev) => { if (!correoVisible) { ev.preventDefault(); mostrarCorreo(); } });
 
   // En el CV impreso el correo va escrito.
-  addEventListener("beforeprint", () => { if (!correoVisible) { correoVisible = true; const dir = ["soydavidcornejo", "gmail.com"].join("@"); document.getElementById("correo-txt").textContent = dir; correo.href = "mailto:" + dir; } });
-  document.getElementById("imprimir").addEventListener("click", () => { document.querySelectorAll(".aparece").forEach((el) => el.classList.add("visible")); print(); });
+  addEventListener("beforeprint", () => { if (!correoVisible) mostrarCorreo(); });
+  document.getElementById("imprimir").addEventListener("click", () => print());
   aplicarIdioma();
   document.getElementById("anio").textContent = new Date().getFullYear();
 
-  // Barra con borde al bajar y entrada suave de las secciones.
+  // Barra con borde al bajar.
   const barra = document.getElementById("barra");
   addEventListener("scroll", () => barra.classList.toggle("con-borde", scrollY > 8), { passive: true });
-  if ("IntersectionObserver" in window) {
-    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" });
-    document.querySelectorAll(".aparece").forEach((el) => io.observe(el));
-  } else document.querySelectorAll(".aparece").forEach((el) => el.classList.add("visible"));
-  const saltar = document.getElementById("saltar");
-  saltar.addEventListener("focus", () => { saltar.style.left = "12px"; saltar.style.top = "12px"; saltar.style.zIndex = 10; });
-  saltar.addEventListener("blur", () => { saltar.style.left = "-9999px"; });
+
+  // El corazón de la firma se dibuja una vez, cuando el pie aparece.
+  const firma = document.getElementById("firma-pie");
+  if ("IntersectionObserver" in window && matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+    const io = new IntersectionObserver((es) => { if (es[0].isIntersecting) { firma.classList.add("dibujar"); io.disconnect(); } }, { threshold: .6 });
+    io.observe(firma);
+  }
 })();
 </script>
 </body>
