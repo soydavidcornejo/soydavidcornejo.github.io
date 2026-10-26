@@ -222,7 +222,7 @@ h3{text-wrap:balance}
 .vo-nodos circle{fill:var(--tarjeta);stroke:var(--acento);stroke-width:2.5}
 .vo-num text{font:750 21px var(--letra);fill:var(--acento)}
 .vo-etq{font:650 18px var(--letra);fill:var(--tinta)}
-.vo-centro{font:760 36px var(--letra);fill:var(--tinta);letter-spacing:-.03em}
+.vo-centro{font:700 25px var(--letra);fill:var(--tinta);letter-spacing:-.03em}
 .pasos{list-style:none;margin:0;padding:0;counter-reset:paso}
 .pasos li{counter-increment:paso;display:grid;grid-template-columns:34px minmax(0,1fr);gap:3px 14px;padding:16px 0;border-top:1px solid var(--linea)}
 .pasos li::before{content:counter(paso);grid-row:span 2;width:32px;height:32px;border-radius:50%;border:2px solid var(--acento);color:var(--acento);display:grid;place-items:center;font:750 15px/1 var(--letra)}
@@ -420,7 +420,7 @@ footer p{margin:0}
     <nav class="secciones" aria-label="Secciones" data-t-aria="secciones">
       <a href="#ayuda" data-t="nav_ayuda">Servicios</a>
       <a href="#zyvoi">Zyvoi</a>
-      <a href="#estrategia" data-t="nav_estr">Estrategia</a>
+      <a href="#estrategia" data-t="nav_estr">Cómo trabajo</a>
       <a href="#metas" data-t="nav_metas">Metas</a>
       <a href="#proyectos" data-t="nav_proy">Proyectos</a>
       <a href="#trayectoria" data-t="nav_tray">Trayectoria</a>
@@ -537,8 +537,8 @@ footer p{margin:0}
 <section id="estrategia" class="raya">
   <div class="envoltura">
     <div class="cabeza">
-      <h2 data-t="h_estr">Mi estrategia: un flywheel bottom-up</h2>
-      <p data-t="p_estr">Parto desde abajo: problemas concretos que resuelvo, publico y llevo a escala. Cada paso alimenta al siguiente.</p>
+      <h2 data-t="h_estr">Cada proyecto hace más fuerte al siguiente</h2>
+      <p data-t="p_estr">Así trabajo: parto de un problema real y cada vuelta deja algo que me sirve para la próxima.</p>
     </div>
     <div class="volante">
       <svg class="vo-svg" viewBox="0 0 560 440" role="img" aria-labelledby="vo-titulo">
@@ -552,7 +552,7 @@ footer p{margin:0}
           <path d="M321.3 75.8 A150 150 0 0 1 421.0 168.7"/><path d="M424.2 261.3 A150 150 0 0 1 331.3 361.0"/>
           <path d="M238.7 364.2 A150 150 0 0 1 139.0 271.3"/><path d="M135.8 178.7 A150 150 0 0 1 228.7 79.0"/>
         </g>
-                <text class="vo-centro" x="280" y="230" text-anchor="middle">bottom-up</text>
+                <text class="vo-centro" text-anchor="middle"><tspan x="280" y="196" data-t="vo_c1">Producto</tspan><tspan x="280" y="230" data-t="vo_c2">Comunidad</tspan><tspan x="280" y="264" data-t="vo_c3">Aprendizaje</tspan></text>
         <g class="vo-nodos">
           <circle cx="280" cy="70" r="28"/><circle cx="430" cy="220" r="28"/><circle cx="280" cy="370" r="28"/><circle cx="130" cy="220" r="28"/>
         </g>
@@ -564,10 +564,10 @@ footer p{margin:0}
       </svg>
       <div>
         <ol class="pasos">
-          <li><h3 data-t="ps1">Parto de un problema real</h3><p data-t="ps1p">En la casa, en el trabajo o en la cancha: algo que a mí o a alguien cercano de verdad le hace falta.</p></li>
-          <li><h3 data-t="ps2">Lo construyo rápido y lo publico abierto</h3><p data-t="ps2p">Con agentes de IA llego rápido a una versión que se puede usar, con pruebas automáticas, y la publico como código abierto.</p></li>
-          <li><h3 data-t="ps3">La gente lo usa, lo mejora y me dice qué falta</h3><p data-t="ps3p">Cada persona que lo usa lo pone a prueba, propone mejoras y muestra lo que todavía no resuelve.</p></li>
-          <li><h3 data-t="ps4">Lo aprendido se aplica a escala</h3><p data-t="ps4p">Harness engineering, MCP y producto llegan a Zyvoi y a mi trabajo como Tech Lead, y eso revela nuevos problemas reales.</p></li>
+          <li><h3 data-t="ps1">Un problema real</h3><p data-t="ps1p">Mis hijos estudiaban desde la foto del cuaderno y no había una herramienta simple para eso. Así nació Repasa.</p></li>
+          <li><h3 data-t="ps2">Lo construyo y lo abro</h3><p data-t="ps2p">Con agentes de IA llego a una versión usable, con pruebas automáticas, y la publico como código abierto. Así salieron las cinco apps.</p></li>
+          <li><h3 data-t="ps3">Uso real, aprendizaje real</h3><p data-t="ps3p">Al conectar Alcancía a una cuenta real de Mercado Pago aparecieron las compras en cuotas y los saldos que no cuadraban. Hoy la app los entiende.</p></li>
+          <li><h3 data-t="ps4">Lo llevo a escala</h3><p data-t="ps4p">Lo aprendido en agentes, MCP y producto llega a Zyvoi y a mi trabajo como Tech Lead, y abre los próximos problemas por resolver.</p></li>
         </ol>
         <p class="cierre-volante" data-t="vo_cierre">Cada vuelta deja un producto, una comunidad y un aprendizaje.</p>
       </div>
@@ -792,7 +792,7 @@ footer p{margin:0}
     of2: "From idea to a launched product in weeks", of2p: "From prototype to production, with automated tests and published releases.", of2e: "Zyvoi, launched on iOS and Android",
     of3: "Technical leadership of product teams", of3p: "Architecture, engineering practices and a team that delivers.", of3e: "Tech Lead at BancoEstado, with a team of 3 developers",
     saltar: "Skip to content", secciones: "Sections", tema: "Switch between light and dark mode",
-    nav_estr: "Strategy", nav_metas: "Goals", nav_proy: "Projects", nav_tray: "Experience", nav_cont: "Contact",
+    nav_estr: "How I work", nav_metas: "Goals", nav_proy: "Projects", nav_tray: "Experience", nav_cont: "Contact",
     tesis: "I build digital products people trust.",
     pi1: "Financial services", pi1p: "6+ years building software for banking, pensions and credit: BancoEstado, pension funds (AFP, at SONDA) and auto financing at Tanner (through Amaris Consulting).",
     pi2: "Sport and community", pi2p: "Co-founder and CEO of Zyvoi: so more people play and coordinate less.",
@@ -821,15 +821,16 @@ footer p{margin:0}
     zy_ios: "Download Zyvoi",
     zy_alt1: "The “My games” screen of the Zyvoi app, with sport filters and the Create game button",
     zy_alt2: "The “Ranking” screen of the Zyvoi app: football players in the Santiago Metropolitan Region with their ranking, win rate and games played",
-    h_estr: "My strategy: a bottom-up flywheel",
-    p_estr: "I start from the ground up: concrete problems I solve, publish and take to scale. Each step feeds the next.",
+    vo_c1: "Product", vo_c2: "Community", vo_c3: "Learning",
+    h_estr: "Every project makes the next one stronger",
+    p_estr: "This is how I work: I start from a real problem, and every turn leaves something I use in the next one.",
     vo_titulo: "A four-step cycle: real problem, build and open, use and learning, apply at scale; and back to the first step.",
     vo_e1: "Real problem", vo_e2: '<tspan x="470">Build</tspan><tspan x="470" dy="19">and open</tspan>',
     vo_e3: "Use and learning", vo_e4: '<tspan x="90">Apply</tspan><tspan x="90" dy="19">at scale</tspan>',
-    ps1: "I start from a real problem", ps1p: "At home, at work or on the court: something I or someone close to me genuinely needs.",
-    ps2: "I build it fast and publish it in the open", ps2p: "With AI agents I reach a usable version fast, with automated tests, and I release it as open source.",
-    ps3: "People use it, improve it and tell me what's missing", ps3p: "Everyone who uses it puts it to the test, suggests improvements and shows what it doesn't solve yet.",
-    ps4: "What I learn is applied at scale", ps4p: "Harness engineering, MCP and product reach Zyvoi and my work as a Tech Lead, and that reveals new real problems.",
+    ps1: "A real problem", ps1p: "My kids studied from photos of their notebooks and there was no simple tool for it. That's how Repasa was born.",
+    ps2: "I build it and open it", ps2p: "With AI agents I reach a usable version, with automated tests, and publish it as open source. That's how the five apps came out.",
+    ps3: "Real use, real learning", ps3p: "Connecting Alcancía to a real Mercado Pago account surfaced installment purchases and balances that didn't add up. Today the app understands them.",
+    ps4: "I take it to scale", ps4p: "What I learn about agents, MCP and product reaches Zyvoi and my work as a Tech Lead, and opens the next problems to solve.",
     vo_cierre: "Every turn leaves behind a product, a community and something learned.",
     h_motor: "The engine: what I work with today", p_motor: "What keeps the cycle turning fast and under control. Each piece, with its proof.",
     k1p: "I design the environment agents work in: one guide per project (AGENTS.md), scoped tools and permissions, and tests that gate every change.",
