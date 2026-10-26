@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>David Cornejo — Tech Lead, CEO de Zyvoi y apps de código abierto</title>
-<meta name="description" content="Ingeniero en Informática en Santiago de Chile. Tech Lead en BancoEstado, CEO y cofundador de Zyvoi, y creador de Minuta, Graba, Corta, Alcancía y Repasa: apps gratis y de código abierto que dejan tus datos en tu computador.">
+<title>David Cornejo — Producto con IA, Tech Lead y CEO de Zyvoi</title>
+<meta name="description" content="Construyo productos con IA, de la idea a producción. Ingeniero en Informática en Santiago de Chile: Tech Lead en BancoEstado, CEO y cofundador de Zyvoi, y creador de Minuta, Graba, Corta, Alcancía y Repasa: apps gratis y de código abierto que dejan tus datos en tu computador.">
 <link rel="canonical" href="https://soydavidcornejo.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#151412" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="David Cornejo — Tech Lead, CEO de Zyvoi y apps de código abierto">
-<meta property="og:description" content="Construyo productos: pagos en BancoEstado, deporte en Zyvoi y cinco apps abiertas que respetan tus datos.">
+<meta property="og:title" content="David Cornejo — Producto con IA, Tech Lead y CEO de Zyvoi">
+<meta property="og:description" content="Construyo productos con IA, de la idea a producción: pagos en BancoEstado, deporte en Zyvoi y cinco apps abiertas hechas con agentes de IA.">
 <meta property="og:url" content="https://soydavidcornejo.github.io/">
 <meta property="og:image" content="https://soydavidcornejo.github.io/img/compartir.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -25,6 +25,7 @@
  "alumniOf":{"@type":"CollegeOrUniversity","name":"INACAP"},
  "address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"},
  "knowsLanguage":["es","en"],
+ "knowsAbout":["Inteligencia artificial aplicada","Agentes de IA","Model Context Protocol","Pagos","Liderazgo técnico","Producto"],
  "sameAs":["https://www.linkedin.com/in/davidacp","https://github.com/soydavidcornejo"]}
 </script>
 <style>
@@ -162,6 +163,80 @@ h2{font:500 clamp(30px,4vw,42px)/1.08 var(--serif);letter-spacing:-.025em;margin
 footer{border-top:1px solid var(--linea);padding:28px 0 40px;color:var(--suave);font-size:13.5px}
 footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
 
+/* IA */
+.fuente{margin-top:10px!important;font-size:14px}
+.arquetipos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media (max-width:1000px){.arquetipos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.arquetipos{grid-template-columns:minmax(0,1fr)}}
+.arquetipo{border:1px solid var(--linea);border-radius:18px;padding:20px;background:var(--papel-2);display:flex;flex-direction:column;gap:10px}
+.arquetipo.fuerte{background:var(--tarjeta);box-shadow:var(--sombra);border-color:color-mix(in srgb,var(--acento) 45%,var(--linea))}
+.arq-cab{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.arq-num{font:500 13px/1 var(--mono);color:var(--suave);width:100%}
+.arquetipo h3{font:500 22px/1.1 var(--serif);margin:0;letter-spacing:-.015em}
+.arq-en{font:12px/1 var(--mono);color:var(--suave);width:100%}
+html[lang="en"] .arq-en{display:none}
+.marca-fuerte{width:100%;font:600 11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--acento);margin-top:4px}
+.arquetipo p{margin:0;color:var(--suave);font-size:15px}
+.sub{font:500 26px/1.2 var(--serif);letter-spacing:-.02em;margin:48px 0 18px}
+.kit{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--linea)}
+@media (max-width:860px){.kit{grid-template-columns:minmax(0,1fr)}}
+.kit li{padding:20px 22px 20px 0;border-bottom:1px solid var(--linea)}
+.kit h3{font:600 16px/1.3 var(--sans);margin:0 0 6px}
+.kit p{margin:0;color:var(--suave);font-size:15px}
+button.boton{font-family:var(--sans)}
+
+/* Imprimir = CV en PDF (compacto: el ancho de A4 caería en los diseños de celular) */
+@media print{
+  @page{size:A4;margin:12mm 13mm}
+  :root{--papel:#fff;--papel-2:#fff;--tarjeta:#fff;--tinta:#111;--suave:#454545;--linea:#d4d4d4;--acento:#9a3412;--sombra:none}
+  body{font-size:8.6pt;line-height:1.42}
+  header.barra,.acciones,.proyecto .foto,.principios,.fuente,#saltar,footer,.punto,.estado,.num,.cabeza p,.tarjeta .pie,.proyecto .pie,.marca-fuerte{display:none!important}
+  .envoltura{padding:0!important;max-width:none}
+  .aparece{opacity:1!important;transform:none!important}
+  section{padding:9pt 0 0!important;border-top:1px solid var(--linea)}
+  .portada{padding:0 0 8pt!important;grid-template-columns:1.5fr 1fr!important;gap:16pt!important;align-items:start}
+  .antetitulo{margin-bottom:6pt;font-size:7.5pt}
+  h1{font-size:22pt!important;margin:0 0 6pt}
+  .bajada{font-size:9.5pt!important;margin:0}
+  .ficha{padding:8pt 10pt;border-radius:8pt}
+  .ficha dl{gap:3pt 8pt;font-size:8.2pt}
+  .cabeza{grid-template-columns:1fr!important;margin-bottom:6pt!important;gap:0!important}
+  h2{font-size:14pt!important}
+  .arquetipos{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:5pt}
+  .arquetipo{padding:6pt 7pt;border-radius:7pt;gap:3pt;background:#fff}
+  .arquetipo h3{font-size:11pt}
+  .arquetipo p,.kit p,.tarjeta p,.tarjeta ul,.proyecto p,.linea-tiempo p{font-size:8pt}
+  .sub{font-size:11pt;margin:8pt 0 4pt}
+  .kit{grid-template-columns:repeat(3,minmax(0,1fr))!important;border-top:0}
+  .kit li{padding:3pt 8pt 3pt 0;border:0}
+  .kit h3{font-size:8.6pt;margin:0}
+  .ahora{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6pt}
+  .tarjeta{padding:7pt 9pt;border-radius:8pt;gap:3pt}
+  .tarjeta h3{font-size:12pt}
+  .tarjeta ul{padding-left:12pt}
+  .proyectos{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:5pt}
+  .proyecto,.proyecto:nth-child(-n+2){grid-column:auto!important;border-radius:7pt}
+  .proyecto .cuerpo{padding:6pt 7pt;gap:3pt}
+  .proyecto h3{font-size:11pt}
+  .proyecto .titulo img{width:16pt;height:16pt}
+  .licencia{display:none}
+  .linea-tiempo li{grid-template-columns:70pt minmax(0,1fr)!important;padding:0 0 4pt 12pt!important;gap:0 8pt}
+  .linea-tiempo li::before{top:3pt;width:7pt;height:7pt;left:-4.5pt}
+  .linea-tiempo h3{font-size:8.8pt}
+  .linea-tiempo .cuando{font-size:7.8pt}
+  .dos{grid-template-columns:1fr 1fr!important;gap:6pt}
+  .lista-certs li{padding:2pt 0}
+  .habilidades li{padding:1pt 6pt;font-size:7.8pt}
+  .contacto{grid-template-columns:1fr 1fr!important;gap:10pt}
+  .contacto h2{font-size:14pt!important}
+  .contacto .bajada{display:none}
+  .enlaces-contacto{gap:3pt}
+  .enlaces-contacto a{padding:4pt 8pt;border-radius:6pt;font-size:8.5pt}
+  .tarjeta,.proyecto,.arquetipo,.ficha,.linea-tiempo li{break-inside:avoid}
+  #proyectos{break-before:page}
+  a{text-decoration:none}
+}
+
 /* Entrada suave */
 .aparece{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
 .aparece.visible{opacity:1;transform:none}
@@ -175,6 +250,7 @@ footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space
   <div class="envoltura">
     <a class="marca" href="#arriba" aria-label="David Cornejo"><span class="mono" aria-hidden="true">DC</span>David Cornejo</a>
     <nav class="secciones" aria-label="Secciones">
+      <a href="#ia" data-t="nav_ia">IA</a>
       <a href="#hoy" data-t="nav_hoy">Hoy</a>
       <a href="#proyectos" data-t="nav_proy">Proyectos</a>
       <a href="#trayectoria" data-t="nav_tray">Trayectoria</a>
@@ -192,18 +268,19 @@ footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space
 <div class="envoltura" id="arriba">
   <div class="portada">
     <div>
-      <p class="antetitulo" data-t="ante">Santiago de Chile · Ingeniero en Informática</p>
-      <h1 data-t="titulo">Construyo productos que la gente <em>usa de verdad</em>.</h1>
-      <p class="bajada" data-t="bajada">Soy <b>Tech Lead en BancoEstado</b>, <b>CEO y cofundador de Zyvoi</b> —la app para organizar partidos y jugar con más gente— y creo <b>apps gratis y de código abierto</b> que dejan tus datos en tu computador y trabajan con tu propia IA.</p>
+      <p class="antetitulo" data-t="ante">Santiago de Chile · Tech Lead · CEO de Zyvoi</p>
+      <h1 data-t="titulo">Construyo productos con IA, <em>de la idea a producción</em>.</h1>
+      <p class="bajada" data-t="bajada">Más de 12 años en tecnología. Hoy soy <b>Tech Lead en BancoEstado</b>, <b>CEO y cofundador de Zyvoi</b> y creo <b>apps de código abierto trabajando con agentes de IA</b>: rápido para probar ideas, riguroso para llevarlas a producción.</p>
       <div class="acciones">
         <a class="boton principal" href="https://www.linkedin.com/in/davidacp" rel="me noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>LinkedIn</a>
-        <a class="boton" href="#proyectos" data-t="ver_proy">Ver proyectos</a>
-        <a class="boton" href="#contacto" data-t="escribeme">Escríbeme</a>
-      </div>
+        <a class="boton" href="#ia" data-t="ver_ia">Cómo trabajo con IA</a>
+        <button class="boton" type="button" id="imprimir" data-t="cv">Descargar CV</button>
+              </div>
     </div>
     <aside class="ficha" aria-label="Resumen">
       <p class="estado"><span class="punto" aria-hidden="true"></span><span data-t="estado">Construyendo Zyvoi y cinco apps abiertas</span></p>
       <dl>
+        <dt data-t="f_enf">Enfoque</dt><dd data-t="f_enf_v">Producto con IA · Agentes · MCP</dd>
         <dt data-t="f_ahora">Ahora</dt><dd data-t="f_ahora_v">Tech Lead · BancoEstado<br>CEO y cofundador · Zyvoi</dd>
         <dt data-t="f_exp">Experiencia</dt><dd data-t="f_exp_v">Más de 12 años en tecnología</dd>
         <dt data-t="f_est">Estudios</dt><dd data-t="f_est_v">Ingeniería en Informática, INACAP</dd>
@@ -213,10 +290,54 @@ footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space
   </div>
 </div>
 
-<section id="hoy">
+<section id="ia">
   <div class="envoltura">
     <div class="cabeza aparece">
       <div class="num">01</div>
+      <div>
+        <h2 data-t="h_ia">Cómo trabajo en la era de la IA</h2>
+        <p data-t="p_ia">Boris Cherny, creador de Claude Code en Anthropic, plantea que con la IA los equipos se ordenan menos por cargos (frontend, backend, diseño) y más por cinco formas de aportar. Así me reparto entre ellas:</p>
+        <p class="fuente"><a href="https://www.inc.com/ashley-couto/claude-code-startup-needs-employee-archetypes/91370409" target="_blank" rel="noopener" data-t="fuente">Los cinco arquetipos, según Inc.</a></p>
+      </div>
+    </div>
+    <div class="arquetipos">
+        <article class="arquetipo aparece fuerte">
+          <div class="arq-cab"><span class="arq-num">1</span><h3 data-t="a_pro">Prototipador</h3><span class="arq-en">Prototyper</span><span class="marca-fuerte" data-t="fuerte">Mi fuerte</span></div>
+          <p data-t="a_pro_p">Cinco apps de código abierto lanzadas en semanas: de la idea a una versión que la gente puede usar, probando y descartando rápido con agentes de IA.</p>
+        </article>
+        <article class="arquetipo aparece fuerte">
+          <div class="arq-cab"><span class="arq-num">2</span><h3 data-t="a_con">Constructor</h3><span class="arq-en">Builder</span><span class="marca-fuerte" data-t="fuerte">Mi fuerte</span></div>
+          <p data-t="a_con_p">Cuatro años como Tech Lead llevando a producción servicios de pagos en BancoEstado; antes, full stack en SONDA, Amaris y Vigalab.</p>
+        </article>
+        <article class="arquetipo aparece fuerte">
+          <div class="arq-cab"><span class="arq-num">3</span><h3 data-t="a_imp">Impulsor</h3><span class="arq-en">Grower</span><span class="marca-fuerte" data-t="fuerte">Mi fuerte</span></div>
+          <p data-t="a_imp_p">Como CEO de Zyvoi persigo el product-market fit: validar el problema, el modelo de negocio y vender directo a los recintos deportivos.</p>
+        </article>
+        <article class="arquetipo aparece">
+          <div class="arq-cab"><span class="arq-num">4</span><h3 data-t="a_man">Mantenedor</h3><span class="arq-en">Maintainer</span></div>
+          <p data-t="a_man_p">Pagos que no se pueden caer: confiabilidad, integraciones y procesos de datos en la nube que siguen rápidos a medida que crecen.</p>
+        </article>
+        <article class="arquetipo aparece">
+          <div class="arq-cab"><span class="arq-num">5</span><h3 data-t="a_sim">Simplificador</h3><span class="arq-en">Sweeper</span></div>
+          <p data-t="a_sim_p">Lo más simple que funcione: sin dependencias innecesarias, pruebas automáticas en cada cambio y formatos abiertos.</p>
+        </article>
+    </div>
+    <h3 class="sub aparece" data-t="h_kit">IA en la práctica</h3>
+    <ul class="kit">
+<li class="aparece"><h3 data-t="k1">Agentes de programación</h3><p data-t="k1p">Claude Code, Codex y Gemini en el día a día, con agentes revisores de privacidad y de aportes antes de cada cambio.</p></li>
+<li class="aparece"><h3 data-t="k2">Servidores MCP</h3><p data-t="k2p">Conecto la IA de cada persona con sus propios datos: un MCP de solo lectura para Alcancía y herramientas internas para Zyvoi.</p></li>
+<li class="aparece"><h3 data-t="k3">La IA de cada persona</h3><p data-t="k3p">Apps que usan la suscripción del usuario, le muestran a la IA lo mínimo y validan cada respuesta antes de usarla.</p></li>
+<li class="aparece"><h3 data-t="k4">IA local</h3><p data-t="k4p">Transcripción en el computador con whisper.cpp: el audio nunca sale de la máquina.</p></li>
+<li class="aparece"><h3 data-t="k5">Operación con agentes</h3><p data-t="k5p">Ventas, contenido y operación con flujos de agentes y bitácoras que aprenden de cada resultado.</p></li>
+<li class="aparece"><h3 data-t="k6">Seguridad primero</h3><p data-t="k6p">Formación en pentesting y hacking ético aplicada a los agentes: llaves en el Llavero, solo lectura y sin servidores propios.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section id="hoy">
+  <div class="envoltura">
+    <div class="cabeza aparece">
+      <div class="num">02</div>
       <div><h2 data-t="h_hoy">Lo que hago hoy</h2><p data-t="p_hoy">Tres frentes: tecnología para un banco que usa todo Chile, una startup de deporte y software abierto para cualquier persona.</p></div>
     </div>
     <div class="ahora">
@@ -262,7 +383,7 @@ footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space
 <section id="proyectos">
   <div class="envoltura">
     <div class="cabeza aparece">
-      <div class="num">02</div>
+      <div class="num">03</div>
       <div>
         <h2 data-t="h_proy">Proyectos de código abierto</h2>
         <p data-t="p_proy">Herramientas que me hacían falta a mí y a mi familia. Las publico para que cualquiera las use, las revise y las mejore.</p>
@@ -319,7 +440,7 @@ footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space
 <section id="trayectoria">
   <div class="envoltura">
     <div class="cabeza aparece">
-      <div class="num">03</div>
+      <div class="num">04</div>
       <div><h2 data-t="h_tray">Trayectoria</h2><p data-t="p_tray">De soporte técnico a liderar equipos: más de doce años construyendo y operando software.</p></div>
     </div>
     <ol class="linea-tiempo aparece">
@@ -340,7 +461,7 @@ footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space
 <section id="estudios">
   <div class="envoltura">
     <div class="cabeza aparece">
-      <div class="num">04</div>
+      <div class="num">05</div>
       <div><h2 data-t="h_est">Estudios y certificaciones</h2></div>
     </div>
     <div class="dos">
@@ -350,7 +471,7 @@ footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space
         <span class="fecha">INACAP · 2009 — 2014</span>
         <span class="rol" style="margin-top:14px" data-t="e_hab">Cómo trabajo</span>
         <ul class="habilidades">
-          <li data-t="hab_1">Liderazgo técnico</li><li data-t="hab_2">Gestión ágil</li><li>Scrum</li><li>Jira</li><li data-t="hab_3">Desarrollo full stack</li><li data-t="hab_4">Nube</li><li data-t="hab_5">Seguridad</li><li data-t="hab_6">Producto</li>
+          <li data-t="hab_1">Liderazgo técnico</li><li data-t="hab_2">Gestión ágil</li><li>Scrum</li><li>Jira</li><li data-t="hab_3">Desarrollo full stack</li><li data-t="hab_4">Nube</li><li data-t="hab_5">Seguridad</li><li data-t="hab_6">Producto</li><li data-t="hab_7">IA aplicada</li><li data-t="hab_8">Agentes y MCP</li><li data-t="hab_9">CRM y ventas</li>
         </ul>
       </div>
       <div class="tarjeta aparece">
@@ -362,6 +483,9 @@ footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space
           <li><span>CCNA</span><span class="tipo" data-t="curso">curso</span></li>
           <li><span data-t="c_4">Fundamentos de Docker</span></li>
           <li><span>React.js</span><span class="tipo" data-t="curso">curso</span></li>
+          <li><span data-t="c_5">Especialista en Ventas Tech 360</span></li>
+          <li><span data-t="c_6">Técnicas y herramientas para un SDR</span></li>
+          <li><span data-t="c_7">Introducción al rol de SDR</span></li>
         </ul>
       </div>
     </div>
@@ -371,7 +495,7 @@ footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space
 <section id="contacto">
   <div class="envoltura contacto">
     <div class="aparece">
-      <div class="num" style="margin-bottom:10px">05</div>
+      <div class="num" style="margin-bottom:10px">06</div>
       <h2 data-t="h_cont">Conversemos.</h2>
       <p class="bajada" style="margin-top:18px" data-t="p_cont">Producto, tecnología, deporte o código abierto: si quieres colaborar con algo, escríbeme.</p>
     </div>
@@ -396,11 +520,30 @@ footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space
   "use strict";
   document.body.classList.remove("sin-js");
   const EN = {
+    nav_ia: "AI", ver_ia: "How I work with AI", cv: "Download CV",
+    f_enf: "Focus", f_enf_v: "AI products · Agents · MCP",
+    h_ia: "How I work in the AI era",
+    p_ia: "Boris Cherny, creator of Claude Code at Anthropic, argues that with AI, teams organize less around job titles (frontend, backend, design) and more around five ways of contributing. Here's how I spread across them:",
+    fuente: "The five archetypes, per Inc.", fuerte: "My strength",
+    a_pro: "Prototyper", a_pro_p: "Five open-source apps launched in weeks: from idea to a version people can use, testing and discarding fast with AI agents.",
+    a_con: "Builder", a_con_p: "Four years as Tech Lead taking payment services to production at BancoEstado; before that, full stack at SONDA, Amaris and Vigalab.",
+    a_imp: "Grower", a_imp_p: "As CEO of Zyvoi I chase product-market fit: validating the problem and the business model, and selling directly to sports venues.",
+    a_man: "Maintainer", a_man_p: "Payments that can't go down: reliability, integrations and cloud data processes that stay fast as they grow.",
+    a_sim: "Sweeper", a_sim_p: "The simplest thing that works: no unnecessary dependencies, automated tests on every change and open formats.",
+    h_kit: "AI in practice",
+    k1: "Coding agents", k1p: "Claude Code, Codex and Gemini every day, with agents that review privacy and contributions before every change.",
+    k2: "MCP servers", k2p: "I connect each person's AI to their own data: a read-only MCP for Alcancía and internal tools for Zyvoi.",
+    k3: "Each person's own AI", k3p: "Apps that use the user's subscription, show the AI the bare minimum and validate every answer before using it.",
+    k4: "Local AI", k4p: "On-device transcription with whisper.cpp: audio never leaves the machine.",
+    k5: "Operations with agents", k5p: "Sales, content and operations run with agent workflows and logs that learn from every result.",
+    k6: "Security first", k6p: "Pentesting and ethical hacking training applied to agents: keys in the Keychain, read-only access and no servers of our own.",
+    hab_7: "Applied AI", hab_8: "Agents & MCP", hab_9: "CRM & sales",
+    c_5: "Tech Sales Specialist 360", c_6: "SDR techniques and tools", c_7: "Introduction to the SDR role",
     saltar: "Skip to content", nav_hoy: "Now", nav_proy: "Projects", nav_tray: "Experience", nav_est: "Education", nav_cont: "Contact",
     tema: "Switch between light and dark mode",
-    ante: "Santiago, Chile · Computer Engineer",
-    titulo: "I build products people <em>actually use</em>.",
-    bajada: "I'm a <b>Tech Lead at BancoEstado</b>, <b>CEO and co-founder of Zyvoi</b> —the app to organize games and play with more people— and I make <b>free, open-source apps</b> that keep your data on your computer and work with your own AI.",
+    ante: "Santiago, Chile · Tech Lead · CEO of Zyvoi",
+    titulo: "I build products with AI, <em>from idea to production</em>.",
+    bajada: "12+ years in technology. Today I'm <b>Tech Lead at BancoEstado</b>, <b>CEO and co-founder of Zyvoi</b>, and I build <b>open-source apps working with AI agents</b>: fast to test ideas, rigorous to take them to production.",
     ver_proy: "See projects", escribeme: "Get in touch",
     estado: "Building Zyvoi and five open apps",
     f_ahora: "Now", f_ahora_v: "Tech Lead · BancoEstado<br>CEO & co-founder · Zyvoi",
@@ -456,7 +599,7 @@ footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space
     b.textContent = idioma === "en" ? "ES" : "EN";
     b.setAttribute("aria-label", idioma === "en" ? "Leer en español" : "Read in English");
     document.getElementById("tema").setAttribute("aria-label", d.tema);
-    document.title = idioma === "en" ? "David Cornejo — Tech Lead, CEO of Zyvoi and open-source apps" : "David Cornejo — Tech Lead, CEO de Zyvoi y apps de código abierto";
+    document.title = idioma === "en" ? "David Cornejo — AI products, Tech Lead and CEO of Zyvoi" : "David Cornejo — Producto con IA, Tech Lead y CEO de Zyvoi";
   }
   document.getElementById("idioma").addEventListener("click", () => { idioma = idioma === "en" ? "es" : "en"; guardar("idioma", idioma); aplicarIdioma(); });
 
@@ -480,6 +623,9 @@ footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space
     }
   });
 
+  // En el CV impreso el correo va escrito.
+  addEventListener("beforeprint", () => { if (!correoVisible) { correoVisible = true; const dir = ["soydavidcornejo", "gmail.com"].join("@"); document.getElementById("correo-txt").textContent = dir; correo.href = "mailto:" + dir; } });
+  document.getElementById("imprimir").addEventListener("click", () => { document.querySelectorAll(".aparece").forEach((el) => el.classList.add("visible")); print(); });
   aplicarIdioma();
   document.getElementById("anio").textContent = new Date().getFullYear();
 
