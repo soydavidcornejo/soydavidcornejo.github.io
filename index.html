@@ -13,18 +13,18 @@
 <meta name="theme-color" content="#13111a" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="David Cornejo — Tech Lead y CEO de Zyvoi | AI engineering en Chile">
-<meta property="og:description" content="Construyo software en el que la gente confía: con su plata, su tiempo y sus datos. Tech Lead en BancoEstado, CEO y cofundador de Zyvoi y creador de cinco apps abiertas.">
+<meta property="og:description" content="Construyo productos digitales en los que la gente confía: más de 6 años en servicios financieros, cofundador y CEO de Zyvoi y creador de apps abiertas que dejan los datos de cada persona en su computador.">
 <meta property="og:url" content="https://soydavidcornejo.github.io/">
 <meta property="og:image" content="https://soydavidcornejo.github.io/img/compartir.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="David Cornejo: construyo software en el que la gente confía, con su plata, su tiempo y sus datos">
+<meta property="og:image:alt" content="David Cornejo: construyo productos digitales en los que la gente confía">
 <meta property="og:locale" content="es_CL"><meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","@id":"https://soydavidcornejo.github.io/#david",
  "name":"David Cornejo","givenName":"David","familyName":"Cornejo",
  "url":"https://soydavidcornejo.github.io/","image":"https://soydavidcornejo.github.io/img/david.jpg",
- "description":"Tech Lead y CEO y cofundador de Zyvoi. AI engineering en Chile: construyo software en el que la gente confía, con su plata, su tiempo y sus datos.",
+ "description":"Tech Lead y CEO y cofundador de Zyvoi. AI engineering en Chile: construyo productos digitales en los que la gente confía.",
  "jobTitle":["Tech Lead","CEO y cofundador de Zyvoi"],
  "worksFor":[{"@type":"Organization","name":"Zyvoi","url":"https://zyvoi.com","logo":"https://soydavidcornejo.github.io/img/zyvoi-logo.webp","founder":{"@id":"https://soydavidcornejo.github.io/#david"}},{"@type":"Organization","name":"BancoEstado"}],
  "alumniOf":{"@type":"CollegeOrUniversity","name":"INACAP"},
@@ -93,13 +93,14 @@ nav.secciones a:hover{color:var(--tinta)}
 @media (max-width:720px){.portada{grid-template-columns:minmax(0,1fr);gap:40px;padding:24px 0 40px}.retrato{order:-1}}
 .nombre{font:700 clamp(22px,2.2vw,26px)/1.1 var(--letra);letter-spacing:-.02em;margin:0}
 .ubicacion{margin:6px 0 28px;color:var(--suave);font-size:15.5px}
-h1.tesis{font:700 clamp(38px,5vw,64px)/1.04 var(--letra);letter-spacing:-.035em;margin:0 0 32px;max-width:14em;text-wrap:balance}
+h1.tesis{font:700 clamp(40px,5.4vw,70px)/1.03 var(--letra);letter-spacing:-.035em;margin:0 0 32px;max-width:12em;text-wrap:balance}
 .pruebas{margin:0 0 32px;max-width:38em}
-.pruebas div{display:grid;grid-template-columns:92px minmax(0,1fr);gap:4px 18px;padding:13px 0;border-top:1px solid var(--linea)}
+.pruebas div{display:grid;grid-template-columns:190px minmax(0,1fr);gap:4px 20px;padding:14px 0;border-top:1px solid var(--linea)}
 .pruebas div:last-child{border-bottom:1px solid var(--linea)}
 .pruebas dt{font:700 17px/1.45 var(--letra);color:var(--acento)}
 .pruebas dd{margin:0;font-size:17px;line-height:1.45}
-@media (max-width:480px){.pruebas div{grid-template-columns:70px minmax(0,1fr);gap:4px 12px}.pruebas dt,.pruebas dd{font-size:16px}}
+@media (max-width:900px){.pruebas div{grid-template-columns:minmax(0,1fr);gap:2px}}
+@media (max-width:480px){.pruebas dt,.pruebas dd{font-size:16px}}
 .bajada{font-size:clamp(17px,1.5vw,19px);line-height:1.6;color:var(--suave);max-width:36em;margin:0 0 30px}
 .acciones{display:flex;flex-wrap:wrap;gap:10px}
 .boton{display:inline-flex;align-items:center;gap:9px;min-height:48px;padding:0 22px;border-radius:999px;font:600 16px/1 var(--letra);text-decoration:none;border:1.5px solid var(--tinta);color:var(--tinta);background:transparent;cursor:pointer;transition:background-color .15s,color .15s,transform .12s,filter .15s}
@@ -118,6 +119,7 @@ h1.tesis{font:700 clamp(38px,5vw,64px)/1.04 var(--letra);letter-spacing:-.035em;
 
 /* He trabajado en (solo texto, sin logos de terceros) */
 .trabaje{margin:-40px 0 72px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 26px;color:var(--suave);font-size:14.5px}
+.trabaje small{font-size:13px;font-weight:500;color:var(--suave);letter-spacing:0}
 .trabaje .empresas{font:650 17px/1.2 var(--letra);letter-spacing:-.01em;color:color-mix(in srgb,var(--tinta) 72%,var(--fondo))}
 
 /* Cómo es trabajar conmigo */
@@ -195,7 +197,7 @@ h3{text-wrap:balance}
 .zy-recintos p{margin:0;color:rgba(255,255,255,.76);font-size:15.5px}
 .zy-enlace{display:inline-block;margin-top:8px;font-weight:600;font-size:15px;color:#fff;text-decoration-color:rgba(255,255,255,.5)}
 .zy-enlace:hover{color:#fff;text-decoration-color:#fff}
-.zy-cifras{list-style:none;margin:0 0 28px;padding:18px 0 0;border-top:1px solid rgba(255,255,255,.18);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px 20px;max-width:40em}
+.zy-cifras{list-style:none;margin:0 0 28px;padding:18px 0 0;border-top:1px solid rgba(255,255,255,.18);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 24px;max-width:36em}
 @media (max-width:560px){.zy-cifras{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .zy-cifras li{display:flex;flex-direction:column;gap:3px;min-width:0}
 .zy-cifras b{font:700 18px/1.15 var(--letra);letter-spacing:-.015em}
@@ -437,11 +439,11 @@ footer p{margin:0}
     <div>
       <p class="nombre">David Cornejo</p>
       <p class="ubicacion" data-t="ubicacion">AI engineering en Santiago de Chile</p>
-      <h1 class="tesis" data-t="tesis">Construyo software en el que la gente confía: con su plata, su tiempo y sus datos.</h1>
+      <h1 class="tesis" data-t="tesis">Construyo productos digitales en los que la gente confía.</h1>
       <dl class="pruebas">
-        <div><dt data-t="pr_plata">Plata</dt><dd data-t="pr_plata_p">Tech Lead en BancoEstado, y creador de Alcancía para ordenar las finanzas de la casa.</dd></div>
-        <div><dt data-t="pr_tiempo">Tiempo</dt><dd data-t="pr_tiempo_p">CEO y cofundador de Zyvoi: que la gente juegue más y coordine menos.</dd></div>
-        <div><dt data-t="pr_datos">Datos</dt><dd data-t="pr_datos_p">Apps abiertas donde tus datos no salen de tu computador.</dd></div>
+        <div><dt data-t="pi1">Servicios financieros</dt><dd data-t="pi1p">Más de 6 años construyendo software para banca, pensiones y crédito: BancoEstado, AFP (en SONDA) y financiamiento automotriz en Tanner (vía Amaris Consulting).</dd></div>
+        <div><dt data-t="pi2">Deporte y comunidad</dt><dd data-t="pi2p">Cofundador y CEO de Zyvoi: que más gente juegue y coordine menos.</dd></div>
+        <div><dt data-t="pi3">IA y privacidad</dt><dd data-t="pi3p">Apps abiertas que usan la IA de cada persona y dejan sus datos en su computador.</dd></div>
       </dl>
       <div class="acciones">
         <a class="boton principal" href="#contacto" data-t="cta_hablar">Conversemos</a>
@@ -455,12 +457,12 @@ footer p{margin:0}
           </figure>
   </div>
   <ul class="hechos" aria-label="Hechos" data-t-aria="hechos">
-    <li><span class="valor" data-t="hc1v">12+ años</span><span class="dato" data-t="hc1p">construyendo y operando software</span></li>
-    <li><a class="valor" href="#zyvoi" data-t="hc2v">+200 jugadores</a><span class="dato" data-t="hc2p">registrados en Zyvoi</span></li>
-    <li><a class="valor" href="#zyvoi" data-t="hc3v">222 partidos jugados</a><span class="dato" data-t="hc3p">organizados con Zyvoi</span></li>
-    <li><a class="valor" href="https://github.com/soydavidcornejo" target="_blank" rel="noopener" data-t="hc4v">5 apps en 5 días</a><span class="dato" data-t="hc4p">abiertas, publicadas del 22 al 26 de octubre de 2026</span></li>
+    <li><span class="valor" data-t="hc1v">12+ años</span><span class="dato" data-t="hc1p">en tecnología</span></li>
+    <li><span class="valor" data-t="hc2v">6+ años</span><span class="dato" data-t="hc2p">en servicios financieros</span></li>
+    <li><span class="valor">Tech Lead</span><span class="dato" data-t="hc3p">de equipos de desarrollo</span></li>
+    <li><a class="valor" href="#zyvoi" data-t="hc4v">Cofundador y CEO</a><span class="dato" data-t="hc4p">de Zyvoi</span></li>
   </ul>
-  <p class="trabaje"><span data-t="trabaje">He trabajado en</span> <span class="empresas">BancoEstado</span> <span class="empresas">Vigalab · Codelco</span> <span class="empresas">SONDA</span> <span class="empresas">Amaris Consulting</span></p>
+  <p class="trabaje"><span data-t="trabaje">He trabajado en</span> <span class="empresas">BancoEstado</span> <span class="empresas">Codelco <small><span data-t="via">vía</span> Vigalab</small></span> <span class="empresas">Tanner <small><span data-t="via">vía</span> Amaris Consulting</small></span> <span class="empresas">SONDA</span></p>
 </div>
 
 <section id="ayuda" class="raya">
@@ -498,6 +500,8 @@ footer p{margin:0}
       <h2 id="zy-titulo" data-t="zy_h">Para que más gente juegue y se conozca a través del deporte.</h2>
       <p class="zy-bajada" data-t="z_p">Una app chilena para encontrar partidos, armar equipos y reservar canchas: fútbol, pádel, tenis, básquetbol y más.</p>
       <ul class="zy-cifras">
+        <li><b data-t="zc5v">+200</b><span data-t="zc5p">jugadores registrados</span></li>
+        <li><b>222</b><span data-t="zc6p">partidos jugados</span></li>
         <li><b data-t="zc1">Marzo 2026</b><span data-t="zc1p">lanzada en Chile, en iOS y Android</span></li>
         <li><b data-t="zc2">4 deportes</b><span data-t="zc2p">en 7 regiones de Chile</span></li>
         <li><b>Google for Startups</b><span data-t="zc3p">parte del programa Cloud</span></li>
@@ -561,7 +565,7 @@ footer p{margin:0}
       <div>
         <ol class="pasos">
           <li><h3 data-t="ps1">Parto de un problema real</h3><p data-t="ps1p">En la casa, en el trabajo o en la cancha: algo que a mí o a alguien cercano de verdad le hace falta.</p></li>
-          <li><h3 data-t="ps2">Lo construyo rápido y lo publico abierto</h3><p data-t="ps2p">Con agentes de IA llego en semanas a una versión que se puede usar, y la publico como código abierto.</p></li>
+          <li><h3 data-t="ps2">Lo construyo rápido y lo publico abierto</h3><p data-t="ps2p">Con agentes de IA llego rápido a una versión que se puede usar, con pruebas automáticas, y la publico como código abierto.</p></li>
           <li><h3 data-t="ps3">La gente lo usa, lo mejora y me dice qué falta</h3><p data-t="ps3p">Cada persona que lo usa lo pone a prueba, propone mejoras y muestra lo que todavía no resuelve.</p></li>
           <li><h3 data-t="ps4">Lo aprendido se aplica a escala</h3><p data-t="ps4p">Harness engineering, MCP y producto llegan a Zyvoi y a mi trabajo como Tech Lead, y eso revela nuevos problemas reales.</p></li>
         </ol>
@@ -628,7 +632,7 @@ footer p{margin:0}
   <div class="envoltura">
     <div class="cabeza">
       <h2 data-t="h_proy">Proyectos abiertos</h2>
-      <p data-t="p_proy">Herramientas que me hacían falta a mí y a mi familia. Las publico para que cualquiera las use, las revise y las mejore.</p>
+      <p data-t="p_proy">Cinco apps de código abierto para escritorio, con pruebas automáticas, revisión de privacidad en cada cambio y guías para agentes de IA.</p>
       <ul class="principios">
         <li data-t="pr_1">Gratis y sin cuentas</li><li data-t="pr_3">Tu propia IA</li><li data-t="pr_4">Español e inglés</li>
       </ul>
@@ -685,7 +689,7 @@ footer p{margin:0}
     </div>
     <ul class="modo">
       <li><h3 data-t="mo1">Primero entiendo el problema de negocio, después elijo la tecnología.</h3><p data-t="mo1p">Defino qué tiene que cambiar para el usuario y para el negocio; el stack se elige al servicio de eso.</p></li>
-      <li><h3 data-t="mo2">Entrego algo usable en días, no en meses.</h3><p data-t="mo2p">Versiones cortas que se pueden probar con usuarios reales desde el inicio.</p><a class="enlace-prueba" href="#proyectos" data-t="mo2e">Prueba: cinco apps publicadas del 22 al 26 de octubre</a></li>
+      <li><h3 data-t="mo2">Entrego temprano y en ciclos cortos.</h3><p data-t="mo2p">Versiones que se pueden probar con usuarios reales desde el inicio y que mejoran en cada ciclo.</p><a class="enlace-prueba" href="#proyectos" data-t="mo2e">Prueba: las versiones publicadas de las apps abiertas</a></li>
       <li><h3 data-t="mo3">Documento para que el equipo no dependa de mí.</h3><p data-t="mo3p">Cada proyecto tiene una guía única con reglas, arquitectura y cómo probar cada cambio.</p><span class="enlace-prueba"><span data-t="prueba">Prueba:</span> <a href="https://github.com/alcancia-app/alcancia/blob/main/AGENTS.md" target="_blank" rel="noopener">AGENTS.md · Alcancía</a>, <a href="https://github.com/minuta-app/minuta/blob/main/AGENTS.md" target="_blank" rel="noopener">AGENTS.md · Minuta</a></span></li>
       <li><h3 data-t="mo4">Seguridad y privacidad desde el día uno.</h3><p data-t="mo4p">Mínimo privilegio, secretos en el Llavero y agentes que revisan privacidad antes de cada cambio.</p><a class="enlace-prueba" href="https://github.com/alcancia-app/alcancia/tree/main/.claude/agents" target="_blank" rel="noopener" data-t="mo4e">Prueba: los agentes revisores de Alcancía</a></li>
     </ul>
@@ -703,7 +707,9 @@ footer p{margin:0}
       <li class="actual"><span class="cuando" data-t="t_be">2022 – hoy</span><div><h3>Tech Lead <span>· BancoEstado</span></h3><p data-t="t_be_p">Llegué a liderar un equipo de 3 desarrolladores.</p><p class="stack" data-t="t_be_stack">AWS, Salesforce, Node.js, NestJS, Next.js y más</p></div></li>
       <li><span class="cuando">2020 – 2021</span><div><h3>Tech Lead <span>· Vigalab</span></h3><p data-t="t_vi_p">Lideré CoWatch para Codelco: trazabilidad de contactos estrechos con IoT durante el COVID-19.</p>
         <p class="stack" data-sin-traducir>IoT, AWS</p></div></li>
-      <li><span class="cuando">2013 – 2020</span><div><h3 data-t="t_antes">Soporte, jefatura de TI y desarrollo full stack <span>· Adexus, Comercial IP, Incobech, Qanalytics, SONDA y Amaris (y Integ, 2022)</span></h3></div></li>
+      <li><span class="cuando">2019 – 2020</span><div><h3>Full Stack Developer <span>· Amaris Consulting</span></h3><p data-t="t_am_p">En Tanner: financiamiento automotriz.</p></div></li>
+      <li><span class="cuando">2018 – 2019</span><div><h3>Full Stack Developer <span>· SONDA</span></h3><p data-t="t_so_p">En el área de AFP.</p></div></li>
+      <li><span class="cuando">2013 – 2018</span><div><h3 data-t="t_antes">Soporte, jefatura de TI y desarrollo full stack <span>· Adexus, Comercial IP, Incobech y Qanalytics (y Integ, 2022)</span></h3></div></li>
     </ol>
   </div>
 </section>
@@ -775,7 +781,7 @@ footer p{margin:0}
   const EN = {
     h_trabajo: "What it's like to work with me",
     mo1: "I understand the business problem first, then choose the technology.", mo1p: "I define what has to change for the user and for the business; the stack is chosen to serve that.",
-    mo2: "I deliver something usable in days, not months.", mo2p: "Short releases that can be tested with real users from the start.", mo2e: "Proof: five apps published October 22–26",
+    mo2: "I deliver early and in short cycles.", mo2p: "Releases that real users can test from the start and that improve with every cycle.", mo2e: "Proof: the published releases of the open apps",
     mo3: "I document so the team doesn't depend on me.", mo3p: "Every project has a single guide with its rules, architecture and how to test each change.",
     mo4: "Security and privacy from day one.", mo4p: "Least privilege, secrets in the Keychain and agents that review privacy before every change.", mo4e: "Proof: Alcancía's review agents",
     ubicacion: "AI engineering in Santiago, Chile",
@@ -787,17 +793,20 @@ footer p{margin:0}
     of3: "Technical leadership of product teams", of3p: "Architecture, engineering practices and a team that delivers.", of3e: "Tech Lead at BancoEstado, with a team of 3 developers",
     saltar: "Skip to content", secciones: "Sections", tema: "Switch between light and dark mode",
     nav_estr: "Strategy", nav_metas: "Goals", nav_proy: "Projects", nav_tray: "Experience", nav_cont: "Contact",
-    tesis: "I build software people trust with their money, their time and their data.",
-    pr_plata: "Money", pr_plata_p: "Tech Lead at BancoEstado, and creator of Alcancía to put household finances in order.",
-    pr_tiempo: "Time", pr_tiempo_p: "CEO and co-founder of Zyvoi: so people play more and coordinate less.",
-    pr_datos: "Data", pr_datos_p: "Open apps where your data never leaves your computer.",
+    tesis: "I build digital products people trust.",
+    pi1: "Financial services", pi1p: "6+ years building software for banking, pensions and credit: BancoEstado, pension funds (AFP, at SONDA) and auto financing at Tanner (through Amaris Consulting).",
+    pi2: "Sport and community", pi2p: "Co-founder and CEO of Zyvoi: so more people play and coordinate less.",
+    pi3: "AI and privacy", pi3p: "Open apps that use each person's own AI and keep their data on their computer.",
     cta_hablar: "Let's talk", cta_zy: "Meet Zyvoi", cv: "Download CV",
     retrato_alt: "David Cornejo smiling, wearing a purple Zyvoi T-shirt",
     hechos: "Facts",
-    hc1v: "12+ years", hc1p: "building and running software",
-    hc2v: "200+ players", hc2p: "registered on Zyvoi",
-    hc3v: "222 games played", hc3p: "organized with Zyvoi",
-    hc4v: "5 apps in 5 days", hc4p: "open source, published October 22–26, 2026",
+    hc1v: "12+ years", hc1p: "in technology",
+    hc2v: "6+ years", hc2p: "in financial services",
+    hc3p: "of development teams",
+    hc4v: "Co-founder and CEO", hc4p: "of Zyvoi",
+    via: "via",
+    zc5v: "200+",
+    zc5p: "registered players", zc6p: "games played",
     zy_rol: "Co-founder and CEO since May 2025.",
     zy_h: "So more people play and get to know each other through sport.",
     z_p: "A Chilean app to find games, build teams and book courts: football, padel, tennis, basketball and more.",
@@ -818,7 +827,7 @@ footer p{margin:0}
     vo_e1: "Real problem", vo_e2: '<tspan x="470">Build</tspan><tspan x="470" dy="19">and open</tspan>',
     vo_e3: "Use and learning", vo_e4: '<tspan x="90">Apply</tspan><tspan x="90" dy="19">at scale</tspan>',
     ps1: "I start from a real problem", ps1p: "At home, at work or on the court: something I or someone close to me genuinely needs.",
-    ps2: "I build it fast and publish it in the open", ps2p: "With AI agents I reach a usable version in weeks, and I release it as open source.",
+    ps2: "I build it fast and publish it in the open", ps2p: "With AI agents I reach a usable version fast, with automated tests, and I release it as open source.",
     ps3: "People use it, improve it and tell me what's missing", ps3p: "Everyone who uses it puts it to the test, suggests improvements and shows what it doesn't solve yet.",
     ps4: "What I learn is applied at scale", ps4p: "Harness engineering, MCP and product reach Zyvoi and my work as a Tech Lead, and that reveals new real problems.",
     vo_cierre: "Every turn leaves behind a product, a community and something learned.",
@@ -845,7 +854,7 @@ footer p{margin:0}
     mt4_de: "Community", mt4: "Share what I learn about harness engineering",
     mt4p: "Publish openly how I work with agents: guides, templates and real examples from my projects.",
     mt4a: "Guides and templates published", mt4b: "People and teams reusing them", mt4c: "Questions and conversations they spark",
-    h_proy: "Open projects", p_proy: "Tools my family and I needed. I publish them so anyone can use, review and improve them.",
+    h_proy: "Open projects", p_proy: "Five open-source desktop apps, with automated tests, a privacy review on every change and guides for AI agents.",
     pr_1: "Free, no accounts", pr_3: "Your own AI", pr_4: "Spanish and English",
     minuta: "Leave every meeting with your notes ready and knowing how to communicate better.",
     graba: "Record your screen with your camera; your AI writes notes, a YouTube script, chapters and subtitles.",
@@ -857,7 +866,8 @@ footer p{margin:0}
     t_zy: "2025 – today", t_zy_h: "CEO & co-founder <span>· Zyvoi</span>", t_zy_p: "Strategy, product and growth of a sports community app built for Latin America.",
     t_be: "2022 – today", t_be_p: "I came to lead a team of 3 developers.", t_be_stack: "AWS, Salesforce, Node.js, NestJS, Next.js and more",
     t_vi_p: "Led CoWatch for Codelco: IoT-based close-contact tracing during COVID-19.",
-    t_antes: "Tech support, IT management and full-stack development <span>· Adexus, Comercial IP, Incobech, Qanalytics, SONDA and Amaris (plus Integ, 2022)</span>",
+    t_am_p: "At Tanner: auto financing.", t_so_p: "In the pension fund (AFP) area.",
+    t_antes: "Tech support, IT management and full-stack development <span>· Adexus, Comercial IP, Incobech and Qanalytics (plus Integ, 2022)</span>",
     h_est: "Education and certifications", e_tit: "Degree", e_h: "Computer Engineering",
     e_cert: "Selected certifications", c_1: "Advanced IT security", c_2: "Pentesting fundamentals", c_5: "Tech Sales Specialist 360",
     e_idi: "Languages", e_idi_v: "Native Spanish, professional English",
