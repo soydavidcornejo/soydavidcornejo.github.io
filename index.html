@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>David Cornejo — Tech Lead, CEO de Zyvoi y apps de código abierto</title>
+<meta name="description" content="Ingeniero en Informática en Santiago de Chile. Tech Lead en BancoEstado, CEO y cofundador de Zyvoi, y creador de Minuta, Graba, Corta, Alcancía y Repasa: apps gratis y de código abierto que dejan tus datos en tu computador.">
+<link rel="canonical" href="https://soydavidcornejo.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151412" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="David Cornejo — Tech Lead, CEO de Zyvoi y apps de código abierto">
+<meta property="og:description" content="Construyo productos: pagos en BancoEstado, deporte en Zyvoi y cinco apps abiertas que respetan tus datos.">
+<meta property="og:url" content="https://soydavidcornejo.github.io/">
+<meta property="og:image" content="https://soydavidcornejo.github.io/img/compartir.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_CL"><meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"David Cornejo","url":"https://soydavidcornejo.github.io/",
+ "jobTitle":["Tech Lead","CEO y cofundador de Zyvoi"],
+ "worksFor":[{"@type":"Organization","name":"BancoEstado"},{"@type":"Organization","name":"Zyvoi","url":"https://zyvoi.com"}],
+ "alumniOf":{"@type":"CollegeOrUniversity","name":"INACAP"},
+ "address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"},
+ "knowsLanguage":["es","en"],
+ "sameAs":["https://www.linkedin.com/in/davidacp","https://github.com/soydavidcornejo"]}
+</script>
+<style>
+:root{
+  --papel:#f6f3ec; --papel-2:#efeadf; --tinta:#1b1a17; --suave:#5d5a52; --linea:#ddd6c7;
+  --acento:#b8441f; --acento-txt:#fff; --tarjeta:#fffdf8; --sombra:0 1px 0 rgba(27,26,23,.04),0 10px 30px -18px rgba(27,26,23,.35);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-tema="claro"]){
+  --papel:#151412; --papel-2:#1d1c19; --tinta:#efeae0; --suave:#a8a296; --linea:#34312c;
+  --acento:#f0835e; --acento-txt:#111; --tarjeta:#1d1c19; --sombra:0 10px 30px -18px rgba(0,0,0,.8);
+}}
+:root[data-tema="oscuro"]{
+  --papel:#151412; --papel-2:#1d1c19; --tinta:#efeae0; --suave:#a8a296; --linea:#34312c;
+  --acento:#f0835e; --acento-txt:#111; --tarjeta:#1d1c19; --sombra:0 10px 30px -18px rgba(0,0,0,.8);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--papel);color:var(--tinta);font:16.5px/1.6 var(--sans);text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration-color:color-mix(in srgb,var(--acento) 60%,transparent);text-underline-offset:3px}
+a:hover{color:var(--acento)}
+:focus-visible{outline:2.5px solid var(--acento);outline-offset:3px;border-radius:6px}
+.envoltura{max-width:1100px;margin:0 auto;padding:0 24px}
+@media (max-width:560px){.envoltura{padding:0 16px}}
+
+/* Barra */
+header.barra{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--papel) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.barra.con-borde{border-bottom-color:var(--linea)}
+.barra .envoltura{display:flex;align-items:center;gap:20px;height:60px}
+.marca{font:600 17px/1 var(--serif);text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.marca .mono{width:30px;height:30px;border-radius:9px;background:var(--tinta);color:var(--papel);display:grid;place-items:center;font:600 13px/1 var(--sans);letter-spacing:.02em}
+nav.secciones{display:flex;gap:18px;margin-left:auto;font-size:14.5px}
+nav.secciones a{text-decoration:none;color:var(--suave)}
+nav.secciones a:hover{color:var(--tinta)}
+.botones-barra{display:flex;gap:6px}
+.chico{border:1px solid var(--linea);background:transparent;color:var(--tinta);border-radius:999px;height:32px;min-width:32px;padding:0 11px;font:600 12.5px/1 var(--sans);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.chico:hover{border-color:var(--suave)}
+@media (max-width:820px){nav.secciones{display:none}.botones-barra{margin-left:auto}}
+
+/* Portada */
+.portada{padding:84px 0 64px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:56px;align-items:end}
+@media (max-width:860px){.portada{grid-template-columns:minmax(0,1fr);gap:36px;padding:48px 0 40px}}
+.antetitulo{font:600 12.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--acento);margin:0 0 22px;display:flex;align-items:center;gap:10px}
+.antetitulo::before{content:"";width:28px;height:1.5px;background:currentColor}
+h1{font:500 clamp(44px,7.4vw,84px)/.98 var(--serif);letter-spacing:-.035em;margin:0 0 26px}
+h1 em{font-style:italic;color:var(--acento)}
+.bajada{font-size:clamp(18px,2.1vw,21px);line-height:1.5;color:var(--suave);max-width:36em;margin:0 0 32px}
+.bajada b{color:var(--tinta);font-weight:600}
+.acciones{display:flex;flex-wrap:wrap;gap:10px}
+.boton{display:inline-flex;align-items:center;gap:9px;height:46px;padding:0 20px;border-radius:999px;font:600 15px/1 var(--sans);text-decoration:none;border:1.5px solid var(--tinta);color:var(--tinta);background:transparent;cursor:pointer}
+.boton:hover{background:var(--tinta);color:var(--papel)}
+.boton.principal{background:var(--acento);border-color:var(--acento);color:var(--acento-txt)}
+.boton.principal:hover{filter:brightness(1.06);color:var(--acento-txt)}
+.boton svg{width:18px;height:18px;flex:none}
+.ficha{border:1px solid var(--linea);border-radius:20px;background:var(--tarjeta);box-shadow:var(--sombra);padding:22px 24px}
+.ficha dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px 18px;font-size:15px}
+.ficha dt{color:var(--suave);font-size:13px;padding-top:2px}
+.ficha dd{margin:0;font-weight:500}
+.ficha .estado{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--suave);margin:0 0 16px;padding-bottom:16px;border-bottom:1px dashed var(--linea)}
+.punto{width:8px;height:8px;border-radius:50%;background:#2f9e5b;box-shadow:0 0 0 4px color-mix(in srgb,#2f9e5b 22%,transparent)}
+
+/* Secciones */
+section{padding:72px 0;border-top:1px solid var(--linea)}
+@media (max-width:560px){section{padding:52px 0}}
+.cabeza{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:24px;margin-bottom:40px}
+@media (max-width:760px){.cabeza{grid-template-columns:minmax(0,1fr);gap:8px;margin-bottom:28px}}
+.num{font:500 13px/1.6 var(--mono);color:var(--suave)}
+h2{font:500 clamp(30px,4vw,42px)/1.08 var(--serif);letter-spacing:-.025em;margin:0}
+.cabeza p{color:var(--suave);margin:12px 0 0;max-width:40em}
+
+/* Lo que hago */
+.ahora{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.ahora{grid-template-columns:minmax(0,1fr)}}
+.tarjeta{background:var(--tarjeta);border:1px solid var(--linea);border-radius:20px;padding:26px;box-shadow:var(--sombra);display:flex;flex-direction:column;gap:12px}
+.tarjeta .rol{font:600 12px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--acento)}
+.tarjeta h3{font:500 26px/1.15 var(--serif);letter-spacing:-.02em;margin:0}
+.tarjeta .fecha{font:13px/1 var(--mono);color:var(--suave)}
+.tarjeta p{margin:0;color:var(--suave)}
+.tarjeta ul{margin:0;padding-left:18px;color:var(--suave)}
+.tarjeta ul li{margin:3px 0}
+.tarjeta .pie{margin-top:auto;padding-top:8px;display:flex;flex-wrap:wrap;gap:14px;font-weight:600;font-size:14.5px}
+
+/* Proyectos */
+.principios{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.principios li{border:1px solid var(--linea);border-radius:999px;padding:6px 13px;font-size:13.5px;color:var(--tinta);background:var(--papel-2)}
+.proyectos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+.proyecto{grid-column:span 2;background:var(--tarjeta);border:1px solid var(--linea);border-radius:20px;overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
+.proyecto:nth-child(-n+2){grid-column:span 3}
+.proyecto:hover{transform:translateY(-3px)}
+@media (max-width:900px){.proyecto,.proyecto:nth-child(-n+2){grid-column:span 3}}
+@media (max-width:600px){.proyectos{grid-template-columns:minmax(0,1fr)}.proyecto,.proyecto:nth-child(-n+2){grid-column:auto}}
+.proyecto .foto{display:block;aspect-ratio:1200/630;background:var(--papel-2);border-bottom:1px solid var(--linea)}
+.proyecto .foto img{width:100%;height:100%;object-fit:cover;display:block}
+.proyecto .cuerpo{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.proyecto .titulo{display:flex;align-items:center;gap:11px}
+.proyecto .titulo img{width:30px;height:30px;border-radius:8px;flex:none}
+.proyecto h3{font:500 23px/1 var(--serif);margin:0;letter-spacing:-.015em}
+.licencia{margin-left:auto;font:12px/1 var(--mono);color:var(--suave);border:1px solid var(--linea);border-radius:6px;padding:4px 7px;white-space:nowrap}
+.proyecto p{margin:0;color:var(--suave);font-size:15.5px}
+.proyecto .pie{margin-top:auto;padding-top:6px;display:flex;gap:16px;font-weight:600;font-size:14.5px}
+
+/* Trayectoria */
+.linea-tiempo{list-style:none;margin:0;padding:0;border-left:1.5px solid var(--linea);margin-left:6px}
+.linea-tiempo li{position:relative;padding:0 0 30px 28px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:4px 24px}
+.linea-tiempo li:last-child{padding-bottom:0}
+.linea-tiempo li::before{content:"";position:absolute;left:-6.5px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--papel);border:2px solid var(--suave)}
+.linea-tiempo li.actual::before{background:var(--acento);border-color:var(--acento)}
+@media (max-width:640px){.linea-tiempo li{grid-template-columns:minmax(0,1fr);padding-left:22px}}
+.linea-tiempo .cuando{font:13.5px/1.7 var(--mono);color:var(--suave)}
+.linea-tiempo h3{font:600 17px/1.4 var(--sans);margin:0}
+.linea-tiempo h3 span{font-weight:400;color:var(--suave)}
+.linea-tiempo p{margin:4px 0 0;color:var(--suave);font-size:15px}
+
+/* Estudios */
+.dos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:760px){.dos{grid-template-columns:minmax(0,1fr)}}
+.lista-certs{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.lista-certs li{padding:11px 0;border-bottom:1px dashed var(--linea);display:flex;gap:12px;align-items:baseline}
+.lista-certs li:last-child{border-bottom:0}
+.lista-certs .tipo{font:12px/1 var(--mono);color:var(--suave);margin-left:auto;white-space:nowrap}
+.habilidades{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:6px 0 0;padding:0}
+.habilidades li{background:var(--papel-2);border:1px solid var(--linea);border-radius:8px;padding:5px 11px;font-size:14px}
+
+/* Contacto */
+.contacto{text-align:left;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center}
+@media (max-width:760px){.contacto{grid-template-columns:minmax(0,1fr);gap:24px}}
+.contacto h2{font-size:clamp(34px,5vw,56px)}
+.enlaces-contacto{display:grid;gap:10px}
+.enlaces-contacto a{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--linea);border-radius:16px;background:var(--tarjeta);text-decoration:none;font-weight:600;box-shadow:var(--sombra)}
+.enlaces-contacto a span{font-weight:400;color:var(--suave);font-size:14px;margin-left:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.enlaces-contacto svg{width:20px;height:20px;flex:none}
+footer{border-top:1px solid var(--linea);padding:28px 0 40px;color:var(--suave);font-size:13.5px}
+footer .envoltura{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+
+/* Entrada suave */
+.aparece{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.aparece.visible{opacity:1;transform:none}
+.sin-js .aparece{opacity:1;transform:none}
+</style>
+</head>
+<body class="sin-js">
+<a href="#contenido" class="chico" style="position:absolute;left:-9999px" id="saltar" data-t="saltar">Ir al contenido</a>
+
+<header class="barra" id="barra">
+  <div class="envoltura">
+    <a class="marca" href="#arriba" aria-label="David Cornejo"><span class="mono" aria-hidden="true">DC</span>David Cornejo</a>
+    <nav class="secciones" aria-label="Secciones">
+      <a href="#hoy" data-t="nav_hoy">Hoy</a>
+      <a href="#proyectos" data-t="nav_proy">Proyectos</a>
+      <a href="#trayectoria" data-t="nav_tray">Trayectoria</a>
+      <a href="#estudios" data-t="nav_est">Estudios</a>
+      <a href="#contacto" data-t="nav_cont">Contacto</a>
+    </nav>
+    <div class="botones-barra">
+      <button class="chico" id="idioma" type="button" aria-label="Read in English">EN</button>
+      <button class="chico" id="tema" type="button" aria-label="Cambiar entre modo claro y oscuro" data-t-aria="tema"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+<div class="envoltura" id="arriba">
+  <div class="portada">
+    <div>
+      <p class="antetitulo" data-t="ante">Santiago de Chile · Ingeniero en Informática</p>
+      <h1 data-t="titulo">Construyo productos que la gente <em>usa de verdad</em>.</h1>
+      <p class="bajada" data-t="bajada">Soy <b>Tech Lead en BancoEstado</b>, <b>CEO y cofundador de Zyvoi</b> —la app para organizar partidos y jugar con más gente— y creo <b>apps gratis y de código abierto</b> que dejan tus datos en tu computador y trabajan con tu propia IA.</p>
+      <div class="acciones">
+        <a class="boton principal" href="https://www.linkedin.com/in/davidacp" rel="me noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>LinkedIn</a>
+        <a class="boton" href="#proyectos" data-t="ver_proy">Ver proyectos</a>
+        <a class="boton" href="#contacto" data-t="escribeme">Escríbeme</a>
+      </div>
+    </div>
+    <aside class="ficha" aria-label="Resumen">
+      <p class="estado"><span class="punto" aria-hidden="true"></span><span data-t="estado">Construyendo Zyvoi y cinco apps abiertas</span></p>
+      <dl>
+        <dt data-t="f_ahora">Ahora</dt><dd data-t="f_ahora_v">Tech Lead · BancoEstado<br>CEO y cofundador · Zyvoi</dd>
+        <dt data-t="f_exp">Experiencia</dt><dd data-t="f_exp_v">Más de 12 años en tecnología</dd>
+        <dt data-t="f_est">Estudios</dt><dd data-t="f_est_v">Ingeniería en Informática, INACAP</dd>
+        <dt data-t="f_idi">Idiomas</dt><dd data-t="f_idi_v">Español nativo · Inglés profesional</dd>
+      </dl>
+    </aside>
+  </div>
+</div>
+
+<section id="hoy">
+  <div class="envoltura">
+    <div class="cabeza aparece">
+      <div class="num">01</div>
+      <div><h2 data-t="h_hoy">Lo que hago hoy</h2><p data-t="p_hoy">Tres frentes: tecnología para un banco que usa todo Chile, una startup de deporte y software abierto para cualquier persona.</p></div>
+    </div>
+    <div class="ahora">
+      <article class="tarjeta aparece">
+        <span class="rol" data-t="z_rol">CEO y cofundador</span>
+        <h3>Zyvoi</h3>
+        <span class="fecha" data-t="z_fecha">mayo 2025 — hoy</span>
+        <p data-t="z_p">Una app chilena para encontrar partidos, armar equipos y reservar canchas: fútbol, pádel, tenis, básquetbol y más.</p>
+        <ul>
+          <li data-t="z_1">Visión, modelo de negocio y decisiones de producto</li>
+          <li data-t="z_2">Partidos por cercanía y nivel, con ranking ELO</li>
+          <li data-t="z_3">Zyvoi Recintos: reservas y gestión para los recintos deportivos</li>
+        </ul>
+        <div class="pie"><a href="https://zyvoi.com" target="_blank" rel="noopener">zyvoi.com</a><a href="https://apps.apple.com/app/id6753231031" target="_blank" rel="noopener" data-t="z_ios">App Store</a></div>
+      </article>
+      <article class="tarjeta aparece">
+        <span class="rol">Tech Lead</span>
+        <h3>BancoEstado</h3>
+        <span class="fecha" data-t="b_fecha">abril 2022 — hoy</span>
+        <p data-t="b_p">Lidero desarrollo en el equipo de Compraquí, la pasarela de pagos del banco.</p>
+        <ul>
+          <li data-t="b_1">Arquitectura y liderazgo técnico del equipo</li>
+          <li data-t="b_2">Integraciones de pagos, microservicios y procesos de datos en la nube</li>
+          <li data-t="b_3">Metodologías ágiles con Scrum y Jira</li>
+        </ul>
+      </article>
+      <article class="tarjeta aparece">
+        <span class="rol" data-t="o_rol">Creador</span>
+        <h3 data-t="o_h">Código abierto</h3>
+        <span class="fecha" data-t="o_fecha">2026 — hoy</span>
+        <p data-t="o_p">Cinco apps para el computador, gratis para siempre, sin cuentas ni publicidad.</p>
+        <ul>
+          <li data-t="o_1">Tus datos viven en tu computador, en formatos abiertos</li>
+          <li data-t="o_2">Funcionan con tu propia IA: Claude, ChatGPT o Gemini</li>
+          <li data-t="o_3">Hechas en público, con la comunidad</li>
+        </ul>
+        <div class="pie"><a href="#proyectos" data-t="o_ver">Ver las cinco</a><a href="https://github.com/soydavidcornejo" target="_blank" rel="noopener">GitHub</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <div class="envoltura">
+    <div class="cabeza aparece">
+      <div class="num">02</div>
+      <div>
+        <h2 data-t="h_proy">Proyectos de código abierto</h2>
+        <p data-t="p_proy">Herramientas que me hacían falta a mí y a mi familia. Las publico para que cualquiera las use, las revise y las mejore.</p>
+        <ul class="principios">
+          <li data-t="pr_1">Gratis y sin cuentas</li><li data-t="pr_2">Tus datos no salen de tu computador</li><li data-t="pr_3">Tu propia IA</li><li data-t="pr_4">Español e inglés</li>
+        </ul>
+      </div>
+    </div>
+    <div class="proyectos">
+      <article class="proyecto aparece">
+        <a class="foto" href="https://minuta-app.github.io/minuta/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/minuta.jpg" alt="" width="960" height="504" loading="lazy"></a>
+        <div class="cuerpo">
+          <div class="titulo"><img src="img/minuta.svg" alt=""><h3>Minuta</h3><span class="licencia">MIT</span></div>
+          <p data-t="minuta">Sal de cada reunión con las notas listas y sabiendo cómo mejorar tu forma de comunicar.</p>
+          <div class="pie"><a href="https://minuta-app.github.io/minuta/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/minuta-app/minuta" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
+        </div>
+      </article>
+      <article class="proyecto aparece">
+        <a class="foto" href="https://graba-app.github.io/graba/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/graba.jpg" alt="" width="960" height="504" loading="lazy"></a>
+        <div class="cuerpo">
+          <div class="titulo"><img src="img/graba.svg" alt=""><h3>Graba</h3><span class="licencia">MIT</span></div>
+          <p data-t="graba">Graba tu pantalla con tu cámara y tu IA te deja notas, guion para YouTube, capítulos y subtítulos.</p>
+          <div class="pie"><a href="https://graba-app.github.io/graba/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/graba-app/graba" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
+        </div>
+      </article>
+      <article class="proyecto aparece">
+        <a class="foto" href="https://corta-app.github.io/corta/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/corta.jpg" alt="" width="960" height="504" loading="lazy"></a>
+        <div class="cuerpo">
+          <div class="titulo"><img src="img/corta.svg" alt=""><h3>Corta</h3><span class="licencia">AGPL-3.0</span></div>
+          <p data-t="corta">Editor para Shorts, Reels y TikTok: editas el texto y se edita el video. Sin marca de agua.</p>
+          <div class="pie"><a href="https://corta-app.github.io/corta/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/corta-app/corta" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
+        </div>
+      </article>
+      <article class="proyecto aparece">
+        <a class="foto" href="https://alcancia-app.github.io/alcancia/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/alcancia.jpg" alt="" width="960" height="504" loading="lazy"></a>
+        <div class="cuerpo">
+          <div class="titulo"><img src="img/alcancia.svg" alt=""><h3>Alcancía</h3><span class="licencia">AGPL-3.0</span></div>
+          <p data-t="alcancia">Control de gastos: junta las cartolas de tus bancos y tu IA te avisa a tiempo cuando algo se pasa.</p>
+          <div class="pie"><a href="https://alcancia-app.github.io/alcancia/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/alcancia-app/alcancia" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
+        </div>
+      </article>
+      <article class="proyecto aparece">
+        <a class="foto" href="https://repasa-app.github.io/repasa/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/repasa.jpg" alt="" width="960" height="504" loading="lazy"></a>
+        <div class="cuerpo">
+          <div class="titulo"><img src="img/repasa.svg" alt=""><h3>Repasa</h3><span class="licencia">AGPL-3.0</span></div>
+          <p data-t="repasa">Para estudiar desde la foto del cuaderno: resumen, preguntas tipo prueba y repaso diario.</p>
+          <div class="pie"><a href="https://repasa-app.github.io/repasa/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/repasa-app/repasa" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="trayectoria">
+  <div class="envoltura">
+    <div class="cabeza aparece">
+      <div class="num">03</div>
+      <div><h2 data-t="h_tray">Trayectoria</h2><p data-t="p_tray">De soporte técnico a liderar equipos: más de doce años construyendo y operando software.</p></div>
+    </div>
+    <ol class="linea-tiempo aparece">
+      <li class="actual"><span class="cuando" data-t="t_zy">2025 — hoy</span><div><h3 data-t="t_zy_h">CEO y cofundador <span>· Zyvoi</span></h3><p data-t="t_zy_p">Estrategia, producto y crecimiento de una app de comunidad deportiva pensada para Latinoamérica.</p></div></li>
+      <li class="actual"><span class="cuando" data-t="t_be">2022 — hoy</span><div><h3>Tech Lead <span>· BancoEstado</span></h3><p data-t="t_be_p">Liderazgo técnico en pagos: Compraquí, integraciones y servicios en la nube.</p></div></li>
+      <li><span class="cuando">2022</span><div><h3>Full Stack Developer <span>· Integ</span></h3></div></li>
+      <li><span class="cuando">2020 — 2021</span><div><h3>Tech Lead <span>· Vigalab</span></h3></div></li>
+      <li><span class="cuando">2019 — 2020</span><div><h3>Full Stack Developer <span>· Amaris Consulting</span></h3></div></li>
+      <li><span class="cuando">2018 — 2019</span><div><h3>Full Stack Developer <span>· SONDA</span></h3></div></li>
+      <li><span class="cuando">2017 — 2018</span><div><h3>Full Stack Developer <span>· Qanalytics</span></h3></div></li>
+      <li><span class="cuando">2016 — 2017</span><div><h3 data-t="t_it">Jefe de Informática <span>· Incobech</span></h3><p data-t="t_inc_p">Procesos, aplicaciones a medida con tecnologías web y adopción de nuevas herramientas.</p></div></li>
+      <li><span class="cuando">2014 — 2016</span><div><h3 data-t="t_it2">Jefe de Informática <span>· Comercial IP</span></h3><p data-t="t_cip_p">Armé el área desde cero: redes, servidores, ERP, sitio web y la migración de servicios a la nube.</p></div></li>
+      <li><span class="cuando">2013</span><div><h3 data-t="t_sop">Especialista de soporte técnico <span>· Adexus</span></h3></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="estudios">
+  <div class="envoltura">
+    <div class="cabeza aparece">
+      <div class="num">04</div>
+      <div><h2 data-t="h_est">Estudios y certificaciones</h2></div>
+    </div>
+    <div class="dos">
+      <div class="tarjeta aparece">
+        <span class="rol" data-t="e_tit">Título</span>
+        <h3 data-t="e_h">Ingeniería en Informática</h3>
+        <span class="fecha">INACAP · 2009 — 2014</span>
+        <span class="rol" style="margin-top:14px" data-t="e_hab">Cómo trabajo</span>
+        <ul class="habilidades">
+          <li data-t="hab_1">Liderazgo técnico</li><li data-t="hab_2">Gestión ágil</li><li>Scrum</li><li>Jira</li><li data-t="hab_3">Desarrollo full stack</li><li data-t="hab_4">Nube</li><li data-t="hab_5">Seguridad</li><li data-t="hab_6">Producto</li>
+        </ul>
+      </div>
+      <div class="tarjeta aparece">
+        <span class="rol" data-t="e_cert">Certificaciones y cursos</span>
+        <ul class="lista-certs">
+          <li><span data-t="c_1">Seguridad informática avanzada</span></li>
+          <li><span data-t="c_2">Fundamentos de pentesting</span></li>
+          <li><span data-t="c_3">Hacking ético</span></li>
+          <li><span>CCNA</span><span class="tipo" data-t="curso">curso</span></li>
+          <li><span data-t="c_4">Fundamentos de Docker</span></li>
+          <li><span>React.js</span><span class="tipo" data-t="curso">curso</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="envoltura contacto">
+    <div class="aparece">
+      <div class="num" style="margin-bottom:10px">05</div>
+      <h2 data-t="h_cont">Conversemos.</h2>
+      <p class="bajada" style="margin-top:18px" data-t="p_cont">Producto, tecnología, deporte o código abierto: si quieres colaborar con algo, escríbeme.</p>
+    </div>
+    <div class="enlaces-contacto aparece">
+      <a href="https://www.linkedin.com/in/davidacp" target="_blank" rel="me noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>LinkedIn<span>in/davidacp</span></a>
+      <a href="https://github.com/soydavidcornejo" target="_blank" rel="me noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub<span>soydavidcornejo</span></a>
+      <a id="correo" href="#contacto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></svg><span data-t="correo" style="margin:0;color:inherit;font-weight:600;font-size:inherit">Correo</span><span id="correo-txt" data-t="correo_ver">Toca para verlo</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="envoltura">
+    <span>© <span id="anio">2026</span> David Cornejo · Santiago de Chile</span>
+    <span data-t="pie">Página hecha a mano, sin cookies ni seguimiento.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  document.body.classList.remove("sin-js");
+  const EN = {
+    saltar: "Skip to content", nav_hoy: "Now", nav_proy: "Projects", nav_tray: "Experience", nav_est: "Education", nav_cont: "Contact",
+    tema: "Switch between light and dark mode",
+    ante: "Santiago, Chile · Computer Engineer",
+    titulo: "I build products people <em>actually use</em>.",
+    bajada: "I'm a <b>Tech Lead at BancoEstado</b>, <b>CEO and co-founder of Zyvoi</b> —the app to organize games and play with more people— and I make <b>free, open-source apps</b> that keep your data on your computer and work with your own AI.",
+    ver_proy: "See projects", escribeme: "Get in touch",
+    estado: "Building Zyvoi and five open apps",
+    f_ahora: "Now", f_ahora_v: "Tech Lead · BancoEstado<br>CEO & co-founder · Zyvoi",
+    f_exp: "Experience", f_exp_v: "12+ years in technology",
+    f_est: "Education", f_est_v: "Computer Engineering, INACAP",
+    f_idi: "Languages", f_idi_v: "Native Spanish · Professional English",
+    h_hoy: "What I do today", p_hoy: "Three fronts: technology for a bank used across Chile, a sports startup and open software for anyone.",
+    z_rol: "CEO & co-founder", z_fecha: "May 2025 — today",
+    z_p: "A Chilean app to find games, build teams and book courts: football, padel, tennis, basketball and more.",
+    z_1: "Vision, business model and product decisions", z_2: "Nearby games by skill level, with ELO ranking",
+    z_3: "Zyvoi Recintos: bookings and management for sports venues", z_ios: "App Store",
+    b_fecha: "April 2022 — today", b_p: "I lead development on the Compraquí team, the bank's payment gateway.",
+    b_1: "Architecture and technical leadership of the team", b_2: "Payment integrations, microservices and cloud data processes",
+    b_3: "Agile with Scrum and Jira",
+    o_rol: "Creator", o_h: "Open source", o_p: "Five desktop apps, free forever, no accounts or ads.",
+    o_1: "Your data lives on your computer, in open formats", o_2: "They work with your own AI: Claude, ChatGPT or Gemini",
+    o_3: "Built in public, with the community", o_ver: "See all five",
+    h_proy: "Open-source projects", p_proy: "Tools my family and I needed. I publish them so anyone can use, review and improve them.",
+    pr_1: "Free, no accounts", pr_2: "Your data never leaves your computer", pr_3: "Your own AI", pr_4: "Spanish and English",
+    minuta: "Leave every meeting with your notes ready and knowing how to communicate better.",
+    graba: "Record your screen with your camera; your AI writes notes, a YouTube script, chapters and subtitles.",
+    corta: "Editor for Shorts, Reels and TikTok: edit the text and the video edits itself. No watermark.",
+    alcancia: "Expense tracking: bring your bank statements together and your AI warns you in time when something's off.",
+    repasa: "Study from a photo of the school notebook: summary, test-style questions and daily review.",
+    sitio: "Website", codigo: "Code",
+    h_tray: "Experience", p_tray: "From tech support to leading teams: twelve-plus years building and running software.",
+    t_zy: "2025 — today", t_zy_h: "CEO & co-founder <span>· Zyvoi</span>", o_fecha: "2026 — today", t_zy_p: "Strategy, product and growth of a sports community app built for Latin America.",
+    t_be: "2022 — today", t_be_p: "Technical leadership in payments: Compraquí, integrations and cloud services.",
+    t_it: "IT Manager <span>· Incobech</span>", t_inc_p: "Processes, custom web applications and adopting new tools.",
+    t_it2: "IT Manager <span>· Comercial IP</span>", t_cip_p: "Built the department from scratch: networks, servers, ERP, website and moving services to the cloud.",
+    t_sop: "Technical Support Specialist <span>· Adexus</span>",
+    h_est: "Education and certifications", e_tit: "Degree", e_h: "Computer Engineering", e_hab: "How I work",
+    hab_1: "Technical leadership", hab_2: "Agile management", hab_3: "Full-stack development", hab_4: "Cloud", hab_5: "Security", hab_6: "Product",
+    e_cert: "Certifications and courses", c_1: "Advanced IT security", c_2: "Pentesting fundamentals", c_3: "Ethical hacking", c_4: "Docker fundamentals", curso: "course",
+    h_cont: "Let's talk.", p_cont: "Product, technology, sports or open source: if you'd like to work on something together, write to me.",
+    correo: "Email", correo_ver: "Tap to show",
+    pie: "Handmade page, no cookies or tracking."
+  };
+  // Español: el texto que ya está en la página.
+  const ES = {};
+  document.querySelectorAll("[data-t]").forEach((el) => { ES[el.dataset.t] = el.innerHTML; });
+  ES.tema = document.getElementById("tema").getAttribute("aria-label");
+  const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+  const leer = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+
+  let idioma = new URLSearchParams(location.search).get("lang") || leer("idioma") || ((navigator.language || "es").toLowerCase().startsWith("es") ? "es" : "en");
+  if (idioma !== "en") idioma = "es";
+  function aplicarIdioma() {
+    const d = idioma === "en" ? EN : ES;
+    document.querySelectorAll("[data-t]").forEach((el) => { const v = d[el.dataset.t]; if (v != null && !(el.id === "correo-txt" && correoVisible)) el.innerHTML = v; });
+    document.documentElement.lang = idioma;
+    const b = document.getElementById("idioma");
+    b.textContent = idioma === "en" ? "ES" : "EN";
+    b.setAttribute("aria-label", idioma === "en" ? "Leer en español" : "Read in English");
+    document.getElementById("tema").setAttribute("aria-label", d.tema);
+    document.title = idioma === "en" ? "David Cornejo — Tech Lead, CEO of Zyvoi and open-source apps" : "David Cornejo — Tech Lead, CEO de Zyvoi y apps de código abierto";
+  }
+  document.getElementById("idioma").addEventListener("click", () => { idioma = idioma === "en" ? "es" : "en"; guardar("idioma", idioma); aplicarIdioma(); });
+
+  // Tema claro/oscuro: sigue al sistema hasta que la persona elige.
+  const raiz = document.documentElement;
+  const elegido = leer("tema"); if (elegido) raiz.dataset.tema = elegido;
+  document.getElementById("tema").addEventListener("click", () => {
+    const oscuroAhora = raiz.dataset.tema ? raiz.dataset.tema === "oscuro" : matchMedia("(prefers-color-scheme: dark)").matches;
+    raiz.dataset.tema = oscuroAhora ? "claro" : "oscuro"; guardar("tema", raiz.dataset.tema);
+  });
+
+  // Correo: se arma al tocarlo, para que los robots que recolectan direcciones no lo lean del HTML.
+  let correoVisible = false;
+  const correo = document.getElementById("correo");
+  correo.addEventListener("click", (ev) => {
+    const dir = ["soydavidcornejo", "gmail.com"].join("@");
+    if (!correoVisible) {
+      ev.preventDefault(); correoVisible = true;
+      document.getElementById("correo-txt").textContent = dir;
+      correo.href = "mailto:" + dir;
+    }
+  });
+
+  aplicarIdioma();
+  document.getElementById("anio").textContent = new Date().getFullYear();
+
+  // Barra con borde al bajar y entrada suave de las secciones.
+  const barra = document.getElementById("barra");
+  addEventListener("scroll", () => barra.classList.toggle("con-borde", scrollY > 8), { passive: true });
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll(".aparece").forEach((el) => io.observe(el));
+  } else document.querySelectorAll(".aparece").forEach((el) => el.classList.add("visible"));
+  const saltar = document.getElementById("saltar");
+  saltar.addEventListener("focus", () => { saltar.style.left = "12px"; saltar.style.top = "12px"; saltar.style.zIndex = 10; });
+  saltar.addEventListener("blur", () => { saltar.style.left = "-9999px"; });
+})();
+</script>
+</body>
+</html>
