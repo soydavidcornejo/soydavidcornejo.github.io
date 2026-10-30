@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-18Lh+OvjEERrCUcnh7aBr27eGUHazZfkWh9L97lKZU0='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-6g6KqO/O5gxhPKBkqo9XfXcjzeY3dDKn/ptbDwbvIrA='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <title>David Cornejo — Tech Lead y CEO de Zyvoi | AI engineering en Chile</title>
 <meta name="description" content="David Cornejo: Tech Lead en BancoEstado y CEO y cofundador de Zyvoi. AI engineering en Chile: agentes de IA, harness engineering, MCP y guardrails para llevar IA a producción de forma segura. Creador de cinco apps de código abierto.">
 <link rel="canonical" href="https://soydavidcornejo.github.io/">
@@ -261,9 +261,24 @@ h3{text-wrap:balance}
 .principios li{border:1px solid var(--linea);border-radius:999px;padding:6px 14px;font-size:14px;background:var(--tarjeta)}
 .proyectos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
 .proyecto{grid-column:span 2;background:var(--tarjeta);border:1px solid var(--linea);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
-.proyecto:nth-child(-n+2){grid-column:span 3}
-@media (max-width:900px){.proyecto,.proyecto:nth-child(-n+2){grid-column:span 3}}
-@media (max-width:600px){.proyectos{grid-template-columns:minmax(0,1fr)}.proyecto,.proyecto:nth-child(-n+2){grid-column:auto}}
+@media (max-width:900px){.proyecto{grid-column:span 3}}
+@media (max-width:600px){.proyectos{grid-template-columns:minmax(0,1fr)}.proyecto{grid-column:auto}}
+.pieza{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px;align-items:center;margin:0 0 18px;padding:28px 30px;
+  background:var(--acento-velo);border:1px solid var(--linea);border-radius:24px}
+.pieza .titulo{display:flex;align-items:center;gap:12px}
+.pieza .titulo img{width:40px;height:40px;border-radius:10px;flex:none}
+.pieza h3{font:700 30px/1 var(--letra);margin:0;letter-spacing:-.03em}
+.pieza p{margin:12px 0 0;color:var(--suave);font-size:16px}
+.pieza-pasos{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px;counter-reset:paso}
+.pieza-pasos li{counter-increment:paso;border:1px solid var(--linea);border-radius:999px;padding:6px 14px 6px 8px;font-size:14px;background:var(--tarjeta)}
+.pieza-pasos li::before{content:counter(paso);display:inline-grid;place-items:center;width:20px;height:20px;margin-right:8px;border-radius:50%;
+  background:var(--acento);color:var(--acento-txt);font-size:12px;font-weight:700}
+.pieza .pie{margin-top:18px;display:flex;gap:16px;font-weight:600;font-size:15px}
+.pieza-cifras{margin:0;display:grid;gap:14px}
+.pieza-cifras div{display:flex;align-items:baseline;gap:12px}
+.pieza-cifras dt{font:700 40px/1 var(--letra);letter-spacing:-.03em;min-width:2.2ch;text-align:right;color:var(--acento)}
+.pieza-cifras dd{margin:0;color:var(--suave);font-size:15px}
+@media (max-width:700px){.pieza{grid-template-columns:minmax(0,1fr);padding:22px 20px}.pieza-cifras dt{text-align:left}}
 .proyecto .foto{display:block;aspect-ratio:1200/630;background:var(--fondo-2);border-bottom:1px solid var(--linea);overflow:hidden}
 .proyecto .foto img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s var(--suave-mov)}
 .proyecto .cuerpo{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
@@ -633,11 +648,28 @@ footer p{margin:0}
   <div class="envoltura">
     <div class="cabeza">
       <h2 data-t="h_proy">Proyectos abiertos</h2>
-      <p data-t="p_proy">Cinco apps de código abierto para escritorio, con pruebas automáticas, revisión de privacidad en cada cambio y guías para agentes de IA.</p>
+      <p data-t="p_proy">Seis apps de código abierto para escritorio, hechas con un framework propio, con pruebas automáticas, revisión de privacidad en cada cambio y guías para agentes de IA.</p>
       <ul class="principios">
         <li data-t="pr_1">Gratis y sin cuentas</li><li data-t="pr_3">Tu propia IA</li><li data-t="pr_4">Español e inglés</li>
       </ul>
     </div>
+    <article class="pieza" aria-labelledby="pz-titulo">
+      <div class="pieza-texto">
+        <div class="titulo"><img src="img/pieza.svg" alt="" width="40" height="40"><h3 id="pz-titulo">Pieza</h3><span class="licencia" data-t="pz_tipo">Framework</span></div>
+        <p data-t="pz_p">El framework con el que hago todas estas apps: piezas probadas (tu propia IA, idiomas, actualizaciones, un catálogo de la comunidad…) que se enchufan en una app nueva en vez de escribirlas de cero. Cada app que hago deja piezas para la siguiente.</p>
+        <ol class="pieza-pasos">
+          <li data-t="pz_p1">Eliges piezas</li>
+          <li data-t="pz_p2">Revisas la ficha completa: pantallas, permisos, red</li>
+          <li data-t="pz_p3">Enchufas y creces</li>
+        </ol>
+        <div class="pie"><a href="https://pieza-app.github.io/pieza/" target="_blank" rel="noopener" data-t="pz_ver">Ver cómo funciona</a><a href="https://github.com/pieza-app/pieza" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
+      </div>
+      <dl class="pieza-cifras">
+        <div><dt>6</dt><dd data-t="pz_n1">apps en la familia</dd></div>
+        <div><dt>28</dt><dd data-t="pz_n2">piezas en el catálogo</dd></div>
+        <div><dt>2</dt><dd data-t="pz_n3">listas para usar, el resto en camino</dd></div>
+      </dl>
+    </article>
     <div class="proyectos">
       <article class="proyecto">
         <a class="foto" href="https://minuta-app.github.io/minuta/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/minuta.jpg" alt="" width="960" height="504" loading="lazy"></a>
@@ -677,6 +709,14 @@ footer p{margin:0}
           <div class="titulo"><img src="img/repasa.svg" alt="" width="32" height="32"><h3>Repasa</h3><span class="licencia">AGPL-3.0</span></div>
           <p data-t="repasa">Para estudiar desde la foto del cuaderno: resumen, preguntas tipo prueba y repaso diario.</p>
           <div class="pie"><a href="https://repasa-app.github.io/repasa/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/repasa-app/repasa" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
+        </div>
+      </article>
+      <article class="proyecto">
+        <a class="foto" href="https://esquema-app.github.io/esquema/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/esquema.jpg" alt="" width="960" height="504" loading="lazy"></a>
+        <div class="cuerpo">
+          <div class="titulo"><img src="img/esquema.svg" alt="" width="32" height="32"><h3>Esquema</h3><span class="licencia">AGPL-3.0</span></div>
+          <p data-t="esquema">Diagramas y documentación que GitHub ya entiende: dibujas o escribes Mermaid, y tu IA documenta el proyecto.</p>
+          <div class="pie"><a href="https://esquema-app.github.io/esquema/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/esquema-app/esquema" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
         </div>
       </article>
     </div>
@@ -856,7 +896,12 @@ footer p{margin:0}
     mt4_de: "Community", mt4: "Share what I learn about harness engineering",
     mt4p: "Publish openly how I work with agents: guides, templates and real examples from my projects.",
     mt4a: "Guides and templates published", mt4b: "People and teams reusing them", mt4c: "Questions and conversations they spark",
-    h_proy: "Open projects", p_proy: "Five open-source desktop apps, with automated tests, a privacy review on every change and guides for AI agents.",
+    h_proy: "Open projects", p_proy: "Six open-source desktop apps, built with my own framework, with automated tests, a privacy review on every change and guides for AI agents.",
+    pz_tipo: "Framework", pz_p: "The framework behind all these apps: tested pieces (your own AI, languages, updates, a community catalog…) that plug into a new app instead of being rewritten from scratch. Every app I build leaves pieces for the next one.",
+    pz_n1: "apps in the family", pz_n2: "pieces in the catalog", pz_n3: "ready to use, the rest on the way",
+    pz_p1: "Choose pieces", pz_p2: "Review the full spec: screens, permissions, network", pz_p3: "Plug in and grow",
+    pz_ver: "See how it works",
+    esquema: "Diagrams and documentation GitHub already understands: draw or write Mermaid, and your AI documents the project.",
     pr_1: "Free, no accounts", pr_3: "Your own AI", pr_4: "Spanish and English",
     minuta: "Leave every meeting with your notes ready and knowing how to communicate better.",
     graba: "Record your screen with your camera; your AI writes notes, a YouTube script, chapters and subtitles.",
