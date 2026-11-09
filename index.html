@@ -285,6 +285,9 @@ h3{text-wrap:balance}
 .proyecto .titulo{display:flex;align-items:center;gap:11px}
 .proyecto .titulo img{width:32px;height:32px;border-radius:9px;flex:none}
 .proyecto h3{font:700 24px/1 var(--letra);margin:0;letter-spacing:-.025em}
+.version{margin-left:auto;font:600 12.5px/1 var(--mono,ui-monospace,monospace);color:var(--acento);white-space:nowrap}
+.version:empty{display:none}
+.version+.licencia{margin-left:0}
 .licencia{margin-left:auto;font-size:12.5px;color:var(--suave);border:1px solid var(--linea);border-radius:7px;padding:4px 8px;white-space:nowrap}
 .proyecto p{margin:0;color:var(--suave);font-size:15.5px}
 .proyecto .pie{margin-top:auto;padding-top:6px;display:flex;gap:16px;font-weight:600;font-size:15px}
@@ -655,26 +658,26 @@ footer p{margin:0}
     </div>
     <article class="pieza" aria-labelledby="pz-titulo">
       <div class="pieza-texto">
-        <div class="titulo"><img src="img/pieza.svg" alt="" width="40" height="40"><h3 id="pz-titulo">Pieza</h3><span class="licencia" data-t="pz_tipo">Framework modular · MPL-2.0</span></div>
-        <p data-t="pz_p">El framework modular que saco de todas estas apps: armas tu app por módulos, como un rompecabezas. Cada pieza es un módulo probado (tu propia IA, idiomas, actualizaciones, un catálogo de la comunidad…) que se enchufa en vez de escribirse de cero. Cada app que hago deja módulos para la siguiente, y las siete ya corren sobre Pieza: la misma app nativa, el mismo puente seguro y las mismas actualizaciones verificadas.</p>
+        <div class="titulo"><img src="img/pieza.svg" alt="" width="40" height="40"><h3 id="pz-titulo">Pieza</h3><span class="version" data-auto="version:pieza-app/estudio"></span><span class="licencia" data-t="pz_tipo">Programa · AGPL y MPL</span></div>
+        <p data-t="pz_p">El programa de escritorio para crear apps paso a paso, con las piezas que saco de todas estas apps. Eliges para qué sistemas es, cuentas tu idea y tu IA hace solo lo propio: lo ya hecho (tu propia IA, idiomas, actualizaciones verificadas…) se enchufa y no gasta tokens. Ves lo que gasta cada paso, o lo dejas en automático. Las siete apps ya corren sobre Pieza.</p>
         <ol class="pieza-pasos">
-          <li data-t="pz_p1">Eliges piezas</li>
-          <li data-t="pz_p2">Revisas la ficha completa: pantallas, permisos, red</li>
-          <li data-t="pz_p3">Enchufas y creces</li>
+          <li data-t="pz_p1">Sistemas e idea</li>
+          <li data-t="pz_p2">Piezas y ficha: 0 tokens</li>
+          <li data-t="pz_p3">Tu IA, paso a paso</li>
         </ol>
-        <div class="pie"><a href="https://pieza-app.github.io/pieza/" target="_blank" rel="noopener" data-t="pz_ver">Ver cómo funciona</a><a href="https://github.com/pieza-app/pieza" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
+        <div class="pie"><a href="https://github.com/pieza-app/estudio/releases/latest" target="_blank" rel="noopener" data-t="pz_bajar">Descargar</a><a href="https://pieza-app.github.io/pieza/" target="_blank" rel="noopener" data-t="pz_ver">Ver cómo funciona</a><a href="https://github.com/pieza-app/pieza" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
       </div>
       <dl class="pieza-cifras">
-        <div><dt>6</dt><dd data-t="pz_n1">apps en la familia</dd></div>
-        <div><dt>32</dt><dd data-t="pz_n2">piezas en el catálogo</dd></div>
-        <div><dt>16</dt><dd data-t="pz_n3">listas para usar, el resto en camino</dd></div>
+        <div><dt data-auto="pieza:apps">7</dt><dd data-t="pz_n1">apps en la familia</dd></div>
+        <div><dt data-auto="pieza:piezas">32</dt><dd data-t="pz_n2">piezas en el catálogo</dd></div>
+        <div><dt data-auto="pieza:listas">16</dt><dd data-t="pz_n3">listas para usar, el resto en camino</dd></div>
       </dl>
     </article>
     <div class="proyectos">
       <article class="proyecto">
         <a class="foto" href="https://minuta-app.github.io/minuta/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/minuta.jpg" alt="" width="960" height="504" loading="lazy"></a>
         <div class="cuerpo">
-          <div class="titulo"><img src="img/minuta.svg" alt="" width="32" height="32"><h3>Minuta</h3><span class="licencia">AGPL-3.0</span></div>
+          <div class="titulo"><img src="img/minuta.svg" alt="" width="32" height="32"><h3>Minuta</h3><span class="version" data-auto="version:minuta-app/minuta"></span><span class="licencia">AGPL-3.0</span></div>
           <p data-t="minuta">Sal de cada reunión con las notas listas y sabiendo cómo mejorar tu forma de comunicar.</p>
           <div class="pie"><a href="https://minuta-app.github.io/minuta/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/minuta-app/minuta" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
         </div>
@@ -682,7 +685,7 @@ footer p{margin:0}
       <article class="proyecto">
         <a class="foto" href="https://graba-app.github.io/graba/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/graba.jpg" alt="" width="960" height="504" loading="lazy"></a>
         <div class="cuerpo">
-          <div class="titulo"><img src="img/graba.svg" alt="" width="32" height="32"><h3>Graba</h3><span class="licencia">AGPL-3.0</span></div>
+          <div class="titulo"><img src="img/graba.svg" alt="" width="32" height="32"><h3>Graba</h3><span class="version" data-auto="version:graba-app/graba"></span><span class="licencia">AGPL-3.0</span></div>
           <p data-t="graba">Graba tu pantalla con tu cámara y tu IA te deja notas, guion para YouTube, capítulos y subtítulos.</p>
           <div class="pie"><a href="https://graba-app.github.io/graba/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/graba-app/graba" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
         </div>
@@ -690,7 +693,7 @@ footer p{margin:0}
       <article class="proyecto">
         <a class="foto" href="https://corta-app.github.io/corta/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/corta.jpg" alt="" width="960" height="504" loading="lazy"></a>
         <div class="cuerpo">
-          <div class="titulo"><img src="img/corta.svg" alt="" width="32" height="32"><h3>Corta</h3><span class="licencia">AGPL-3.0</span></div>
+          <div class="titulo"><img src="img/corta.svg" alt="" width="32" height="32"><h3>Corta</h3><span class="version" data-auto="version:corta-app/corta"></span><span class="licencia">AGPL-3.0</span></div>
           <p data-t="corta">Editor para Shorts, Reels y TikTok: editas el texto y se edita el video. Sin marca de agua.</p>
           <div class="pie"><a href="https://corta-app.github.io/corta/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/corta-app/corta" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
         </div>
@@ -698,7 +701,7 @@ footer p{margin:0}
       <article class="proyecto">
         <a class="foto" href="https://alcancia-app.github.io/alcancia/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/alcancia.jpg" alt="" width="960" height="504" loading="lazy"></a>
         <div class="cuerpo">
-          <div class="titulo"><img src="img/alcancia.svg" alt="" width="32" height="32"><h3>Alcancía</h3><span class="licencia">AGPL-3.0</span></div>
+          <div class="titulo"><img src="img/alcancia.svg" alt="" width="32" height="32"><h3>Alcancía</h3><span class="version" data-auto="version:alcancia-app/alcancia">v0.2.0</span><span class="licencia">AGPL-3.0</span></div>
           <p data-t="alcancia">Control de gastos: junta las cartolas de tus bancos y tu IA te avisa a tiempo cuando algo se pasa.</p>
           <div class="pie"><a href="https://alcancia-app.github.io/alcancia/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/alcancia-app/alcancia" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
         </div>
@@ -706,7 +709,7 @@ footer p{margin:0}
       <article class="proyecto">
         <a class="foto" href="https://repasa-app.github.io/repasa/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/repasa.jpg" alt="" width="960" height="504" loading="lazy"></a>
         <div class="cuerpo">
-          <div class="titulo"><img src="img/repasa.svg" alt="" width="32" height="32"><h3>Repasa</h3><span class="licencia">AGPL-3.0</span></div>
+          <div class="titulo"><img src="img/repasa.svg" alt="" width="32" height="32"><h3>Repasa</h3><span class="version" data-auto="version:repasa-app/repasa"></span><span class="licencia">AGPL-3.0</span></div>
           <p data-t="repasa">Para estudiar desde la foto del cuaderno: resumen, preguntas tipo prueba y repaso diario.</p>
           <div class="pie"><a href="https://repasa-app.github.io/repasa/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/repasa-app/repasa" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
         </div>
@@ -714,7 +717,7 @@ footer p{margin:0}
       <article class="proyecto">
         <a class="foto" href="https://esquema-app.github.io/esquema/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/esquema.jpg" alt="" width="960" height="504" loading="lazy"></a>
         <div class="cuerpo">
-          <div class="titulo"><img src="img/esquema.svg" alt="" width="32" height="32"><h3>Esquema</h3><span class="licencia">AGPL-3.0</span></div>
+          <div class="titulo"><img src="img/esquema.svg" alt="" width="32" height="32"><h3>Esquema</h3><span class="version" data-auto="version:esquema-app/esquema"></span><span class="licencia">AGPL-3.0</span></div>
           <p data-t="esquema">Diagramas y documentación que GitHub ya entiende: dibujas o escribes Mermaid, y tu IA documenta el proyecto.</p>
           <div class="pie"><a href="https://esquema-app.github.io/esquema/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/esquema-app/esquema" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
         </div>
@@ -722,7 +725,7 @@ footer p{margin:0}
       <article class="proyecto">
         <a class="foto" href="https://despeja-app.github.io/despeja/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/despeja.jpg" alt="" width="960" height="504" loading="lazy"></a>
         <div class="cuerpo">
-          <div class="titulo"><img src="img/despeja.svg" alt="" width="32" height="32"><h3>Despeja</h3><span class="licencia">AGPL-3.0</span></div>
+          <div class="titulo"><img src="img/despeja.svg" alt="" width="32" height="32"><h3>Despeja</h3><span class="version" data-auto="version:despeja-app/despeja"></span><span class="licencia">AGPL-3.0</span></div>
           <p data-t="despeja">Deja tu iPhone solo con lo necesario: respalda fotos y videos en tu Mac, verificados, limpia repetidas y capturas, y tu IA arma el plan.</p>
           <div class="pie"><a href="https://despeja-app.github.io/despeja/" target="_blank" rel="noopener" data-t="sitio">Sitio</a><a href="https://github.com/despeja-app/despeja" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
         </div>
@@ -905,9 +908,9 @@ footer p{margin:0}
     mt4p: "Publish openly how I work with agents: guides, templates and real examples from my projects.",
     mt4a: "Guides and templates published", mt4b: "People and teams reusing them", mt4c: "Questions and conversations they spark",
     h_proy: "Open projects", p_proy: "Seven open-source apps for desktop and iPhone, built with my own framework, with automated tests, a privacy review on every change and guides for AI agents.",
-    pz_tipo: "Modular framework · MPL-2.0", pz_p: "The modular framework I extract from all these apps: build your app in modules, like a puzzle. Each piece is a tested module (your own AI, languages, updates, a community catalog…) that plugs in instead of being rewritten from scratch. Every app I build leaves modules for the next one, and all seven already run on Pieza: the same native app, the same secure bridge and the same verified updates.",
+    pz_tipo: "Program · AGPL and MPL", pz_p: "The desktop program to build apps step by step, with the pieces I extract from all these apps. You choose the systems, tell your idea and your AI does only what is unique: what is already made (your own AI, languages, verified updates…) plugs in and costs no tokens. You see what each step spends, or you leave it on automatic. All seven apps already run on Pieza.",
     pz_n1: "apps in the family", pz_n2: "pieces in the catalog", pz_n3: "ready to use, the rest on the way",
-    pz_p1: "Choose pieces", pz_p2: "Review the full spec: screens, permissions, network", pz_p3: "Plug in and grow",
+    pz_p1: "Systems and idea", pz_p2: "Pieces and spec: 0 tokens", pz_p3: "Your AI, step by step", pz_bajar: "Download",
     pz_ver: "See how it works",
     esquema: "Diagrams and documentation GitHub already understands: draw or write Mermaid, and your AI documents the project.",
     despeja: "Keep only what you need on your iPhone: back up photos and videos to your Mac, verified, clean up duplicates and screenshots, and your AI makes the plan.",
