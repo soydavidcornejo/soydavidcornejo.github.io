@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-6g6KqO/O5gxhPKBkqo9XfXcjzeY3dDKn/ptbDwbvIrA='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-9koxpF2bt2l8fPoUbHY0VxkqmNpW97pR8fDxISiKtqU='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <title>David Cornejo — Tech Lead y CEO de Zyvoi | AI engineering en Chile</title>
 <meta name="description" content="David Cornejo: Tech Lead en BancoEstado y CEO y cofundador de Zyvoi. AI engineering en Chile: agentes de IA, harness engineering, MCP y guardrails para llevar IA a producción de forma segura. Creador de cinco apps de código abierto.">
 <link rel="canonical" href="https://soydavidcornejo.github.io/">
@@ -287,6 +287,8 @@ h3{text-wrap:balance}
 .proyecto h3{font:700 24px/1 var(--letra);margin:0;letter-spacing:-.025em}
 .version{margin-left:auto;font:600 12.5px/1 var(--mono,ui-monospace,monospace);color:var(--acento);white-space:nowrap}
 .version:empty{display:none}
+.pz-sistemas{margin:10px 0 0;font-size:14px;color:var(--suave,#666)}
+.pz-sistemas a{font-weight:600}
 .version+.licencia{margin-left:0}
 .licencia{margin-left:auto;font-size:12.5px;color:var(--suave);border:1px solid var(--linea);border-radius:7px;padding:4px 8px;white-space:nowrap}
 .proyecto p{margin:0;color:var(--suave);font-size:15.5px}
@@ -665,7 +667,8 @@ footer p{margin:0}
           <li data-t="pz_p2">Piezas y ficha: 0 tokens</li>
           <li data-t="pz_p3">Tu IA, paso a paso</li>
         </ol>
-        <div class="pie"><a href="https://github.com/pieza-app/estudio/releases/latest" target="_blank" rel="noopener" data-t="pz_bajar">Descargar</a><a href="https://pieza-app.github.io/pieza/" target="_blank" rel="noopener" data-t="pz_ver">Ver cómo funciona</a><a href="https://github.com/pieza-app/pieza" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
+        <div class="pie"><a id="pz-bajar" href="https://github.com/pieza-app/estudio/releases/latest/download/Pieza-macOS.zip" data-t="pz_bajar">Descargar para Mac</a><a href="https://pieza-app.github.io/pieza/" target="_blank" rel="noopener" data-t="pz_ver">Ver cómo funciona</a><a href="https://github.com/pieza-app/pieza" target="_blank" rel="noopener" data-t="codigo">Código</a></div>
+        <p class="pz-sistemas"><span data-t="pz_para">Para Mac, Windows y Linux:</span> <a href="https://github.com/pieza-app/estudio/releases/latest/download/Pieza-macOS.zip">Mac</a> · <a href="https://github.com/pieza-app/estudio/releases/latest/download/Pieza-Windows.exe">Windows</a> · <a href="https://github.com/pieza-app/estudio/releases/latest/download/Pieza-Linux.AppImage">Linux</a></p>
       </div>
       <dl class="pieza-cifras">
         <div><dt data-auto="pieza:apps">8</dt><dd data-t="pz_n1">apps en la familia</dd></div>
@@ -910,7 +913,7 @@ footer p{margin:0}
     h_proy: "Open projects", p_proy: "Seven open-source apps for desktop and iPhone, built with my own framework, with automated tests, a privacy review on every change and guides for AI agents.",
     pz_tipo: "Program · AGPL and MPL", pz_p: "The desktop program to build apps step by step, with the pieces I extract from all these apps. You choose the systems, tell your idea and your AI does only what is unique: what is already made (your own AI, languages, verified updates…) plugs in and costs no tokens. You see what each step spends, or you leave it on automatic. All seven apps already run on Pieza.",
     pz_n1: "apps in the family", pz_n2: "pieces in the catalog", pz_n3: "ready to use, the rest on the way",
-    pz_p1: "Systems and idea", pz_p2: "Pieces and spec: 0 tokens", pz_p3: "Your AI, step by step", pz_bajar: "Download",
+    pz_p1: "Systems and idea", pz_p2: "Pieces and spec: 0 tokens", pz_p3: "Your AI, step by step", pz_bajar: "Download for Mac", pz_para: "For Mac, Windows and Linux:",
     pz_ver: "See how it works",
     esquema: "Diagrams and documentation GitHub already understands: draw or write Mermaid, and your AI documents the project.",
     despeja: "Keep only what you need on your iPhone: back up photos and videos to your Mac, verified, clean up duplicates and screenshots, and your AI makes the plan.",
@@ -987,6 +990,23 @@ footer p{margin:0}
   // En el CV impreso el correo va escrito.
   addEventListener("beforeprint", () => { if (!correoVisible) mostrarCorreo(); });
   document.getElementById("imprimir").addEventListener("click", () => print());
+  // Pieza: el botón descarga directo el archivo de este computador y dice para cuál es.
+  const so = (() => {
+    const p = `${navigator.userAgentData?.platform || ""} ${navigator.platform || ""} ${navigator.userAgent || ""}`.toLowerCase();
+    if (/android|iphone|ipad|ipod/.test(p) || (/mac/.test(p) && navigator.maxTouchPoints > 1)) return "";
+    return /mac/.test(p) ? "mac" : /win/.test(p) ? "windows" : /linux|x11|cros/.test(p) ? "linux" : "";
+  })();
+  const bajar = document.getElementById("pz-bajar");
+  const ARCHIVO = { mac: ["Mac", "Pieza-macOS.zip"], windows: ["Windows", "Pieza-Windows.exe"], linux: ["Linux", "Pieza-Linux.AppImage"] };
+  if (so && bajar) {
+    bajar.href = "https://github.com/pieza-app/estudio/releases/latest/download/" + ARCHIVO[so][1];
+    bajar.removeAttribute("data-t");
+    const poner = () => { bajar.textContent = (idioma === "en" ? "Download for " : "Descargar para ") + ARCHIVO[so][0]; };
+    poner();
+    new MutationObserver(poner).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+  } else if (bajar) {
+    bajar.href = "#pz-titulo";
+  }
   aplicarIdioma();
   document.getElementById("anio").textContent = new Date().getFullYear();
 
