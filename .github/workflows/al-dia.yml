@@ -1,0 +1,38 @@
+# Pone al día las cifras de Pieza y las versiones de las apps en index.html (herramientas/al_dia.py).
+# Corre cada día, a mano o cuando Pieza o una app avisa (repository_dispatch «al-dia»). Solo hace commit si algo cambió.
+name: al-dia
+on:
+  schedule:
+    - cron: "17 11 * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [al-dia]
+permissions: {}
+concurrency:
+  group: al-dia
+  cancel-in-progress: false
+jobs:
+  al-dia:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.13"
+      - run: python3 herramientas/al_dia.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Commit si cambió
+        env:
+          TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          if git diff --quiet; then echo "Sin cambios"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Al día: versiones y cifras de Pieza"
+          git push "https://x-access-token:${TOKEN}@github.com/${REPO}.git" HEAD:main
